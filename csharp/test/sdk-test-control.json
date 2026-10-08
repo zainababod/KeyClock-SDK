@@ -9,7 +9,11 @@
       },
       "unit": {
         "direct": [],
-        "entityOp": []
+        "entityOp": [
+          { "entity": "certificate", "op": "load", "reason": "generated test only passes id; Keycloak path also requires realm and client_id" },
+          { "entity": "authenticator_config_representation", "op": "load", "reason": "generated test only passes id; Keycloak path also requires realm and executionId" },
+          { "entity": "protocol", "op": "load", "reason": "generated test only passes id; Keycloak path also requires realm and client_id" }
+        ]
       }
     },
     "live": {
