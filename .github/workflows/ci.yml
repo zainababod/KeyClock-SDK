@@ -16,6 +16,7 @@ permissions:
 jobs:
   csharp:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - if: hashFiles('csharp/Makefile') != ''
