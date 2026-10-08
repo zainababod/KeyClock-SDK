@@ -1,0 +1,170 @@
+# Entity: granted
+
+main: kit: entity: granted: {
+
+  alias: field: {}
+
+  fields: {
+    attributes: {
+      h: "Attributes"
+      n: "attributes"
+      r: false
+      t: "`$OBJECT`"
+    }
+    clientRole: {
+      h: "Client Role"
+      n: "clientRole"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    composite: {
+      h: "Composite"
+      n: "composite"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    composites: {
+      h: "Composites"
+      n: "composites"
+      r: false
+      t: "`$OBJECT`"
+    }
+    containerId: {
+      h: "Container Id"
+      n: "containerId"
+      r: false
+      t: "`$STRING`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    scopeParamRequired: {
+      h: "Scope Param Required"
+      n: "scopeParamRequired"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "granted"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/clients/{id}/evaluate-scopes/scope-mappings/{roleContainerId}/granted"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "scope_mapping_id"
+                or: "roleContainerId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "scope"
+                or: "scope"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/clients/{id}/evaluate-scopes/scope-mappings/{roleContainerId}/granted"
+          q: {
+            exist: [
+              "client_id"
+              "realm"
+              "scope_mapping_id"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+              roleContainerId: "scope_mapping_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "evaluate-scopes"
+            }
+            {
+              lit: "scope-mappings"
+            }
+            {
+              var: "scope_mapping_id"
+            }
+            {
+              lit: "granted"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.client") path("$.main.kit.entity.scope_mapping")]
+  ]
+
+}

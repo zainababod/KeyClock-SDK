@@ -1,0 +1,119 @@
+{
+  "existing": {
+    "realm": {
+      "REALM00": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s5e",
+        "description": "s5f",
+        "id": "REALM00",
+        "name": "s61",
+        "scopeParamRequired": true,
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "role_name": "ROLE_NAME01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01",
+        "group_id": "GROUP01",
+        "roles_by_id_id": "ROLES_BY_ID01",
+        "user_id": "USER01"
+      },
+      "REALM01": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "sb8",
+        "description": "sb9",
+        "id": "REALM01",
+        "name": "sbb",
+        "scopeParamRequired": true,
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "role_name": "ROLE_NAME01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01",
+        "group_id": "GROUP01",
+        "roles_by_id_id": "ROLES_BY_ID01",
+        "user_id": "USER01"
+      },
+      "REALM02": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s112",
+        "description": "s113",
+        "id": "REALM02",
+        "name": "s115",
+        "scopeParamRequired": true,
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "role_name": "ROLE_NAME01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01",
+        "group_id": "GROUP01",
+        "roles_by_id_id": "ROLES_BY_ID01",
+        "user_id": "USER01"
+      }
+    }
+  },
+  "new": {
+    "realm": {
+      "realm_ref01": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s16c",
+        "description": "s16d",
+        "name": "s16f",
+        "scopeParamRequired": true
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/clients/{id}/roles/{role-name}/composites/realm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/scope-mappings/realm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-scopes/{id}/scope-mappings/realm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-templates/{id}/scope-mappings/realm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/groups/{id}/role-mappings/realm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/roles/{role-name}/composites/realm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/roles-by-id/{role-id}/composites/realm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/users/{id}/role-mappings/realm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

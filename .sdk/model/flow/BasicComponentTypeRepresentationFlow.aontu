@@ -1,0 +1,26 @@
+# BasicComponentTypeRepresentationFlow
+
+main: kit: flow: BasicComponentTypeRepresentationFlow:
+{
+  entity: "component_type_representation",
+  kind: "basic",
+  name: "BasicComponentTypeRepresentationFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "component_type_representation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicComponentTypeRepresentationFlow"
+}

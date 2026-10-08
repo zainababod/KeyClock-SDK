@@ -1,0 +1,2083 @@
+# Entity: user
+
+main: kit: entity: user: {
+
+  alias: field: {}
+
+  fields: {
+    access: {
+      h: "Access"
+      n: "access"
+      r: false
+      t: "`$OBJECT`"
+    }
+    applicationRoles: {
+      h: "Application Roles"
+      n: "applicationRoles"
+      r: false
+      t: "`$OBJECT`"
+    }
+    attributes: {
+      h: "Attributes"
+      n: "attributes"
+      r: false
+      t: "`$OBJECT`"
+    }
+    clientConsents: {
+      h: "Client Consents"
+      n: "clientConsents"
+      r: false
+      t: "`$ARRAY`"
+    }
+    clientRoles: {
+      h: "Client Roles"
+      n: "clientRoles"
+      r: false
+      t: "`$OBJECT`"
+    }
+    createdTimestamp: {
+      fo: "int64"
+      h: "Created Timestamp"
+      n: "createdTimestamp"
+      r: false
+      t: "`$INTEGER`"
+    }
+    credentials: {
+      h: "Credentials"
+      n: "credentials"
+      r: false
+      t: "`$ARRAY`"
+    }
+    disableableCredentialTypes: {
+      h: "Disableable Credential Types"
+      n: "disableableCredentialTypes"
+      r: false
+      t: "`$ARRAY`"
+    }
+    email: {
+      h: "Email"
+      n: "email"
+      r: false
+      t: "`$STRING`"
+    }
+    emailVerified: {
+      h: "Email Verified"
+      n: "emailVerified"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    enabled: {
+      h: "Enabled"
+      n: "enabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    federatedIdentities: {
+      h: "Federated Identities"
+      n: "federatedIdentities"
+      r: false
+      t: "`$ARRAY`"
+    }
+    federationLink: {
+      h: "Federation Link"
+      n: "federationLink"
+      r: false
+      t: "`$STRING`"
+    }
+    firstName: {
+      h: "First Name"
+      n: "firstName"
+      r: false
+      t: "`$STRING`"
+    }
+    groups: {
+      h: "Groups"
+      n: "groups"
+      r: false
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    lastName: {
+      h: "Last Name"
+      n: "lastName"
+      r: false
+      t: "`$STRING`"
+    }
+    notBefore: {
+      fo: "int32"
+      h: "Not Before"
+      n: "notBefore"
+      r: false
+      t: "`$INTEGER`"
+    }
+    origin: {
+      h: "Origin"
+      n: "origin"
+      r: false
+      t: "`$STRING`"
+    }
+    realmRoles: {
+      h: "Realm Roles"
+      n: "realmRoles"
+      r: false
+      t: "`$ARRAY`"
+    }
+    requiredActions: {
+      h: "Required Actions"
+      n: "requiredActions"
+      r: false
+      t: "`$ARRAY`"
+    }
+    self: {
+      h: "Self"
+      n: "self"
+      r: false
+      t: "`$STRING`"
+    }
+    serviceAccountClientId: {
+      h: "Service Account Client Id"
+      n: "serviceAccountClientId"
+      r: false
+      t: "`$STRING`"
+    }
+    socialLinks: {
+      h: "Social Links"
+      n: "socialLinks"
+      r: false
+      t: "`$ARRAY`"
+    }
+    totp: {
+      h: "Totp"
+      n: "totp"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    userProfileMetadata: {
+      h: "User Profile Metadata"
+      n: "userProfileMetadata"
+      r: false
+      t: "`$OBJECT`"
+    }
+    username: {
+      h: "Username"
+      n: "username"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "user"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /{realm}/users/{id}/credentials/{credentialId}/moveAfter/{newPreviousCredentialId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "credential_id"
+                or: "credentialId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "new_previous_credential_id"
+                or: "newPreviousCredentialId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/users/{id}/credentials/{credentialId}/moveAfter/{newPreviousCredentialId}"
+          q: {
+            exist: [
+              "credential_id"
+              "id"
+              "new_previous_credential_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              credentialId: "credential_id"
+              newPreviousCredentialId: "new_previous_credential_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "credentials"
+            }
+            {
+              var: "credential_id"
+            }
+            {
+              lit: "moveAfter"
+            }
+            {
+              var: "new_previous_credential_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/users/{id}/credentials/{credentialId}/moveToFirst"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "credential_id"
+                or: "credentialId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/users/{id}/credentials/{credentialId}/moveToFirst"
+          q: {
+            "$action": "move_to_first"
+            exist: [
+              "credential_id"
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              credentialId: "credential_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "credentials"
+            }
+            {
+              var: "credential_id"
+            }
+            {
+              lit: "moveToFirst"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/users/{id}/federated-identity/{provider}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "provider"
+                or: "provider"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/users/{id}/federated-identity/{provider}"
+          q: {
+            exist: [
+              "id"
+              "provider"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "federated-identity"
+            }
+            {
+              var: "provider"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/users/{id}/impersonation"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/users/{id}/impersonation"
+          q: {
+            "$action": "impersonation"
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "impersonation"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/users/{id}/logout"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/users/{id}/logout"
+          q: {
+            "$action": "logout"
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "logout"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/users"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/users"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/clients/{id}/roles/{role-name}/users"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "role_name"
+                or: "role-name"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "first"
+                or: "first"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "max"
+                or: "max"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/clients/{id}/roles/{role-name}/users"
+          q: {
+            exist: [
+              "client_id"
+              "realm"
+              "role_name"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+              "role-name": "role_name"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "roles"
+            }
+            {
+              var: "role_name"
+            }
+            {
+              lit: "users"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/users/{id}/configured-user-storage-credential-types"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/users/{id}/configured-user-storage-credential-types"
+          q: {
+            "$action": "configured_user_storage_credential_type"
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "configured-user-storage-credential-types"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/users/{id}/consents"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/users/{id}/consents"
+          q: {
+            "$action": "consent"
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "consents"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/roles/{role-name}/users"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "role_name"
+                or: "role-name"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "first"
+                or: "first"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "max"
+                or: "max"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/roles/{role-name}/users"
+          q: {
+            exist: [
+              "realm"
+              "role_name"
+            ]
+          }
+          r: {
+            param: {
+              "role-name": "role_name"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "roles"
+            }
+            {
+              var: "role_name"
+            }
+            {
+              lit: "users"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/users"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "brief_representation"
+                or: "briefRepresentation"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "email"
+                or: "email"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "email_verified"
+                or: "emailVerified"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "enabled"
+                or: "enabled"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                k: "query"
+                n: "exact"
+                or: "exact"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "first"
+                or: "first"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "first_name"
+                or: "firstName"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "idp_alia"
+                or: "idpAlias"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "idp_user_id"
+                or: "idpUserId"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "last_name"
+                or: "lastName"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "max"
+                or: "max"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "q"
+                or: "q"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "username"
+                or: "username"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/users"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/users/profile/metadata"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/users/profile/metadata"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              lit: "profile"
+            }
+            {
+              lit: "metadata"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/users/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "user_profile_metadata"
+                or: "userProfileMetadata"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/users/{id}"
+          q: {
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/users/{id}/groups/count"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/users/{id}/groups/count"
+          q: {
+            "$action": "group_count"
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "groups"
+            }
+            {
+              lit: "count"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/users/count"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "email"
+                or: "email"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "email_verified"
+                or: "emailVerified"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "enabled"
+                or: "enabled"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                k: "query"
+                n: "first_name"
+                or: "firstName"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "last_name"
+                or: "lastName"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "q"
+                or: "q"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "username"
+                or: "username"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/users/count"
+          q: {
+            "$action": "count"
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              lit: "count"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /{realm}/users/{id}/consents/{client}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client"
+                or: "client"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/users/{id}/consents/{client}"
+          q: {
+            exist: [
+              "client"
+              "id"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "consents"
+            }
+            {
+              var: "client"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/users/{id}/credentials/{credentialId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "credential_id"
+                or: "credentialId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/users/{id}/credentials/{credentialId}"
+          q: {
+            exist: [
+              "credential_id"
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              credentialId: "credential_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "credentials"
+            }
+            {
+              var: "credential_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/users/{id}/groups/{groupId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "group_id"
+                or: "groupId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/users/{id}/groups/{groupId}"
+          q: {
+            exist: [
+              "group_id"
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              groupId: "group_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "groups"
+            }
+            {
+              var: "group_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/users/{id}/federated-identity/{provider}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "provider"
+                or: "provider"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/users/{id}/federated-identity/{provider}"
+          q: {
+            exist: [
+              "id"
+              "provider"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "federated-identity"
+            }
+            {
+              var: "provider"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/users/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/users/{id}"
+          q: {
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /{realm}/users/{id}/credentials/{credentialId}/userLabel"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "credential_id"
+                or: "credentialId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/users/{id}/credentials/{credentialId}/userLabel"
+          q: {
+            "$action": "user_label"
+            exist: [
+              "credential_id"
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              credentialId: "credential_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "credentials"
+            }
+            {
+              var: "credential_id"
+            }
+            {
+              lit: "userLabel"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "PUT /{realm}/users/{id}/groups/{groupId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "group_id"
+                or: "groupId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/users/{id}/groups/{groupId}"
+          q: {
+            exist: [
+              "group_id"
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              groupId: "group_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "groups"
+            }
+            {
+              var: "group_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "PUT /{realm}/users/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/users/{id}"
+          q: {
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "PUT /{realm}/users/{id}/disable-credential-types"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/users/{id}/disable-credential-types"
+          q: {
+            "$action": "disable_credential_type"
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "disable-credential-types"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "PUT /{realm}/users/{id}/execute-actions-email"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "client_id"
+                or: "client_id"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "lifespan"
+                or: "lifespan"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "redirect_uri"
+                or: "redirect_uri"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/users/{id}/execute-actions-email"
+          q: {
+            "$action": "execute_actions_email"
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "execute-actions-email"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "PUT /{realm}/users/{id}/reset-password"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/users/{id}/reset-password"
+          q: {
+            "$action": "reset_password"
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "reset-password"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "PUT /{realm}/users/{id}/reset-password-email"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "client_id"
+                or: "client_id"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "redirect_uri"
+                or: "redirect_uri"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/users/{id}/reset-password-email"
+          q: {
+            "$action": "reset_password_email"
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "reset-password-email"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "PUT /{realm}/users/{id}/send-verify-email"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "client_id"
+                or: "client_id"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "redirect_uri"
+                or: "redirect_uri"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/users/{id}/send-verify-email"
+          q: {
+            "$action": "send_verify_email"
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "send-verify-email"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.credential")]
+    [path("$.main.kit.entity.federated_identity")]
+    [path("$.main.kit.entity.group")]
+    [path("$.main.kit.entity.client") path("$.main.kit.entity.role")]
+    [path("$.main.kit.entity.credential")]
+  ]
+
+}

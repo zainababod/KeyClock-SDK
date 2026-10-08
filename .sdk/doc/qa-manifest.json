@@ -1,0 +1,15 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "Created",
+      "No Content",
+      "OK",
+      "This is a REST API reference for the Keycloak Admin REST API."
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "existing": {
+    "roles_by_id": {
+      "ROLES_BY_ID00": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s5e",
+        "description": "s5f",
+        "id": "ROLES_BY_ID00",
+        "name": "s61",
+        "scopeParamRequired": true,
+        "realm": "REALM01"
+      },
+      "ROLES_BY_ID01": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "sb8",
+        "description": "sb9",
+        "id": "ROLES_BY_ID01",
+        "name": "sbb",
+        "scopeParamRequired": true,
+        "realm": "REALM01"
+      },
+      "ROLES_BY_ID02": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s112",
+        "description": "s113",
+        "id": "ROLES_BY_ID02",
+        "name": "s115",
+        "scopeParamRequired": true,
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "roles_by_id": {
+      "roles_by_id_ref01": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s16c",
+        "description": "s16d",
+        "name": "s16f",
+        "scopeParamRequired": true
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/roles-by-id/{role-id}/composites": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/roles-by-id/{role-id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/roles-by-id/{role-id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/roles-by-id/{role-id}/composites": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/roles-by-id/{role-id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,987 @@
+# Entity: role
+
+main: kit: entity: role: {
+
+  alias: field: {}
+
+  fields: {
+    attributes: {
+      h: "Attributes"
+      n: "attributes"
+      r: false
+      t: "`$OBJECT`"
+    }
+    clientRole: {
+      h: "Client Role"
+      n: "clientRole"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    composite: {
+      h: "Composite"
+      n: "composite"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    composites: {
+      h: "Composites"
+      n: "composites"
+      r: false
+      t: "`$OBJECT`"
+    }
+    containerId: {
+      h: "Container Id"
+      n: "containerId"
+      r: false
+      t: "`$STRING`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    scopeParamRequired: {
+      h: "Scope Param Required"
+      n: "scopeParamRequired"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "role"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /{realm}/clients/{id}/roles/{role-name}/composites"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "role_name"
+                or: "role-name"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/clients/{id}/roles/{role-name}/composites"
+          q: {
+            "$action": "composite"
+            exist: [
+              "client_id"
+              "realm"
+              "role_name"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+              "role-name": "role_name"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "roles"
+            }
+            {
+              var: "role_name"
+            }
+            {
+              lit: "composites"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/clients/{id}/roles"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/clients/{id}/roles"
+          q: {
+            exist: [
+              "client_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "roles"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/roles/{role-name}/composites"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "role_name"
+                or: "role-name"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/roles/{role-name}/composites"
+          q: {
+            "$action": "composite"
+            exist: [
+              "realm"
+              "role_name"
+            ]
+          }
+          r: {
+            param: {
+              "role-name": "role_name"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "roles"
+            }
+            {
+              var: "role_name"
+            }
+            {
+              lit: "composites"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/roles"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/roles"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "roles"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/clients/{id}/roles"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "brief_representation"
+                or: "briefRepresentation"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "first"
+                or: "first"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "max"
+                or: "max"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/clients/{id}/roles"
+          q: {
+            exist: [
+              "client_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "roles"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/roles"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "brief_representation"
+                or: "briefRepresentation"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "first"
+                or: "first"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "max"
+                or: "max"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/roles"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "roles"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/clients/{id}/roles/{role-name}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id"
+                or: "role-name"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/clients/{id}/roles/{role-name}"
+          q: {
+            exist: [
+              "client_id"
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+              "role-name": "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "roles"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/roles/{role-name}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "role-name"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/roles/{role-name}"
+          q: {
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              "role-name": "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "roles"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /{realm}/clients/{id}/roles/{role-name}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id"
+                or: "role-name"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/clients/{id}/roles/{role-name}"
+          q: {
+            exist: [
+              "client_id"
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+              "role-name": "id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "roles"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/clients/{id}/roles/{role-name}/composites"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "role_name"
+                or: "role-name"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/clients/{id}/roles/{role-name}/composites"
+          q: {
+            "$action": "composite"
+            exist: [
+              "client_id"
+              "realm"
+              "role_name"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+              "role-name": "role_name"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "roles"
+            }
+            {
+              var: "role_name"
+            }
+            {
+              lit: "composites"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/roles/{role-name}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "role-name"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/roles/{role-name}"
+          q: {
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              "role-name": "id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "roles"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/roles/{role-name}/composites"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "role_name"
+                or: "role-name"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/roles/{role-name}/composites"
+          q: {
+            "$action": "composite"
+            exist: [
+              "realm"
+              "role_name"
+            ]
+          }
+          r: {
+            param: {
+              "role-name": "role_name"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "roles"
+            }
+            {
+              var: "role_name"
+            }
+            {
+              lit: "composites"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /{realm}/clients/{id}/roles/{role-name}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id"
+                or: "role-name"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/clients/{id}/roles/{role-name}"
+          q: {
+            exist: [
+              "client_id"
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+              "role-name": "id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "roles"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "PUT /{realm}/roles/{role-name}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "role-name"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/roles/{role-name}"
+          q: {
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              "role-name": "id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "roles"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.client")]
+    [path("$.main.kit.entity.client")]
+  ]
+
+}

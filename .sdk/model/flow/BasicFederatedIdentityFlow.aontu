@@ -1,0 +1,27 @@
+# BasicFederatedIdentityFlow
+
+main: kit: flow: BasicFederatedIdentityFlow:
+{
+  entity: "federated_identity",
+  kind: "basic",
+  name: "BasicFederatedIdentityFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01",
+        user_id: "user01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "federated_identity_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicFederatedIdentityFlow"
+}

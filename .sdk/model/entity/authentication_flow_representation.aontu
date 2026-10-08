@@ -1,0 +1,172 @@
+# Entity: authentication_flow_representation
+
+main: kit: entity: authentication_flow_representation: {
+
+  alias: field: {}
+
+  fields: {
+    alias: {
+      h: "Alias"
+      n: "alias"
+      r: false
+      t: "`$STRING`"
+    }
+    authenticationExecutions: {
+      h: "Authentication Executions"
+      n: "authenticationExecutions"
+      r: false
+      t: "`$ARRAY`"
+    }
+    builtIn: {
+      h: "Built In"
+      n: "builtIn"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    providerId: {
+      h: "Provider Id"
+      n: "providerId"
+      r: false
+      t: "`$STRING`"
+    }
+    topLevel: {
+      h: "Top Level"
+      n: "topLevel"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "authentication_flow_representation"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/authentication/flows"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/authentication/flows"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "flows"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/authentication/flows/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/authentication/flows/{id}"
+          q: {
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "flows"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,325 @@
+# Entity: role_mapper
+
+main: kit: entity: role_mapper: {
+
+  alias: field: {}
+
+  fields: {
+    attributes: {
+      h: "Attributes"
+      n: "attributes"
+      r: false
+      t: "`$OBJECT`"
+    }
+    clientRole: {
+      h: "Client Role"
+      n: "clientRole"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    composite: {
+      h: "Composite"
+      n: "composite"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    composites: {
+      h: "Composites"
+      n: "composites"
+      r: false
+      t: "`$OBJECT`"
+    }
+    containerId: {
+      h: "Container Id"
+      n: "containerId"
+      r: false
+      t: "`$STRING`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    scopeParamRequired: {
+      h: "Scope Param Required"
+      n: "scopeParamRequired"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "role_mapper"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /{realm}/groups/{id}/role-mappings/realm"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "group_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/groups/{id}/role-mappings/realm"
+          q: {
+            exist: [
+              "group_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "group_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "groups"
+            }
+            {
+              var: "group_id"
+            }
+            {
+              lit: "role-mappings"
+            }
+            {
+              lit: "realm"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/users/{id}/role-mappings/realm"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "user_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/users/{id}/role-mappings/realm"
+          q: {
+            exist: [
+              "realm"
+              "user_id"
+            ]
+          }
+          r: {
+            param: {
+              id: "user_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "user_id"
+            }
+            {
+              lit: "role-mappings"
+            }
+            {
+              lit: "realm"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /{realm}/groups/{id}/role-mappings/realm"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "group_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/groups/{id}/role-mappings/realm"
+          q: {
+            exist: [
+              "group_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "group_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "groups"
+            }
+            {
+              var: "group_id"
+            }
+            {
+              lit: "role-mappings"
+            }
+            {
+              lit: "realm"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/users/{id}/role-mappings/realm"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "user_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/users/{id}/role-mappings/realm"
+          q: {
+            exist: [
+              "realm"
+              "user_id"
+            ]
+          }
+          r: {
+            param: {
+              id: "user_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "user_id"
+            }
+            {
+              lit: "role-mappings"
+            }
+            {
+              lit: "realm"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.group")]
+    [path("$.main.kit.entity.user")]
+  ]
+
+}

@@ -1,0 +1,50 @@
+{
+  "existing": {
+    "authenticator_config_info_representation": {
+      "AUTHENTICATOR_CONFIG_INFO_REPRESENTATION00": {
+        "helpText": "s28",
+        "name": "s29",
+        "properties": [],
+        "providerId": "s2b",
+        "provider_id": "PROVIDER01",
+        "realm": "REALM01",
+        "id": "AUTHENTICATOR_CONFIG_INFO_REPRESENTATION00"
+      },
+      "AUTHENTICATOR_CONFIG_INFO_REPRESENTATION01": {
+        "helpText": "s50",
+        "name": "s51",
+        "properties": [],
+        "providerId": "s53",
+        "provider_id": "PROVIDER01",
+        "realm": "REALM01",
+        "id": "AUTHENTICATOR_CONFIG_INFO_REPRESENTATION01"
+      },
+      "AUTHENTICATOR_CONFIG_INFO_REPRESENTATION02": {
+        "helpText": "s78",
+        "name": "s79",
+        "properties": [],
+        "providerId": "s7b",
+        "provider_id": "PROVIDER01",
+        "realm": "REALM01",
+        "id": "AUTHENTICATOR_CONFIG_INFO_REPRESENTATION02"
+      }
+    }
+  },
+  "new": {
+    "authenticator_config_info_representation": {
+      "authenticator_config_info_representation_ref01": {
+        "helpText": "sa0",
+        "name": "sa1",
+        "properties": [],
+        "providerId": "sa3"
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/authentication/config-description/{providerId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

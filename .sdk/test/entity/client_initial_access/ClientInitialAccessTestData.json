@@ -1,0 +1,30 @@
+{
+  "existing": {
+    "client_initial_access": {
+      "CLIENT_INITIAL_ACCESS00": {
+        "id": "CLIENT_INITIAL_ACCESS00",
+        "realm": "REALM01"
+      },
+      "CLIENT_INITIAL_ACCESS01": {
+        "id": "CLIENT_INITIAL_ACCESS01",
+        "realm": "REALM01"
+      },
+      "CLIENT_INITIAL_ACCESS02": {
+        "id": "CLIENT_INITIAL_ACCESS02",
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "client_initial_access": {
+      "client_initial_access_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /{realm}/clients-initial-access/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# BasicAdminEventFlow
+
+main: kit: flow: BasicAdminEventFlow:
+{
+  entity: "admin_event",
+  kind: "basic",
+  name: "BasicAdminEventFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "admin_event_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAdminEventFlow"
+}

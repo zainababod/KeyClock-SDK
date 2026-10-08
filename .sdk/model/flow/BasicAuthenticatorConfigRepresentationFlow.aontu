@@ -1,0 +1,33 @@
+# BasicAuthenticatorConfigRepresentationFlow
+
+main: kit: flow: BasicAuthenticatorConfigRepresentationFlow:
+{
+  entity: "authenticator_config_representation",
+  kind: "basic",
+  name: "BasicAuthenticatorConfigRepresentationFlow",
+  step: [
+    {
+      i: {
+        ref: "authenticator_config_representation_ref01",
+        srcdatavar: "authenticator_config_representation_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "authenticator_config_representation01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-authenticator_config_representation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAuthenticatorConfigRepresentationFlow"
+}

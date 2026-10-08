@@ -1,0 +1,86 @@
+{
+  "existing": {
+    "client_scope": {
+      "CLIENT_SCOPE00": {
+        "attributes": {},
+        "description": "s3d",
+        "id": "CLIENT_SCOPE00",
+        "name": "s3f",
+        "protocol": "s40",
+        "protocolMappers": [],
+        "realm": "REALM01"
+      },
+      "CLIENT_SCOPE01": {
+        "attributes": {},
+        "description": "s79",
+        "id": "CLIENT_SCOPE01",
+        "name": "s7b",
+        "protocol": "s7c",
+        "protocolMappers": [],
+        "realm": "REALM01"
+      },
+      "CLIENT_SCOPE02": {
+        "attributes": {},
+        "description": "sb5",
+        "id": "CLIENT_SCOPE02",
+        "name": "sb7",
+        "protocol": "sb8",
+        "protocolMappers": [],
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "client_scope": {
+      "client_scope_ref01": {
+        "attributes": {},
+        "description": "sf1",
+        "name": "sf3",
+        "protocol": "sf4",
+        "protocolMappers": []
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/client-scopes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/client-templates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-scopes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-scopes/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/client-scopes/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/client-templates/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/client-scopes/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/client-templates/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "existing": {
+    "user_session": {
+      "USER_SESSION00": {
+        "clients": {},
+        "id": "USER_SESSION00",
+        "ipAddress": "s52",
+        "lastAccess": 83,
+        "rememberMe": true,
+        "start": 85,
+        "userId": "s56",
+        "username": "s57",
+        "client_id": "CLIENT01",
+        "realm": "REALM01"
+      },
+      "USER_SESSION01": {
+        "clients": {},
+        "id": "USER_SESSION01",
+        "ipAddress": "sa2",
+        "lastAccess": 163,
+        "rememberMe": true,
+        "start": 165,
+        "userId": "sa6",
+        "username": "sa7",
+        "client_id": "CLIENT01",
+        "realm": "REALM01"
+      },
+      "USER_SESSION02": {
+        "clients": {},
+        "id": "USER_SESSION02",
+        "ipAddress": "sf2",
+        "lastAccess": 243,
+        "rememberMe": true,
+        "start": 245,
+        "userId": "sf6",
+        "username": "sf7",
+        "client_id": "CLIENT01",
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "user_session": {
+      "user_session_ref01": {
+        "clients": {},
+        "ipAddress": "s142",
+        "lastAccess": 323,
+        "rememberMe": true,
+        "start": 325,
+        "userId": "s146",
+        "username": "s147"
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/clients/{id}/user-sessions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

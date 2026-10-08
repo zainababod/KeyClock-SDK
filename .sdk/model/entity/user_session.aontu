@@ -1,0 +1,155 @@
+# Entity: user_session
+
+main: kit: entity: user_session: {
+
+  alias: field: {}
+
+  fields: {
+    clients: {
+      h: "Clients"
+      n: "clients"
+      r: false
+      t: "`$OBJECT`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    ipAddress: {
+      h: "Ip Address"
+      n: "ipAddress"
+      r: false
+      t: "`$STRING`"
+    }
+    lastAccess: {
+      fo: "int64"
+      h: "Last Access"
+      n: "lastAccess"
+      r: false
+      t: "`$INTEGER`"
+    }
+    rememberMe: {
+      h: "Remember Me"
+      n: "rememberMe"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    start: {
+      fo: "int64"
+      h: "Start"
+      n: "start"
+      r: false
+      t: "`$INTEGER`"
+    }
+    userId: {
+      h: "User Id"
+      n: "userId"
+      r: false
+      t: "`$STRING`"
+    }
+    username: {
+      h: "Username"
+      n: "username"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "user_session"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/clients/{id}/user-sessions"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "first"
+                or: "first"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "max"
+                or: "max"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/clients/{id}/user-sessions"
+          q: {
+            exist: [
+              "client_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "user-sessions"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.client")]
+  ]
+
+}

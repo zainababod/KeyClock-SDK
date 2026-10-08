@@ -1,0 +1,1530 @@
+# Entity: authentication_management
+
+main: kit: entity: authentication_management: {
+
+  alias: field: {}
+
+  fields: {
+    alias: {
+      h: "Alias"
+      n: "alias"
+      r: false
+      t: "`$STRING`"
+    }
+    authenticationConfig: {
+      h: "Authentication Config"
+      n: "authenticationConfig"
+      r: false
+      t: "`$STRING`"
+    }
+    authenticationExecutions: {
+      h: "Authentication Executions"
+      n: "authenticationExecutions"
+      r: false
+      t: "`$ARRAY`"
+    }
+    authenticationFlow: {
+      h: "Authentication Flow"
+      n: "authenticationFlow"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    authenticator: {
+      h: "Authenticator"
+      n: "authenticator"
+      r: false
+      t: "`$STRING`"
+    }
+    authenticatorConfig: {
+      h: "Authenticator Config"
+      n: "authenticatorConfig"
+      r: false
+      t: "`$STRING`"
+    }
+    authenticatorFlow: {
+      h: "Authenticator Flow"
+      n: "authenticatorFlow"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    autheticatorFlow: {
+      h: "Autheticator Flow"
+      n: "autheticatorFlow"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    builtIn: {
+      h: "Built In"
+      n: "builtIn"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    config: {
+      h: "Config"
+      n: "config"
+      r: false
+      t: "`$OBJECT`"
+    }
+    configurable: {
+      h: "Configurable"
+      n: "configurable"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    defaultAction: {
+      h: "Default Action"
+      n: "defaultAction"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    defaultValue: {
+      h: "Default Value"
+      n: "defaultValue"
+      r: false
+      t: "`$ANY`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    displayName: {
+      h: "Display Name"
+      n: "displayName"
+      r: false
+      t: "`$STRING`"
+    }
+    enabled: {
+      h: "Enabled"
+      n: "enabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    flowId: {
+      h: "Flow Id"
+      n: "flowId"
+      r: false
+      t: "`$STRING`"
+    }
+    helpText: {
+      h: "Help Text"
+      n: "helpText"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    index: {
+      fo: "int32"
+      h: "Index"
+      n: "index"
+      r: false
+      t: "`$INTEGER`"
+    }
+    label: {
+      h: "Label"
+      n: "label"
+      r: false
+      t: "`$STRING`"
+    }
+    level: {
+      fo: "int32"
+      h: "Level"
+      n: "level"
+      r: false
+      t: "`$INTEGER`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    options: {
+      h: "Options"
+      n: "options"
+      r: false
+      t: "`$ARRAY`"
+    }
+    parentFlow: {
+      h: "Parent Flow"
+      n: "parentFlow"
+      r: false
+      t: "`$STRING`"
+    }
+    priority: {
+      fo: "int32"
+      h: "Priority"
+      n: "priority"
+      r: false
+      t: "`$INTEGER`"
+    }
+    providerId: {
+      h: "Provider Id"
+      n: "providerId"
+      r: false
+      t: "`$STRING`"
+    }
+    readOnly: {
+      h: "Read Only"
+      n: "readOnly"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    required: {
+      h: "Required"
+      n: "required"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    requirement: {
+      h: "Requirement"
+      n: "requirement"
+      r: false
+      t: "`$STRING`"
+    }
+    requirementChoices: {
+      h: "Requirement Choices"
+      n: "requirementChoices"
+      r: false
+      t: "`$ARRAY`"
+    }
+    secret: {
+      h: "Secret"
+      n: "secret"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    topLevel: {
+      h: "Top Level"
+      n: "topLevel"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "authentication_management"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /{realm}/authentication/executions/{executionId}/config"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "execution_id"
+                or: "executionId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/authentication/executions/{executionId}/config"
+          q: {
+            exist: [
+              "execution_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              executionId: "execution_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "executions"
+            }
+            {
+              var: "execution_id"
+            }
+            {
+              lit: "config"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/authentication/executions/{executionId}/lower-priority"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "execution_id"
+                or: "executionId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/authentication/executions/{executionId}/lower-priority"
+          q: {
+            "$action": "lower_priority"
+            exist: [
+              "execution_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              executionId: "execution_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "executions"
+            }
+            {
+              var: "execution_id"
+            }
+            {
+              lit: "lower-priority"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/authentication/executions/{executionId}/raise-priority"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "execution_id"
+                or: "executionId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/authentication/executions/{executionId}/raise-priority"
+          q: {
+            "$action": "raise_priority"
+            exist: [
+              "execution_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              executionId: "execution_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "executions"
+            }
+            {
+              var: "execution_id"
+            }
+            {
+              lit: "raise-priority"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/authentication/flows/{flowAlias}/executions/execution"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "flow_alia"
+                or: "flowAlias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/authentication/flows/{flowAlias}/executions/execution"
+          q: {
+            exist: [
+              "flow_alia"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              flowAlias: "flow_alia"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "flows"
+            }
+            {
+              var: "flow_alia"
+            }
+            {
+              lit: "executions"
+            }
+            {
+              lit: "execution"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/authentication/flows/{flowAlias}/executions/flow"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "flow_alia"
+                or: "flowAlias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/authentication/flows/{flowAlias}/executions/flow"
+          q: {
+            exist: [
+              "flow_alia"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              flowAlias: "flow_alia"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "flows"
+            }
+            {
+              var: "flow_alia"
+            }
+            {
+              lit: "executions"
+            }
+            {
+              lit: "flow"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/authentication/config"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/authentication/config"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "config"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/authentication/executions"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/authentication/executions"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "executions"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/authentication/flows"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/authentication/flows"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "flows"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/authentication/register-required-action"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/authentication/register-required-action"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "register-required-action"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/authentication/authenticator-providers"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/authentication/authenticator-providers"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "authenticator-providers"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/authentication/client-authenticator-providers"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/authentication/client-authenticator-providers"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "client-authenticator-providers"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/authentication/form-action-providers"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/authentication/form-action-providers"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "form-action-providers"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/authentication/form-providers"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/authentication/form-providers"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "form-providers"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/authentication/unregistered-required-actions"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/authentication/unregistered-required-actions"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "unregistered-required-actions"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/authentication/executions/{executionId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "execution_id"
+                or: "executionId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/authentication/executions/{executionId}"
+          q: {
+            exist: [
+              "execution_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              executionId: "execution_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "executions"
+            }
+            {
+              var: "execution_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/authentication/flows/{flowAlias}/executions"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "flow_alia"
+                or: "flowAlias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/authentication/flows/{flowAlias}/executions"
+          q: {
+            exist: [
+              "flow_alia"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              flowAlias: "flow_alia"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "flows"
+            }
+            {
+              var: "flow_alia"
+            }
+            {
+              lit: "executions"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/authentication/per-client-config-description"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/authentication/per-client-config-description"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "per-client-config-description"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /{realm}/authentication/required-actions/{alias}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "alia"
+                or: "alias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/authentication/required-actions/{alias}"
+          q: {
+            exist: [
+              "alia"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              alias: "alia"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "required-actions"
+            }
+            {
+              var: "alia"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/authentication/executions/{executionId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "execution_id"
+                or: "executionId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/authentication/executions/{executionId}"
+          q: {
+            exist: [
+              "execution_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              executionId: "execution_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "executions"
+            }
+            {
+              var: "execution_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/authentication/config/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/authentication/config/{id}"
+          q: {
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "config"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/authentication/flows/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/authentication/flows/{id}"
+          q: {
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "flows"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /{realm}/authentication/required-actions/{alias}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "alia"
+                or: "alias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/authentication/required-actions/{alias}"
+          q: {
+            exist: [
+              "alia"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              alias: "alia"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "required-actions"
+            }
+            {
+              var: "alia"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "PUT /{realm}/authentication/flows/{flowAlias}/executions"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "flow_alia"
+                or: "flowAlias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/authentication/flows/{flowAlias}/executions"
+          q: {
+            exist: [
+              "flow_alia"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              flowAlias: "flow_alia"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "flows"
+            }
+            {
+              var: "flow_alia"
+            }
+            {
+              lit: "executions"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "PUT /{realm}/authentication/config/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/authentication/config/{id}"
+          q: {
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "config"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "PUT /{realm}/authentication/flows/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/authentication/flows/{id}"
+          q: {
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "flows"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.flow")]
+    [path("$.main.kit.entity.required_action")]
+  ]
+
+}

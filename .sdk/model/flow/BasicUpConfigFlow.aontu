@@ -1,0 +1,44 @@
+# BasicUpConfigFlow
+
+main: kit: flow: BasicUpConfigFlow:
+{
+  entity: "up_config",
+  kind: "basic",
+  name: "BasicUpConfigFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "up_config_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "up_config_ref01",
+        srcdatavar: "up_config_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-up_config_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicUpConfigFlow"
+}

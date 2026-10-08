@@ -1,0 +1,113 @@
+{
+  "existing": {
+    "management_permission_reference": {
+      "MANAGEMENT_PERMISSION_REFERENCE00": {
+        "enabled": true,
+        "resource": "s1f",
+        "scopePermissions": {},
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "role_name": "ROLE_NAME01",
+        "group_id": "GROUP01",
+        "instance_id": "INSTANCE01",
+        "roles_by_id_id": "ROLES_BY_ID01",
+        "id": "MANAGEMENT_PERMISSION_REFERENCE00"
+      },
+      "MANAGEMENT_PERMISSION_REFERENCE01": {
+        "enabled": true,
+        "resource": "s3d",
+        "scopePermissions": {},
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "role_name": "ROLE_NAME01",
+        "group_id": "GROUP01",
+        "instance_id": "INSTANCE01",
+        "roles_by_id_id": "ROLES_BY_ID01",
+        "id": "MANAGEMENT_PERMISSION_REFERENCE01"
+      },
+      "MANAGEMENT_PERMISSION_REFERENCE02": {
+        "enabled": true,
+        "resource": "s5b",
+        "scopePermissions": {},
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "role_name": "ROLE_NAME01",
+        "group_id": "GROUP01",
+        "instance_id": "INSTANCE01",
+        "roles_by_id_id": "ROLES_BY_ID01",
+        "id": "MANAGEMENT_PERMISSION_REFERENCE02"
+      }
+    }
+  },
+  "new": {
+    "management_permission_reference": {
+      "management_permission_reference_ref01": {
+        "enabled": true,
+        "resource": "s79",
+        "scopePermissions": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/clients/{id}/roles/{role-name}/management/permissions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/management/permissions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/groups/{id}/management/permissions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/identity-provider/instances/{alias}/management/permissions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/roles/{role-name}/management/permissions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/roles-by-id/{role-id}/management/permissions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/clients/{id}/roles/{role-name}/management/permissions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/clients/{id}/management/permissions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/groups/{id}/management/permissions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/identity-provider/instances/{alias}/management/permissions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/roles/{role-name}/management/permissions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/roles-by-id/{role-id}/management/permissions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

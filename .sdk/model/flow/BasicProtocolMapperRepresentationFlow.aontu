@@ -1,0 +1,51 @@
+# BasicProtocolMapperRepresentationFlow
+
+main: kit: flow: BasicProtocolMapperRepresentationFlow:
+{
+  entity: "protocol_mapper_representation",
+  kind: "basic",
+  name: "BasicProtocolMapperRepresentationFlow",
+  step: [
+    {
+      m: {
+        client_template_id: "client_template01",
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "protocol_mapper_representation_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "protocol_mapper_representation_ref01",
+        srcdatavar: "protocol_mapper_representation_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        client_template_id: "client_template01",
+        id: "protocol_mapper_representation01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-protocol_mapper_representation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicProtocolMapperRepresentationFlow"
+}

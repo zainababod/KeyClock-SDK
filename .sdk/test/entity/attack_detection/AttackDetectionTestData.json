@@ -1,0 +1,43 @@
+{
+  "existing": {
+    "attack_detection": {
+      "ATTACK_DETECTION00": {
+        "realm": "REALM01",
+        "user_id": "USER01",
+        "id": "ATTACK_DETECTION00"
+      },
+      "ATTACK_DETECTION01": {
+        "realm": "REALM01",
+        "user_id": "USER01",
+        "id": "ATTACK_DETECTION01"
+      },
+      "ATTACK_DETECTION02": {
+        "realm": "REALM01",
+        "user_id": "USER01",
+        "id": "ATTACK_DETECTION02"
+      }
+    }
+  },
+  "new": {
+    "attack_detection": {
+      "attack_detection_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /{realm}/attack-detection/brute-force/users/{userId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/attack-detection/brute-force/users/{userId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/attack-detection/brute-force/users": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

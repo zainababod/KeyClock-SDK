@@ -1,0 +1,119 @@
+# BasicUserFlow
+
+main: kit: flow: BasicUserFlow:
+{
+  entity: "user",
+  kind: "basic",
+  name: "BasicUserFlow",
+  step: [
+    {
+      i: {
+        ref: "user_ref01"
+      }
+
+      m: {
+        client_id: "client01",
+        realm: "realm01",
+        role_name: "role_name01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "user_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      d: {
+        realm: "realm01"
+      }
+
+      i: {
+        ref: "user_ref01",
+        srcdatavar: "user_ref01_data",
+        suffix: "_up0",
+        textfield: "email"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-user_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "user_ref01",
+        srcdatavar: "user_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "user01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-user_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "user_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "user01",
+        realm: "realm01"
+      }
+
+      o: "remove"
+    }
+
+    {
+      i: {
+        suffix: "_rt0"
+      }
+
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemNotExists",
+          def: {
+            ref: "user_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicUserFlow"
+}

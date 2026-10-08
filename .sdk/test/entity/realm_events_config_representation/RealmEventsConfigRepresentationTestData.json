@@ -1,0 +1,52 @@
+{
+  "existing": {
+    "realm_events_config_representation": {
+      "REALM_EVENTS_CONFIG_REPRESENTATION00": {
+        "adminEventsDetailsEnabled": true,
+        "adminEventsEnabled": false,
+        "enabledEventTypes": [],
+        "eventsEnabled": false,
+        "eventsExpiration": 64,
+        "eventsListeners": [],
+        "realm": "REALM01"
+      },
+      "REALM_EVENTS_CONFIG_REPRESENTATION01": {
+        "adminEventsDetailsEnabled": true,
+        "adminEventsEnabled": false,
+        "enabledEventTypes": [],
+        "eventsEnabled": false,
+        "eventsExpiration": 124,
+        "eventsListeners": [],
+        "realm": "REALM01"
+      },
+      "REALM_EVENTS_CONFIG_REPRESENTATION02": {
+        "adminEventsDetailsEnabled": true,
+        "adminEventsEnabled": false,
+        "enabledEventTypes": [],
+        "eventsEnabled": false,
+        "eventsExpiration": 184,
+        "eventsListeners": [],
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "realm_events_config_representation": {
+      "realm_events_config_representation_ref01": {
+        "adminEventsDetailsEnabled": true,
+        "adminEventsEnabled": false,
+        "enabledEventTypes": [],
+        "eventsEnabled": false,
+        "eventsExpiration": 244,
+        "eventsListeners": []
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/events/config": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

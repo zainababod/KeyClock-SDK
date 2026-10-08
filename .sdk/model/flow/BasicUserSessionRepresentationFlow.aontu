@@ -1,0 +1,50 @@
+# BasicUserSessionRepresentationFlow
+
+main: kit: flow: BasicUserSessionRepresentationFlow:
+{
+  entity: "user_session_representation",
+  kind: "basic",
+  name: "BasicUserSessionRepresentationFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "user_session_representation_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "user_session_representation_ref01",
+        srcdatavar: "user_session_representation_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "user_session_representation01",
+        realm: "realm01",
+        user_id: "user01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-user_session_representation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicUserSessionRepresentationFlow"
+}

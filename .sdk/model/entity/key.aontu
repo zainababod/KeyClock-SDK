@@ -1,0 +1,124 @@
+# Entity: key
+
+main: kit: entity: key: {
+
+  alias: field: {}
+
+  fields: {
+    algorithm: {
+      h: "Algorithm"
+      n: "algorithm"
+      r: false
+      t: "`$STRING`"
+    }
+    certificate: {
+      h: "Certificate"
+      n: "certificate"
+      r: false
+      t: "`$STRING`"
+    }
+    kid: {
+      h: "Kid"
+      n: "kid"
+      r: false
+      t: "`$STRING`"
+    }
+    providerId: {
+      h: "Provider Id"
+      n: "providerId"
+      r: false
+      t: "`$STRING`"
+    }
+    providerPriority: {
+      fo: "int64"
+      h: "Provider Priority"
+      n: "providerPriority"
+      r: false
+      t: "`$INTEGER`"
+    }
+    publicKey: {
+      h: "Public Key"
+      n: "publicKey"
+      r: false
+      t: "`$STRING`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: false
+      t: "`$STRING`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: false
+      t: "`$STRING`"
+    }
+    use: {
+      h: "Use"
+      n: "use"
+      r: false
+      t: "`$OBJECT`"
+    }
+    validTo: {
+      fo: "int64"
+      h: "Valid To"
+      n: "validTo"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "key"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/keys"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/keys"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "keys"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.keys`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

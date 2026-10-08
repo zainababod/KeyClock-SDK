@@ -1,0 +1,117 @@
+# BasicAuthenticationManagementFlow
+
+main: kit: flow: BasicAuthenticationManagementFlow:
+{
+  entity: "authentication_management",
+  kind: "basic",
+  name: "BasicAuthenticationManagementFlow",
+  step: [
+    {
+      i: {
+        ref: "authentication_management_ref01"
+      }
+
+      m: {
+        realm: "realm01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "authentication_management_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      d: {
+        realm: "realm01"
+      }
+
+      i: {
+        ref: "authentication_management_ref01",
+        srcdatavar: "authentication_management_ref01_data",
+        suffix: "_up0",
+        textfield: "alias"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-authentication_management_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "authentication_management_ref01",
+        srcdatavar: "authentication_management_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "authentication_management01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-authentication_management_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "authentication_management_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "authentication_management01",
+        realm: "realm01"
+      }
+
+      o: "remove"
+    }
+
+    {
+      i: {
+        suffix: "_rt0"
+      }
+
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemNotExists",
+          def: {
+            ref: "authentication_management_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAuthenticationManagementFlow"
+}

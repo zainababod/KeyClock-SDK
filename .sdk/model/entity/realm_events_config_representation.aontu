@@ -1,0 +1,102 @@
+# Entity: realm_events_config_representation
+
+main: kit: entity: realm_events_config_representation: {
+
+  alias: field: {}
+
+  fields: {
+    adminEventsDetailsEnabled: {
+      h: "Admin Events Details Enabled"
+      n: "adminEventsDetailsEnabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    adminEventsEnabled: {
+      h: "Admin Events Enabled"
+      n: "adminEventsEnabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    enabledEventTypes: {
+      h: "Enabled Event Types"
+      n: "enabledEventTypes"
+      r: false
+      t: "`$ARRAY`"
+    }
+    eventsEnabled: {
+      h: "Events Enabled"
+      n: "eventsEnabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    eventsExpiration: {
+      fo: "int64"
+      h: "Events Expiration"
+      n: "eventsExpiration"
+      r: false
+      t: "`$INTEGER`"
+    }
+    eventsListeners: {
+      h: "Events Listeners"
+      n: "eventsListeners"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "realm_events_config_representation"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/events/config"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/events/config"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "events"
+            }
+            {
+              lit: "config"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

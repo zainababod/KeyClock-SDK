@@ -1,0 +1,43 @@
+{
+  "existing": {
+    "federated_identity": {
+      "FEDERATED_IDENTITY00": {
+        "identityProvider": "s1e",
+        "userId": "s1f",
+        "userName": "s20",
+        "realm": "REALM01",
+        "user_id": "USER01"
+      },
+      "FEDERATED_IDENTITY01": {
+        "identityProvider": "s3c",
+        "userId": "s3d",
+        "userName": "s3e",
+        "realm": "REALM01",
+        "user_id": "USER01"
+      },
+      "FEDERATED_IDENTITY02": {
+        "identityProvider": "s5a",
+        "userId": "s5b",
+        "userName": "s5c",
+        "realm": "REALM01",
+        "user_id": "USER01"
+      }
+    }
+  },
+  "new": {
+    "federated_identity": {
+      "federated_identity_ref01": {
+        "identityProvider": "s78",
+        "userId": "s79",
+        "userName": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/users/{id}/federated-identity": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

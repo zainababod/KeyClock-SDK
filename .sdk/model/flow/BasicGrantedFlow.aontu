@@ -1,0 +1,28 @@
+# BasicGrantedFlow
+
+main: kit: flow: BasicGrantedFlow:
+{
+  entity: "granted",
+  kind: "basic",
+  name: "BasicGrantedFlow",
+  step: [
+    {
+      m: {
+        client_id: "client01",
+        realm: "realm01",
+        scope_mapping_id: "scope_mapping01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "granted_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicGrantedFlow"
+}

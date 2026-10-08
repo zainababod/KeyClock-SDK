@@ -1,0 +1,118 @@
+# BasicClientScopeFlow
+
+main: kit: flow: BasicClientScopeFlow:
+{
+  entity: "client_scope",
+  kind: "basic",
+  name: "BasicClientScopeFlow",
+  step: [
+    {
+      i: {
+        ref: "client_scope_ref01"
+      }
+
+      m: {
+        realm: "realm01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "client_scope_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      d: {
+        realm: "realm01"
+      }
+
+      i: {
+        ref: "client_scope_ref01",
+        srcdatavar: "client_scope_ref01_data",
+        suffix: "_up0",
+        textfield: "description"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-client_scope_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "client_scope_ref01",
+        srcdatavar: "client_scope_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "client_scope01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-client_scope_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "client_scope_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "client_scope01",
+        realm: "realm01"
+      }
+
+      o: "remove"
+    }
+
+    {
+      i: {
+        suffix: "_rt0"
+      }
+
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemNotExists",
+          def: {
+            ref: "client_scope_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicClientScopeFlow"
+}

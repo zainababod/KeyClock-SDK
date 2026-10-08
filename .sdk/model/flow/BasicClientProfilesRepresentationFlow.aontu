@@ -1,0 +1,26 @@
+# BasicClientProfilesRepresentationFlow
+
+main: kit: flow: BasicClientProfilesRepresentationFlow:
+{
+  entity: "client_profiles_representation",
+  kind: "basic",
+  name: "BasicClientProfilesRepresentationFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "client_profiles_representation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicClientProfilesRepresentationFlow"
+}

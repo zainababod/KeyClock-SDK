@@ -1,0 +1,47 @@
+{
+  "existing": {
+    "authenticator_config_representation": {
+      "AUTHENTICATOR_CONFIG_REPRESENTATION00": {
+        "alias": "s1e",
+        "config": {},
+        "id": "AUTHENTICATOR_CONFIG_REPRESENTATION00",
+        "execution_id": "EXECUTION01",
+        "realm": "REALM01"
+      },
+      "AUTHENTICATOR_CONFIG_REPRESENTATION01": {
+        "alias": "s3c",
+        "config": {},
+        "id": "AUTHENTICATOR_CONFIG_REPRESENTATION01",
+        "execution_id": "EXECUTION01",
+        "realm": "REALM01"
+      },
+      "AUTHENTICATOR_CONFIG_REPRESENTATION02": {
+        "alias": "s5a",
+        "config": {},
+        "id": "AUTHENTICATOR_CONFIG_REPRESENTATION02",
+        "execution_id": "EXECUTION01",
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "authenticator_config_representation": {
+      "authenticator_config_representation_ref01": {
+        "alias": "s78",
+        "config": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/authentication/executions/{executionId}/config/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/authentication/config/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

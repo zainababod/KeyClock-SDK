@@ -1,0 +1,86 @@
+# Entity: client_profiles_representation
+
+main: kit: entity: client_profiles_representation: {
+
+  alias: field: {}
+
+  fields: {
+    globalProfiles: {
+      h: "Global Profiles"
+      n: "globalProfiles"
+      r: false
+      t: "`$ARRAY`"
+    }
+    profiles: {
+      h: "Profiles"
+      n: "profiles"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "client_profiles_representation"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/client-policies/profiles"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "include_global_profile"
+                or: "include-global-profiles"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/client-policies/profiles"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-policies"
+            }
+            {
+              lit: "profiles"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

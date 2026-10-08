@@ -1,0 +1,124 @@
+# BasicClientFlow
+
+main: kit: flow: BasicClientFlow:
+{
+  entity: "client",
+  kind: "basic",
+  name: "BasicClientFlow",
+  step: [
+    {
+      i: {
+        ref: "client_ref01"
+      }
+
+      m: {
+        client_scope_id: "client_scope01",
+        client_template_id: "client_template01",
+        group_id: "group01",
+        realm: "realm01",
+        role_name: "role_name01",
+        roles_by_id_id: "roles_by_id01",
+        user_id: "user01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "client_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      d: {
+        realm: "realm01"
+      }
+
+      i: {
+        ref: "client_ref01",
+        srcdatavar: "client_ref01_data",
+        suffix: "_up0",
+        textfield: "adminUrl"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-client_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "client_ref01",
+        srcdatavar: "client_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "client01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-client_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "client_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "client01",
+        realm: "realm01"
+      }
+
+      o: "remove"
+    }
+
+    {
+      i: {
+        suffix: "_rt0"
+      }
+
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemNotExists",
+          def: {
+            ref: "client_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicClientFlow"
+}

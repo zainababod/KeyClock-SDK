@@ -1,0 +1,27 @@
+# BasicUserSessionFlow
+
+main: kit: flow: BasicUserSessionFlow:
+{
+  entity: "user_session",
+  kind: "basic",
+  name: "BasicUserSessionFlow",
+  step: [
+    {
+      m: {
+        client_id: "client01",
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "user_session_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicUserSessionFlow"
+}

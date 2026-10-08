@@ -1,0 +1,75 @@
+{
+  "existing": {
+    "component": {
+      "COMPONENT00": {
+        "config": {},
+        "id": "COMPONENT00",
+        "name": "s48",
+        "parentId": "s49",
+        "providerId": "s4a",
+        "providerType": "s4b",
+        "subType": "s4c",
+        "realm": "REALM01"
+      },
+      "COMPONENT01": {
+        "config": {},
+        "id": "COMPONENT01",
+        "name": "s8e",
+        "parentId": "s8f",
+        "providerId": "s90",
+        "providerType": "s91",
+        "subType": "s92",
+        "realm": "REALM01"
+      },
+      "COMPONENT02": {
+        "config": {},
+        "id": "COMPONENT02",
+        "name": "sd4",
+        "parentId": "sd5",
+        "providerId": "sd6",
+        "providerType": "sd7",
+        "subType": "sd8",
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "component": {
+      "component_ref01": {
+        "config": {},
+        "name": "s11a",
+        "parentId": "s11b",
+        "providerId": "s11c",
+        "providerType": "s11d",
+        "subType": "s11e"
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/components": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/components": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/components/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/components/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/components/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,1228 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 60
+  metrics: count: path: 208
+  metrics: count: method: 316
+
+  entity: access_token: {
+    path: "/{realm}/clients/{id}/evaluate-scopes/generate-example-access-token": {
+      rename: param: "id": *"client_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: admin_event: {
+    path: "/{realm}/admin-events": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: attack_detection: {
+    path: "/{realm}/attack-detection/brute-force/users": {
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/attack-detection/brute-force/users/{userId}": {
+      rename: param: "userId": *"user_id"
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: authentication_flow_representation: {
+    path: "/{realm}/authentication/flows": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/authentication/flows/{id}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: authentication_management: {
+    path: "/{realm}/authentication/authenticator-providers": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/authentication/client-authenticator-providers": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/authentication/config": {
+      op: create: method: *POST
+    }
+    path: "/{realm}/authentication/config/{id}": {
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/authentication/executions": {
+      op: create: method: *POST
+    }
+    path: "/{realm}/authentication/executions/{executionId}": {
+      rename: param: "executionId": *"execution_id"
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/authentication/executions/{executionId}/config": {
+      rename: param: "executionId": *"execution_id"
+      op: create: method: *POST
+    }
+    path: "/{realm}/authentication/executions/{executionId}/lower-priority": {
+      action: "lower_priority": {}
+      rename: param: "executionId": *"execution_id"
+      op: create: method: *POST
+    }
+    path: "/{realm}/authentication/executions/{executionId}/raise-priority": {
+      action: "raise_priority": {}
+      rename: param: "executionId": *"execution_id"
+      op: create: method: *POST
+    }
+    path: "/{realm}/authentication/flows": {
+      op: create: method: *POST
+    }
+    path: "/{realm}/authentication/flows/{flowAlias}/executions": {
+      rename: param: "flowAlias": *"flow_alia"
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+    path: "/{realm}/authentication/flows/{flowAlias}/executions/execution": {
+      rename: param: "flowAlias": *"flow_alia"
+      op: create: method: *POST
+    }
+    path: "/{realm}/authentication/flows/{flowAlias}/executions/flow": {
+      rename: param: "flowAlias": *"flow_alia"
+      op: create: method: *POST
+    }
+    path: "/{realm}/authentication/flows/{id}": {
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/authentication/form-action-providers": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/authentication/form-providers": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/authentication/per-client-config-description": {
+      op: load: method: *GET
+    }
+    path: "/{realm}/authentication/register-required-action": {
+      op: create: method: *POST
+    }
+    path: "/{realm}/authentication/required-actions/{alias}": {
+      rename: param: "alias": *"alia"
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/authentication/unregistered-required-actions": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: authenticator_config_info_representation: {
+    path: "/{realm}/authentication/config-description/{providerId}": {
+      rename: param: "providerId": *"provider_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: authenticator_config_representation: {
+    path: "/{realm}/authentication/config/{id}": {
+      op: load: method: *GET
+    }
+    path: "/{realm}/authentication/executions/{executionId}/config/{id}": {
+      rename: param: "executionId": *"execution_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: available: {
+    path: "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}/available": {
+      rename: param: "client": *"client_id"
+      rename: param: "id": *"client_scope_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/client-scopes/{id}/scope-mappings/realm/available": {
+      rename: param: "id": *"client_scope_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/client-templates/{id}/scope-mappings/clients/{client}/available": {
+      rename: param: "client": *"client_id"
+      rename: param: "id": *"client_template_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/client-templates/{id}/scope-mappings/realm/available": {
+      rename: param: "id": *"client_template_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/clients/{id}/scope-mappings/clients/{client}/available": {
+      rename: param: "id": *"client_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/clients/{id}/scope-mappings/realm/available": {
+      rename: param: "id": *"client_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/groups/{id}/role-mappings/clients/{client}/available": {
+      rename: param: "client": *"client_id"
+      rename: param: "id": *"group_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/groups/{id}/role-mappings/realm/available": {
+      rename: param: "id": *"group_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/users/{id}/role-mappings/clients/{client}/available": {
+      rename: param: "client": *"client_id"
+      rename: param: "id": *"user_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/users/{id}/role-mappings/realm/available": {
+      rename: param: "id": *"user_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: certificate: {
+    path: "/{realm}/clients/{id}/certificates/{attr}": {
+      rename: param: "attr": *"id"
+      rename: param: "id": *"client_id"
+      op: load: method: *GET
+    }
+    path: "/{realm}/clients/{id}/certificates/{attr}/download": {
+      action: "download": {}
+      rename: param: "id": *"client_id"
+      op: create: method: *POST
+    }
+    path: "/{realm}/clients/{id}/certificates/{attr}/generate-and-download": {
+      action: "generate_and_download": {}
+      rename: param: "id": *"client_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: certificate_representation: {
+    path: "/{realm}/clients/{id}/certificates/{attr}/generate": {
+      rename: param: "id": *"client_id"
+      op: create: method: *POST
+    }
+    path: "/{realm}/clients/{id}/certificates/{attr}/upload": {
+      rename: param: "id": *"client_id"
+      op: create: method: *POST
+    }
+    path: "/{realm}/clients/{id}/certificates/{attr}/upload-certificate": {
+      rename: param: "id": *"client_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: client: {
+    path: "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}": {
+      rename: param: "client": *"id"
+      rename: param: "id": *"client_scope_id"
+      op: load: method: *GET
+    }
+    path: "/{realm}/client-templates/{id}/scope-mappings/clients/{client}": {
+      rename: param: "client": *"id"
+      rename: param: "id": *"client_template_id"
+      op: load: method: *GET
+    }
+    path: "/{realm}/clients": {
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+    path: "/{realm}/clients/{id}": {
+      op: load: method: *GET
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/clients/{id}/client-secret/rotated": {
+      action: "client_secret_rotated": {}
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/clients/{id}/default-client-scopes/{clientScopeId}": {
+      rename: param: "clientScopeId": *"client_scope_id"
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/clients/{id}/evaluate-scopes/generate-example-userinfo": {
+      action: "evaluate_scope_generate_example_userinfo": {}
+      op: load: method: *GET
+    }
+    path: "/{realm}/clients/{id}/installation/providers/{providerId}": {
+      rename: param: "providerId": *"provider_id"
+      op: load: method: *GET
+    }
+    path: "/{realm}/clients/{id}/nodes": {
+      action: "node": {}
+      op: create: method: *POST
+    }
+    path: "/{realm}/clients/{id}/nodes/{node}": {
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/clients/{id}/offline-session-count": {
+      action: "offline_session_count": {}
+      op: load: method: *GET
+    }
+    path: "/{realm}/clients/{id}/optional-client-scopes/{clientScopeId}": {
+      rename: param: "clientScopeId": *"client_scope_id"
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/clients/{id}/roles/{role-name}/composites/clients/{clientUuid}": {
+      rename: param: "clientUuid": *"client_uuid"
+      rename: param: "role-name": *"role_name"
+      op: load: method: *GET
+    }
+    path: "/{realm}/clients/{id}/scope-mappings/clients/{client}": {
+      op: load: method: *GET
+    }
+    path: "/{realm}/clients/{id}/session-count": {
+      action: "session_count": {}
+      op: load: method: *GET
+    }
+    path: "/{realm}/groups/{id}/role-mappings/clients/{client}": {
+      rename: param: "client": *"id"
+      rename: param: "id": *"group_id"
+      op: create: method: *POST
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/roles-by-id/{role-id}/composites/clients/{clientUuid}": {
+      rename: param: "clientUuid": *"id"
+      rename: param: "role-id": *"roles_by_id_id"
+      op: load: method: *GET
+    }
+    path: "/{realm}/roles/{role-name}/composites/clients/{clientUuid}": {
+      rename: param: "clientUuid": *"id"
+      rename: param: "role-name": *"role_name"
+      op: load: method: *GET
+    }
+    path: "/{realm}/users/{id}/role-mappings/clients/{client}": {
+      rename: param: "client": *"id"
+      rename: param: "id": *"user_id"
+      op: create: method: *POST
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: client_initial_access: {
+    path: "/{realm}/clients-initial-access/{id}": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: client_initial_access_presentation: {
+    path: "/{realm}/clients-initial-access": {
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+  }
+
+  entity: client_policy_representation: {
+    path: "/{realm}/client-policies/policies": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.policies`")|top
+    }
+  }
+
+  entity: client_profiles_representation: {
+    path: "/{realm}/client-policies/profiles": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: client_representation: {
+    path: "/{realm}/client-description-converter": {
+      op: create: method: *POST
+    }
+    path: "/{realm}/clients/{id}/registration-access-token": {
+      action: "registration-access-token": {}
+      op: create: method: *POST
+    }
+  }
+
+  entity: client_scope: {
+    path: "/{realm}/client-scopes": {
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+    path: "/{realm}/client-scopes/{id}": {
+      op: load: method: *GET
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/client-templates": {
+      op: create: method: *POST
+    }
+    path: "/{realm}/client-templates/{id}": {
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+  }
+
+  entity: client_scope_representation: {
+    path: "/{realm}/client-templates": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/client-templates/{id}": {
+      op: load: method: *GET
+    }
+    path: "/{realm}/clients/{id}/default-client-scopes": {
+      action: "default-client-scopes": {}
+      op: list: method: *GET
+    }
+    path: "/{realm}/clients/{id}/optional-client-scopes": {
+      action: "optional-client-scopes": {}
+      op: list: method: *GET
+    }
+    path: "/{realm}/default-default-client-scopes": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/default-optional-client-scopes": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: component: {
+    path: "/{realm}/components": {
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+    path: "/{realm}/components/{id}": {
+      op: load: method: *GET
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+  }
+
+  entity: component_type_representation: {
+    path: "/{realm}/client-registration-policy/providers": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/components/{id}/sub-component-types": {
+      action: "sub-component-types": {}
+      op: list: method: *GET
+    }
+  }
+
+  entity: composite: {
+    path: "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}/composite": {
+      rename: param: "client": *"client_id"
+      rename: param: "id": *"client_scope_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/client-scopes/{id}/scope-mappings/realm/composite": {
+      rename: param: "id": *"client_scope_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/client-templates/{id}/scope-mappings/clients/{client}/composite": {
+      rename: param: "client": *"client_id"
+      rename: param: "id": *"client_template_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/client-templates/{id}/scope-mappings/realm/composite": {
+      rename: param: "id": *"client_template_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/clients/{id}/roles/{role-name}/composites": {
+      rename: param: "id": *"client_id"
+      rename: param: "role-name": *"role_name"
+      op: list: method: *GET
+    }
+    path: "/{realm}/clients/{id}/scope-mappings/clients/{client}/composite": {
+      rename: param: "id": *"client_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/clients/{id}/scope-mappings/realm/composite": {
+      rename: param: "id": *"client_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/groups/{id}/role-mappings/clients/{client}/composite": {
+      rename: param: "client": *"client_id"
+      rename: param: "id": *"group_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/groups/{id}/role-mappings/realm/composite": {
+      rename: param: "id": *"group_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/roles-by-id/{role-id}/composites": {
+      rename: param: "role-id": *"roles_by_id_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/roles/{role-name}/composites": {
+      rename: param: "role-name": *"role_name"
+      op: list: method: *GET
+    }
+    path: "/{realm}/users/{id}/role-mappings/clients/{client}/composite": {
+      rename: param: "client": *"client_id"
+      rename: param: "id": *"user_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/users/{id}/role-mappings/realm/composite": {
+      rename: param: "id": *"user_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: credential: {
+    path: "/{realm}/users/{id}/credentials": {
+      rename: param: "id": *"user_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: credential_representation: {
+    path: "/{realm}/clients/{id}/client-secret": {
+      rename: param: "id": *"client_id"
+      op: create: method: *POST
+      op: load: method: *GET
+    }
+    path: "/{realm}/clients/{id}/client-secret/rotated": {
+      rename: param: "id": *"client_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: delete_by_realm: {
+    path: "/{realm}": {
+      rename: param: "realm": *"id"
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: event: {
+    path: "/{realm}/events": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: federated_identity: {
+    path: "/{realm}/users/{id}/federated-identity": {
+      rename: param: "id": *"user_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: flow: {
+    path: "/{realm}/authentication/flows/{flowAlias}/copy": {
+      action: "copy": {}
+      rename: param: "flowAlias": *"flow_alia"
+      op: create: method: *POST
+    }
+  }
+
+  entity: get: {
+    path: "/": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: get_by_realm: {
+    path: "/{realm}": {
+      rename: param: "realm": *"id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: global_request_result: {
+    path: "/{realm}/clients/{id}/push-revocation": {
+      rename: param: "id": *"client_id"
+      op: create: method: *POST
+    }
+    path: "/{realm}/clients/{id}/test-nodes-available": {
+      rename: param: "id": *"client_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/logout-all": {
+      op: create: method: *POST
+    }
+    path: "/{realm}/push-revocation": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: granted: {
+    path: "/{realm}/clients/{id}/evaluate-scopes/scope-mappings/{roleContainerId}/granted": {
+      rename: param: "id": *"client_id"
+      rename: param: "roleContainerId": *"scope_mapping_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: group: {
+    path: "/{realm}/clients/{id}/roles/{role-name}/groups": {
+      rename: param: "id": *"client_id"
+      rename: param: "role-name": *"role_name"
+      op: list: method: *GET
+    }
+    path: "/{realm}/groups": {
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+    path: "/{realm}/groups/count": {
+      action: "count": {}
+      op: load: method: *GET
+    }
+    path: "/{realm}/groups/{id}": {
+      op: load: method: *GET
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/groups/{id}/children": {
+      action: "child": {}
+      op: create: method: *POST
+    }
+    path: "/{realm}/roles/{role-name}/groups": {
+      rename: param: "role-name": *"role_name"
+      op: list: method: *GET
+    }
+    path: "/{realm}/users/{id}/groups": {
+      rename: param: "id": *"user_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: group_representation: {
+    path: "/{realm}/default-groups": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/group-by-path/{path}": {
+      op: load: method: *GET
+    }
+    path: "/{realm}/groups/{id}/children": {
+      action: "children": {}
+      op: list: method: *GET
+    }
+  }
+
+  entity: id_token: {
+    path: "/{realm}/clients/{id}/evaluate-scopes/generate-example-id-token": {
+      rename: param: "id": *"client_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: identity_provider: {
+    path: "/{realm}/identity-provider/import-config": {
+      action: "import_config": {}
+      op: create: method: *POST
+    }
+    path: "/{realm}/identity-provider/instances": {
+      action: "instance": {}
+      op: create: method: *POST
+    }
+    path: "/{realm}/identity-provider/instances/{alias}": {
+      rename: param: "alias": *"alia"
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/identity-provider/instances/{alias}/export": {
+      rename: param: "alias": *"alia"
+      op: load: method: *GET
+    }
+    path: "/{realm}/identity-provider/instances/{alias}/mapper-types": {
+      rename: param: "alias": *"alia"
+      op: load: method: *GET
+    }
+    path: "/{realm}/identity-provider/instances/{alias}/mappers": {
+      rename: param: "alias": *"alia"
+      op: create: method: *POST
+    }
+    path: "/{realm}/identity-provider/instances/{alias}/mappers/{id}": {
+      rename: param: "alias": *"alia"
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/identity-provider/providers/{provider_id}": {
+      rename: param: "provider_id": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: identity_provider_mapper_representation: {
+    path: "/{realm}/identity-provider/instances/{alias}/mappers": {
+      rename: param: "alias": *"alia"
+      op: list: method: *GET
+    }
+    path: "/{realm}/identity-provider/instances/{alias}/mappers/{id}": {
+      rename: param: "alias": *"alia"
+      op: load: method: *GET
+    }
+  }
+
+  entity: identity_provider_representation: {
+    path: "/{realm}/identity-provider/instances": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/identity-provider/instances/{alias}": {
+      rename: param: "alias": *"alia"
+      op: load: method: *GET
+    }
+  }
+
+  entity: key: {
+    path: "/{realm}/keys": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.keys`")|top
+    }
+  }
+
+  entity: management_permission_reference: {
+    path: "/{realm}/clients/{id}/management/permissions": {
+      rename: param: "id": *"client_id"
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+    path: "/{realm}/clients/{id}/roles/{role-name}/management/permissions": {
+      rename: param: "id": *"client_id"
+      rename: param: "role-name": *"role_name"
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+    path: "/{realm}/groups/{id}/management/permissions": {
+      rename: param: "id": *"group_id"
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+    path: "/{realm}/identity-provider/instances/{alias}/management/permissions": {
+      rename: param: "alias": *"instance_id"
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+    path: "/{realm}/roles-by-id/{role-id}/management/permissions": {
+      rename: param: "role-id": *"roles_by_id_id"
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+    path: "/{realm}/roles/{role-name}/management/permissions": {
+      rename: param: "role-name": *"role_name"
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+  }
+
+  entity: mappings_representation: {
+    path: "/{realm}/client-scopes/{id}/scope-mappings": {
+      rename: param: "id": *"client_scope_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.realmMappings`")|top
+    }
+    path: "/{realm}/client-templates/{id}/scope-mappings": {
+      rename: param: "id": *"client_template_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.realmMappings`")|top
+    }
+    path: "/{realm}/clients/{id}/scope-mappings": {
+      rename: param: "id": *"client_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.realmMappings`")|top
+    }
+    path: "/{realm}/groups/{id}/role-mappings": {
+      rename: param: "id": *"group_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.realmMappings`")|top
+    }
+    path: "/{realm}/users/{id}/role-mappings": {
+      rename: param: "id": *"user_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.realmMappings`")|top
+    }
+  }
+
+  entity: not_granted: {
+    path: "/{realm}/clients/{id}/evaluate-scopes/scope-mappings/{roleContainerId}/not-granted": {
+      rename: param: "id": *"client_id"
+      rename: param: "roleContainerId": *"scope_mapping_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: post: {
+    path: "/": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: protocol: {
+    path: "/{realm}/client-scopes/{id}/protocol-mappers/protocol/{protocol}": {
+      rename: param: "id": *"client_scope_id"
+      rename: param: "protocol": *"id"
+      op: load: method: *GET
+    }
+    path: "/{realm}/client-templates/{id}/protocol-mappers/protocol/{protocol}": {
+      rename: param: "id": *"client_template_id"
+      rename: param: "protocol": *"id"
+      op: load: method: *GET
+    }
+    path: "/{realm}/clients/{id}/protocol-mappers/protocol/{protocol}": {
+      rename: param: "id": *"client_id"
+      rename: param: "protocol": *"id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: protocol_mapper: {
+    path: "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}": {
+      rename: param: "id1": *"client_scope_id"
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/client-scopes/{id}/protocol-mappers/add-models": {
+      action: "add_model": {}
+      rename: param: "id": *"client_scope_id"
+      op: create: method: *POST
+    }
+    path: "/{realm}/client-scopes/{id}/protocol-mappers/models": {
+      action: "model": {}
+      rename: param: "id": *"client_scope_id"
+      op: create: method: *POST
+    }
+    path: "/{realm}/client-templates/{id1}/protocol-mappers/models/{id2}": {
+      rename: param: "id1": *"client_template_id"
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/client-templates/{id}/protocol-mappers/add-models": {
+      action: "add_model": {}
+      rename: param: "id": *"client_template_id"
+      op: create: method: *POST
+    }
+    path: "/{realm}/client-templates/{id}/protocol-mappers/models": {
+      action: "model": {}
+      rename: param: "id": *"client_template_id"
+      op: create: method: *POST
+    }
+    path: "/{realm}/clients/{id1}/protocol-mappers/models/{id2}": {
+      rename: param: "id1": *"client_id"
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/clients/{id}/evaluate-scopes/protocol-mappers": {
+      rename: param: "id": *"client_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/clients/{id}/protocol-mappers/add-models": {
+      action: "add_model": {}
+      rename: param: "id": *"client_id"
+      op: create: method: *POST
+    }
+    path: "/{realm}/clients/{id}/protocol-mappers/models": {
+      action: "model": {}
+      rename: param: "id": *"client_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: protocol_mapper_representation: {
+    path: "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}": {
+      rename: param: "id1": *"client_scope_id"
+      op: load: method: *GET
+    }
+    path: "/{realm}/client-scopes/{id}/protocol-mappers/models": {
+      rename: param: "id": *"client_scope_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/client-templates/{id1}/protocol-mappers/models/{id2}": {
+      rename: param: "id1": *"client_template_id"
+      op: load: method: *GET
+    }
+    path: "/{realm}/client-templates/{id}/protocol-mappers/models": {
+      rename: param: "id": *"client_template_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/clients/{id1}/protocol-mappers/models/{id2}": {
+      rename: param: "id1": *"client_id"
+      op: load: method: *GET
+    }
+    path: "/{realm}/clients/{id}/protocol-mappers/models": {
+      rename: param: "id": *"client_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: put_by_realm: {
+    path: "/{realm}": {
+      rename: param: "realm": *"id"
+      op: update: method: *PUT
+    }
+  }
+
+  entity: realm: {
+    path: "/{realm}/client-scopes/{id}/scope-mappings/realm": {
+      rename: param: "id": *"client_scope_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/client-templates/{id}/scope-mappings/realm": {
+      rename: param: "id": *"client_template_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/clients/{id}/roles/{role-name}/composites/realm": {
+      rename: param: "id": *"client_id"
+      rename: param: "role-name": *"role_name"
+      op: list: method: *GET
+    }
+    path: "/{realm}/clients/{id}/scope-mappings/realm": {
+      rename: param: "id": *"client_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/groups/{id}/role-mappings/realm": {
+      rename: param: "id": *"group_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/roles-by-id/{role-id}/composites/realm": {
+      rename: param: "role-id": *"roles_by_id_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/roles/{role-name}/composites/realm": {
+      rename: param: "role-name": *"role_name"
+      op: list: method: *GET
+    }
+    path: "/{realm}/users/{id}/role-mappings/realm": {
+      rename: param: "id": *"user_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: realm_events_config_representation: {
+    path: "/{realm}/events/config": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: realms_admin: {
+    path: "/{realm}/admin-events": {
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/client-policies/policies": {
+      op: update: method: *PUT
+    }
+    path: "/{realm}/client-policies/profiles": {
+      op: update: method: *PUT
+    }
+    path: "/{realm}/client-session-stats": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/credential-registrators": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/default-default-client-scopes/{clientScopeId}": {
+      rename: param: "clientScopeId": *"client_scope_id"
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/default-groups/{groupId}": {
+      rename: param: "groupId": *"group_id"
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/default-optional-client-scopes/{clientScopeId}": {
+      rename: param: "clientScopeId": *"client_scope_id"
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/events": {
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/events/config": {
+      op: update: method: *PUT
+    }
+    path: "/{realm}/localization": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/localization/{locale}": {
+      op: create: method: *POST
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/localization/{locale}/{key}": {
+      op: load: method: *GET
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/partial-export": {
+      op: create: method: *POST
+    }
+    path: "/{realm}/partialImport": {
+      op: create: method: *POST
+    }
+    path: "/{realm}/sessions/{session}": {
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/testSMTPConnection": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: required_action: {
+    path: "/{realm}/authentication/required-actions": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/authentication/required-actions/{alias}": {
+      rename: param: "alias": *"id"
+      op: load: method: *GET
+    }
+    path: "/{realm}/authentication/required-actions/{alias}/lower-priority": {
+      action: "lower_priority": {}
+      rename: param: "alias": *"alia"
+      op: create: method: *POST
+    }
+    path: "/{realm}/authentication/required-actions/{alias}/raise-priority": {
+      action: "raise_priority": {}
+      rename: param: "alias": *"alia"
+      op: create: method: *POST
+    }
+  }
+
+  entity: role: {
+    path: "/{realm}/clients/{id}/roles": {
+      rename: param: "id": *"client_id"
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+    path: "/{realm}/clients/{id}/roles/{role-name}": {
+      rename: param: "id": *"client_id"
+      rename: param: "role-name": *"id"
+      op: load: method: *GET
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/clients/{id}/roles/{role-name}/composites": {
+      action: "composite": {}
+      rename: param: "id": *"client_id"
+      rename: param: "role-name": *"role_name"
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/roles": {
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+    path: "/{realm}/roles/{role-name}": {
+      rename: param: "role-name": *"id"
+      op: load: method: *GET
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/roles/{role-name}/composites": {
+      action: "composite": {}
+      rename: param: "role-name": *"role_name"
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: role_mapper: {
+    path: "/{realm}/groups/{id}/role-mappings/realm": {
+      rename: param: "id": *"group_id"
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/users/{id}/role-mappings/realm": {
+      rename: param: "id": *"user_id"
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: roles_by_id: {
+    path: "/{realm}/roles-by-id/{role-id}": {
+      rename: param: "role-id": *"id"
+      op: load: method: *GET
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/roles-by-id/{role-id}/composites": {
+      action: "composite": {}
+      rename: param: "role-id": *"id"
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: scope_mapping: {
+    path: "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}": {
+      rename: param: "id": *"client_scope_id"
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/client-scopes/{id}/scope-mappings/realm": {
+      action: "realm": {}
+      rename: param: "id": *"client_scope_id"
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/client-templates/{id}/scope-mappings/clients/{client}": {
+      rename: param: "id": *"client_template_id"
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/client-templates/{id}/scope-mappings/realm": {
+      action: "realm": {}
+      rename: param: "id": *"client_template_id"
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/clients/{id}/scope-mappings/clients/{client}": {
+      rename: param: "id": *"client_id"
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/clients/{id}/scope-mappings/realm": {
+      action: "realm": {}
+      rename: param: "id": *"client_id"
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: up_config: {
+    path: "/{realm}/users/profile": {
+      op: list: method: *GET
+      op: update: method: *PUT
+    }
+  }
+
+  entity: user: {
+    path: "/{realm}/clients/{id}/roles/{role-name}/users": {
+      rename: param: "id": *"client_id"
+      rename: param: "role-name": *"role_name"
+      op: list: method: *GET
+    }
+    path: "/{realm}/roles/{role-name}/users": {
+      rename: param: "role-name": *"role_name"
+      op: list: method: *GET
+    }
+    path: "/{realm}/users": {
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+    path: "/{realm}/users/count": {
+      action: "count": {}
+      op: load: method: *GET
+    }
+    path: "/{realm}/users/profile/metadata": {
+      op: list: method: *GET
+    }
+    path: "/{realm}/users/{id}": {
+      op: load: method: *GET
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/users/{id}/configured-user-storage-credential-types": {
+      action: "configured_user_storage_credential_type": {}
+      op: list: method: *GET
+    }
+    path: "/{realm}/users/{id}/consents": {
+      action: "consent": {}
+      op: list: method: *GET
+    }
+    path: "/{realm}/users/{id}/consents/{client}": {
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/users/{id}/credentials/{credentialId}": {
+      rename: param: "credentialId": *"credential_id"
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/users/{id}/credentials/{credentialId}/moveAfter/{newPreviousCredentialId}": {
+      rename: param: "credentialId": *"credential_id"
+      rename: param: "newPreviousCredentialId": *"new_previous_credential_id"
+      op: create: method: *POST
+    }
+    path: "/{realm}/users/{id}/credentials/{credentialId}/moveToFirst": {
+      action: "move_to_first": {}
+      rename: param: "credentialId": *"credential_id"
+      op: create: method: *POST
+    }
+    path: "/{realm}/users/{id}/credentials/{credentialId}/userLabel": {
+      action: "user_label": {}
+      rename: param: "credentialId": *"credential_id"
+      op: update: method: *PUT
+    }
+    path: "/{realm}/users/{id}/disable-credential-types": {
+      action: "disable_credential_type": {}
+      op: update: method: *PUT
+    }
+    path: "/{realm}/users/{id}/execute-actions-email": {
+      action: "execute_actions_email": {}
+      op: update: method: *PUT
+    }
+    path: "/{realm}/users/{id}/federated-identity/{provider}": {
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+    path: "/{realm}/users/{id}/groups/count": {
+      action: "group_count": {}
+      op: load: method: *GET
+    }
+    path: "/{realm}/users/{id}/groups/{groupId}": {
+      rename: param: "groupId": *"group_id"
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/{realm}/users/{id}/impersonation": {
+      action: "impersonation": {}
+      op: create: method: *POST
+    }
+    path: "/{realm}/users/{id}/logout": {
+      action: "logout": {}
+      op: create: method: *POST
+    }
+    path: "/{realm}/users/{id}/reset-password": {
+      action: "reset_password": {}
+      op: update: method: *PUT
+    }
+    path: "/{realm}/users/{id}/reset-password-email": {
+      action: "reset_password_email": {}
+      op: update: method: *PUT
+    }
+    path: "/{realm}/users/{id}/send-verify-email": {
+      action: "send_verify_email": {}
+      op: update: method: *PUT
+    }
+  }
+
+  entity: user_representation: {
+    path: "/{realm}/clients/{id}/service-account-user": {
+      rename: param: "id": *"client_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/groups/{id}/members": {
+      rename: param: "id": *"group_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: user_session: {
+    path: "/{realm}/clients/{id}/user-sessions": {
+      rename: param: "id": *"client_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: user_session_representation: {
+    path: "/{realm}/clients/{id}/offline-sessions": {
+      rename: param: "id": *"client_id"
+      op: list: method: *GET
+    }
+    path: "/{realm}/users/{id}/offline-sessions/{clientUuid}": {
+      rename: param: "clientUuid": *"client_uuid"
+      rename: param: "id": *"user_id"
+      op: load: method: *GET
+    }
+    path: "/{realm}/users/{id}/sessions": {
+      action: "sessions": {}
+      op: list: method: *GET
+    }
+  }
+
+  entity: users_management_permission: {
+    path: "/{realm}/users-management-permissions": {
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+  }
+
+}

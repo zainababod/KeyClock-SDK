@@ -1,0 +1,130 @@
+{
+  "existing": {
+    "scope_mapping": {
+      "SCOPE_MAPPING00": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s5e",
+        "description": "s5f",
+        "id": "SCOPE_MAPPING00",
+        "name": "s61",
+        "scopeParamRequired": true,
+        "client": "CLIENT01",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01"
+      },
+      "SCOPE_MAPPING01": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "sb8",
+        "description": "sb9",
+        "id": "SCOPE_MAPPING01",
+        "name": "sbb",
+        "scopeParamRequired": true,
+        "client": "CLIENT01",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01"
+      },
+      "SCOPE_MAPPING02": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s112",
+        "description": "s113",
+        "id": "SCOPE_MAPPING02",
+        "name": "s115",
+        "scopeParamRequired": true,
+        "client": "CLIENT01",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01"
+      }
+    }
+  },
+  "new": {
+    "scope_mapping": {
+      "scope_mapping_ref01": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s16c",
+        "description": "s16d",
+        "name": "s16f",
+        "scopeParamRequired": true
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/clients/{id}/scope-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/client-scopes/{id}/scope-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/client-templates/{id}/scope-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/clients/{id}/scope-mappings/realm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/client-scopes/{id}/scope-mappings/realm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/client-templates/{id}/scope-mappings/realm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/clients/{id}/scope-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/client-scopes/{id}/scope-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/client-templates/{id}/scope-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/clients/{id}/scope-mappings/realm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/client-scopes/{id}/scope-mappings/realm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/client-templates/{id}/scope-mappings/realm": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

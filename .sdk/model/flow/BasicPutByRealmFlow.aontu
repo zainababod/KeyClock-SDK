@@ -1,0 +1,29 @@
+# BasicPutByRealmFlow
+
+main: kit: flow: BasicPutByRealmFlow:
+{
+  entity: "put_by_realm",
+  kind: "basic",
+  name: "BasicPutByRealmFlow",
+  step: [
+    {
+      i: {
+        ref: "put_by_realm_ref01",
+        srcdatavar: "put_by_realm_ref01_data",
+        suffix: "_up0",
+        textfield: "accountTheme"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-put_by_realm_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicPutByRealmFlow"
+}

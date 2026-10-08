@@ -1,0 +1,292 @@
+{
+  "existing": {
+    "authentication_management": {
+      "AUTHENTICATION_MANAGEMENT00": {
+        "alias": "s154",
+        "authenticationConfig": "s155",
+        "authenticationExecutions": [],
+        "authenticationFlow": false,
+        "authenticator": "s158",
+        "authenticatorConfig": "s159",
+        "authenticatorFlow": true,
+        "autheticatorFlow": false,
+        "builtIn": true,
+        "config": {},
+        "configurable": true,
+        "defaultAction": false,
+        "defaultValue": "s160",
+        "description": "s161",
+        "displayName": "s162",
+        "enabled": false,
+        "flowId": "s164",
+        "helpText": "s165",
+        "id": "AUTHENTICATION_MANAGEMENT00",
+        "index": 359,
+        "label": "s168",
+        "level": 361,
+        "name": "s16a",
+        "options": [],
+        "parentFlow": "s16c",
+        "priority": 365,
+        "providerId": "s16e",
+        "readOnly": false,
+        "required": true,
+        "requirement": "s171",
+        "requirementChoices": [],
+        "secret": false,
+        "topLevel": true,
+        "type": "s175",
+        "execution_id": "EXECUTION01",
+        "realm": "REALM01",
+        "flow_alia": "FLOW_ALIA01",
+        "alia": "ALIA01"
+      },
+      "AUTHENTICATION_MANAGEMENT01": {
+        "alias": "s2a8",
+        "authenticationConfig": "s2a9",
+        "authenticationExecutions": [],
+        "authenticationFlow": false,
+        "authenticator": "s2ac",
+        "authenticatorConfig": "s2ad",
+        "authenticatorFlow": true,
+        "autheticatorFlow": false,
+        "builtIn": true,
+        "config": {},
+        "configurable": true,
+        "defaultAction": false,
+        "defaultValue": "s2b4",
+        "description": "s2b5",
+        "displayName": "s2b6",
+        "enabled": false,
+        "flowId": "s2b8",
+        "helpText": "s2b9",
+        "id": "AUTHENTICATION_MANAGEMENT01",
+        "index": 699,
+        "label": "s2bc",
+        "level": 701,
+        "name": "s2be",
+        "options": [],
+        "parentFlow": "s2c0",
+        "priority": 705,
+        "providerId": "s2c2",
+        "readOnly": false,
+        "required": true,
+        "requirement": "s2c5",
+        "requirementChoices": [],
+        "secret": false,
+        "topLevel": true,
+        "type": "s2c9",
+        "execution_id": "EXECUTION01",
+        "realm": "REALM01",
+        "flow_alia": "FLOW_ALIA01",
+        "alia": "ALIA01"
+      },
+      "AUTHENTICATION_MANAGEMENT02": {
+        "alias": "s3fc",
+        "authenticationConfig": "s3fd",
+        "authenticationExecutions": [],
+        "authenticationFlow": false,
+        "authenticator": "s400",
+        "authenticatorConfig": "s401",
+        "authenticatorFlow": true,
+        "autheticatorFlow": false,
+        "builtIn": true,
+        "config": {},
+        "configurable": true,
+        "defaultAction": false,
+        "defaultValue": "s408",
+        "description": "s409",
+        "displayName": "s40a",
+        "enabled": false,
+        "flowId": "s40c",
+        "helpText": "s40d",
+        "id": "AUTHENTICATION_MANAGEMENT02",
+        "index": 1039,
+        "label": "s410",
+        "level": 1041,
+        "name": "s412",
+        "options": [],
+        "parentFlow": "s414",
+        "priority": 1045,
+        "providerId": "s416",
+        "readOnly": false,
+        "required": true,
+        "requirement": "s419",
+        "requirementChoices": [],
+        "secret": false,
+        "topLevel": true,
+        "type": "s41d",
+        "execution_id": "EXECUTION01",
+        "realm": "REALM01",
+        "flow_alia": "FLOW_ALIA01",
+        "alia": "ALIA01"
+      }
+    }
+  },
+  "new": {
+    "authentication_management": {
+      "authentication_management_ref01": {
+        "alias": "s550",
+        "authenticationConfig": "s551",
+        "authenticationExecutions": [],
+        "authenticationFlow": false,
+        "authenticator": "s554",
+        "authenticatorConfig": "s555",
+        "authenticatorFlow": true,
+        "autheticatorFlow": false,
+        "builtIn": true,
+        "config": {},
+        "configurable": true,
+        "defaultAction": false,
+        "defaultValue": "s55c",
+        "description": "s55d",
+        "displayName": "s55e",
+        "enabled": false,
+        "flowId": "s560",
+        "helpText": "s561",
+        "index": 1379,
+        "label": "s564",
+        "level": 1381,
+        "name": "s566",
+        "options": [],
+        "parentFlow": "s568",
+        "priority": 1385,
+        "providerId": "s56a",
+        "readOnly": false,
+        "required": true,
+        "requirement": "s56d",
+        "requirementChoices": [],
+        "secret": false,
+        "topLevel": true,
+        "type": "s571"
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/authentication/executions/{executionId}/config": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/authentication/executions/{executionId}/lower-priority": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/authentication/executions/{executionId}/raise-priority": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/authentication/flows/{flowAlias}/executions/execution": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/authentication/flows/{flowAlias}/executions/flow": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/authentication/config": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/authentication/executions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/authentication/flows": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/authentication/register-required-action": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/authentication/authenticator-providers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/authentication/client-authenticator-providers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/authentication/form-action-providers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/authentication/form-providers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/authentication/unregistered-required-actions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/authentication/executions/{executionId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/authentication/flows/{flowAlias}/executions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/authentication/per-client-config-description": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/authentication/required-actions/{alias}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/authentication/executions/{executionId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/authentication/config/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/authentication/flows/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/authentication/required-actions/{alias}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/authentication/flows/{flowAlias}/executions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/authentication/config/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/authentication/flows/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

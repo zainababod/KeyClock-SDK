@@ -1,0 +1,9 @@
+# BasicClientInitialAccessFlow
+
+main: kit: flow: BasicClientInitialAccessFlow:
+{
+  entity: "client_initial_access",
+  kind: "basic",
+  name: "BasicClientInitialAccessFlow",
+  "key$": "BasicClientInitialAccessFlow"
+}

@@ -1,0 +1,37 @@
+# BasicRoleMapperFlow
+
+main: kit: flow: BasicRoleMapperFlow:
+{
+  entity: "role_mapper",
+  kind: "basic",
+  name: "BasicRoleMapperFlow",
+  step: [
+    {
+      i: {
+        ref: "role_mapper_ref01"
+      }
+
+      m: {
+        realm: "realm01",
+        user_id: "user01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "role_mapper_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "role_mapper01",
+        realm: "realm01"
+      }
+
+      o: "remove"
+    }
+  ],
+  "key$": "BasicRoleMapperFlow"
+}

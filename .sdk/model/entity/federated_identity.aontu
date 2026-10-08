@@ -1,0 +1,102 @@
+# Entity: federated_identity
+
+main: kit: entity: federated_identity: {
+
+  alias: field: {}
+
+  fields: {
+    identityProvider: {
+      h: "Identity Provider"
+      n: "identityProvider"
+      r: false
+      t: "`$STRING`"
+    }
+    userId: {
+      h: "User Id"
+      n: "userId"
+      r: false
+      t: "`$STRING`"
+    }
+    userName: {
+      h: "User Name"
+      n: "userName"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "federated_identity"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/users/{id}/federated-identity"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "user_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/users/{id}/federated-identity"
+          q: {
+            exist: [
+              "realm"
+              "user_id"
+            ]
+          }
+          r: {
+            param: {
+              id: "user_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "user_id"
+            }
+            {
+              lit: "federated-identity"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.user")]
+  ]
+
+}

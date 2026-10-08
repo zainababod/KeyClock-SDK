@@ -1,0 +1,743 @@
+# Entity: identity_provider
+
+main: kit: entity: identity_provider: {
+
+  alias: field: {}
+
+  fields: {
+    addReadTokenRoleOnCreate: {
+      h: "Add Read Token Role On Create"
+      n: "addReadTokenRoleOnCreate"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    alias: {
+      h: "Alias"
+      n: "alias"
+      r: false
+      t: "`$STRING`"
+    }
+    authenticateByDefault: {
+      h: "Authenticate By Default"
+      n: "authenticateByDefault"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    config: {
+      h: "Config"
+      n: "config"
+      r: false
+      t: "`$OBJECT`"
+    }
+    displayName: {
+      h: "Display Name"
+      n: "displayName"
+      r: false
+      t: "`$STRING`"
+    }
+    enabled: {
+      h: "Enabled"
+      n: "enabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    firstBrokerLoginFlowAlias: {
+      h: "First Broker Login Flow Alias"
+      n: "firstBrokerLoginFlowAlias"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    identityProviderAlias: {
+      h: "Identity Provider Alias"
+      n: "identityProviderAlias"
+      r: false
+      t: "`$STRING`"
+    }
+    identityProviderMapper: {
+      h: "Identity Provider Mapper"
+      n: "identityProviderMapper"
+      r: false
+      t: "`$STRING`"
+    }
+    internalId: {
+      h: "Internal Id"
+      n: "internalId"
+      r: false
+      t: "`$STRING`"
+    }
+    linkOnly: {
+      h: "Link Only"
+      n: "linkOnly"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    postBrokerLoginFlowAlias: {
+      h: "Post Broker Login Flow Alias"
+      n: "postBrokerLoginFlowAlias"
+      r: false
+      t: "`$STRING`"
+    }
+    providerId: {
+      h: "Provider Id"
+      n: "providerId"
+      r: false
+      t: "`$STRING`"
+    }
+    storeToken: {
+      h: "Store Token"
+      n: "storeToken"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    trustEmail: {
+      h: "Trust Email"
+      n: "trustEmail"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    updateProfileFirstLogin: {
+      h: "Update Profile First Login"
+      n: "updateProfileFirstLogin"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    updateProfileFirstLoginMode: {
+      h: "Update Profile First Login Mode"
+      n: "updateProfileFirstLoginMode"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "identity_provider"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /{realm}/identity-provider/instances/{alias}/mappers"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "alia"
+                or: "alias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/identity-provider/instances/{alias}/mappers"
+          q: {
+            exist: [
+              "alia"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              alias: "alia"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "identity-provider"
+            }
+            {
+              lit: "instances"
+            }
+            {
+              var: "alia"
+            }
+            {
+              lit: "mappers"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/identity-provider/import-config"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/identity-provider/import-config"
+          q: {
+            "$action": "import_config"
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "identity-provider"
+            }
+            {
+              lit: "import-config"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/identity-provider/instances"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/identity-provider/instances"
+          q: {
+            "$action": "instance"
+            exist: [
+              "realm"
+            ]
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "identity-provider"
+            }
+            {
+              lit: "instances"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/identity-provider/instances/{alias}/export"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "alia"
+                or: "alias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "format"
+                or: "format"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/identity-provider/instances/{alias}/export"
+          q: {
+            exist: [
+              "alia"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              alias: "alia"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "identity-provider"
+            }
+            {
+              lit: "instances"
+            }
+            {
+              var: "alia"
+            }
+            {
+              lit: "export"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/identity-provider/instances/{alias}/mapper-types"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "alia"
+                or: "alias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/identity-provider/instances/{alias}/mapper-types"
+          q: {
+            exist: [
+              "alia"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              alias: "alia"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "identity-provider"
+            }
+            {
+              lit: "instances"
+            }
+            {
+              var: "alia"
+            }
+            {
+              lit: "mapper-types"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/identity-provider/providers/{provider_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "provider_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/identity-provider/providers/{provider_id}"
+          q: {
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              provider_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "identity-provider"
+            }
+            {
+              lit: "providers"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /{realm}/identity-provider/instances/{alias}/mappers/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "alia"
+                or: "alias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/identity-provider/instances/{alias}/mappers/{id}"
+          q: {
+            exist: [
+              "alia"
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              alias: "alia"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "identity-provider"
+            }
+            {
+              lit: "instances"
+            }
+            {
+              var: "alia"
+            }
+            {
+              lit: "mappers"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/identity-provider/instances/{alias}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "alia"
+                or: "alias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/identity-provider/instances/{alias}"
+          q: {
+            exist: [
+              "alia"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              alias: "alia"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "identity-provider"
+            }
+            {
+              lit: "instances"
+            }
+            {
+              var: "alia"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /{realm}/identity-provider/instances/{alias}/mappers/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "alia"
+                or: "alias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/identity-provider/instances/{alias}/mappers/{id}"
+          q: {
+            exist: [
+              "alia"
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              alias: "alia"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "identity-provider"
+            }
+            {
+              lit: "instances"
+            }
+            {
+              var: "alia"
+            }
+            {
+              lit: "mappers"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "PUT /{realm}/identity-provider/instances/{alias}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "alia"
+                or: "alias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/{realm}/identity-provider/instances/{alias}"
+          q: {
+            exist: [
+              "alia"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              alias: "alia"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "identity-provider"
+            }
+            {
+              lit: "instances"
+            }
+            {
+              var: "alia"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

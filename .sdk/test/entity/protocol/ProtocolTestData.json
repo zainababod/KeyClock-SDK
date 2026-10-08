@@ -1,0 +1,74 @@
+{
+  "existing": {
+    "protocol": {
+      "PROTOCOL00": {
+        "config": {},
+        "consentRequired": false,
+        "consentText": "s48",
+        "id": "PROTOCOL00",
+        "name": "s4a",
+        "protocol": "s4b",
+        "protocolMapper": "s4c",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01"
+      },
+      "PROTOCOL01": {
+        "config": {},
+        "consentRequired": false,
+        "consentText": "s8e",
+        "id": "PROTOCOL01",
+        "name": "s90",
+        "protocol": "s91",
+        "protocolMapper": "s92",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01"
+      },
+      "PROTOCOL02": {
+        "config": {},
+        "consentRequired": false,
+        "consentText": "sd4",
+        "id": "PROTOCOL02",
+        "name": "sd6",
+        "protocol": "sd7",
+        "protocolMapper": "sd8",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01"
+      }
+    }
+  },
+  "new": {
+    "protocol": {
+      "protocol_ref01": {
+        "config": {},
+        "consentRequired": false,
+        "consentText": "s11a",
+        "name": "s11c",
+        "protocol": "s11d",
+        "protocolMapper": "s11e"
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/clients/{id}/protocol-mappers/protocol/{protocol}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-scopes/{id}/protocol-mappers/protocol/{protocol}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-templates/{id}/protocol-mappers/protocol/{protocol}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

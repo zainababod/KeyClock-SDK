@@ -1,0 +1,490 @@
+# Entity: protocol_mapper_representation
+
+main: kit: entity: protocol_mapper_representation: {
+
+  alias: field: {}
+
+  fields: {
+    config: {
+      h: "Config"
+      n: "config"
+      r: false
+      t: "`$OBJECT`"
+    }
+    consentRequired: {
+      h: "Consent Required"
+      n: "consentRequired"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    consentText: {
+      h: "Consent Text"
+      n: "consentText"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    protocol: {
+      h: "Protocol"
+      n: "protocol"
+      r: false
+      t: "`$STRING`"
+    }
+    protocolMapper: {
+      h: "Protocol Mapper"
+      n: "protocolMapper"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "protocol_mapper_representation"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/clients/{id}/protocol-mappers/models"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/clients/{id}/protocol-mappers/models"
+          q: {
+            exist: [
+              "client_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "protocol-mappers"
+            }
+            {
+              lit: "models"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/client-scopes/{id}/protocol-mappers/models"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_scope_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/client-scopes/{id}/protocol-mappers/models"
+          q: {
+            exist: [
+              "client_scope_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_scope_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-scopes"
+            }
+            {
+              var: "client_scope_id"
+            }
+            {
+              lit: "protocol-mappers"
+            }
+            {
+              lit: "models"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/client-templates/{id}/protocol-mappers/models"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_template_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/client-templates/{id}/protocol-mappers/models"
+          q: {
+            exist: [
+              "client_template_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_template_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-templates"
+            }
+            {
+              var: "client_template_id"
+            }
+            {
+              lit: "protocol-mappers"
+            }
+            {
+              lit: "models"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/clients/{id1}/protocol-mappers/models/{id2}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id1"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id2"
+                or: "id2"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/clients/{id1}/protocol-mappers/models/{id2}"
+          q: {
+            exist: [
+              "client_id"
+              "id2"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id1: "client_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "protocol-mappers"
+            }
+            {
+              lit: "models"
+            }
+            {
+              var: "id2"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_scope_id"
+                or: "id1"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id2"
+                or: "id2"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}"
+          q: {
+            exist: [
+              "client_scope_id"
+              "id2"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id1: "client_scope_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-scopes"
+            }
+            {
+              var: "client_scope_id"
+            }
+            {
+              lit: "protocol-mappers"
+            }
+            {
+              lit: "models"
+            }
+            {
+              var: "id2"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/client-templates/{id1}/protocol-mappers/models/{id2}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_template_id"
+                or: "id1"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id2"
+                or: "id2"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/client-templates/{id1}/protocol-mappers/models/{id2}"
+          q: {
+            exist: [
+              "client_template_id"
+              "id2"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id1: "client_template_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-templates"
+            }
+            {
+              var: "client_template_id"
+            }
+            {
+              lit: "protocol-mappers"
+            }
+            {
+              lit: "models"
+            }
+            {
+              var: "id2"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.client_scope")]
+    [path("$.main.kit.entity.client")]
+    [path("$.main.kit.entity.client_scope")]
+    [path("$.main.kit.entity.client")]
+  ]
+
+}

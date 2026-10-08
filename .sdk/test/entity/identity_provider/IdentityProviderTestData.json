@@ -1,0 +1,151 @@
+{
+  "existing": {
+    "identity_provider": {
+      "IDENTITY_PROVIDER00": {
+        "addReadTokenRoleOnCreate": true,
+        "alias": "sbf",
+        "authenticateByDefault": true,
+        "config": {},
+        "displayName": "sc2",
+        "enabled": false,
+        "firstBrokerLoginFlowAlias": "sc4",
+        "id": "IDENTITY_PROVIDER00",
+        "identityProviderAlias": "sc6",
+        "identityProviderMapper": "sc7",
+        "internalId": "sc8",
+        "linkOnly": false,
+        "name": "sca",
+        "postBrokerLoginFlowAlias": "scb",
+        "providerId": "scc",
+        "storeToken": false,
+        "trustEmail": true,
+        "updateProfileFirstLogin": false,
+        "updateProfileFirstLoginMode": "sd0",
+        "alia": "ALIA01",
+        "realm": "REALM01"
+      },
+      "IDENTITY_PROVIDER01": {
+        "addReadTokenRoleOnCreate": true,
+        "alias": "s17d",
+        "authenticateByDefault": true,
+        "config": {},
+        "displayName": "s180",
+        "enabled": false,
+        "firstBrokerLoginFlowAlias": "s182",
+        "id": "IDENTITY_PROVIDER01",
+        "identityProviderAlias": "s184",
+        "identityProviderMapper": "s185",
+        "internalId": "s186",
+        "linkOnly": false,
+        "name": "s188",
+        "postBrokerLoginFlowAlias": "s189",
+        "providerId": "s18a",
+        "storeToken": false,
+        "trustEmail": true,
+        "updateProfileFirstLogin": false,
+        "updateProfileFirstLoginMode": "s18e",
+        "alia": "ALIA01",
+        "realm": "REALM01"
+      },
+      "IDENTITY_PROVIDER02": {
+        "addReadTokenRoleOnCreate": true,
+        "alias": "s23b",
+        "authenticateByDefault": true,
+        "config": {},
+        "displayName": "s23e",
+        "enabled": false,
+        "firstBrokerLoginFlowAlias": "s240",
+        "id": "IDENTITY_PROVIDER02",
+        "identityProviderAlias": "s242",
+        "identityProviderMapper": "s243",
+        "internalId": "s244",
+        "linkOnly": false,
+        "name": "s246",
+        "postBrokerLoginFlowAlias": "s247",
+        "providerId": "s248",
+        "storeToken": false,
+        "trustEmail": true,
+        "updateProfileFirstLogin": false,
+        "updateProfileFirstLoginMode": "s24c",
+        "alia": "ALIA01",
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "identity_provider": {
+      "identity_provider_ref01": {
+        "addReadTokenRoleOnCreate": true,
+        "alias": "s2f9",
+        "authenticateByDefault": true,
+        "config": {},
+        "displayName": "s2fc",
+        "enabled": false,
+        "firstBrokerLoginFlowAlias": "s2fe",
+        "identityProviderAlias": "s300",
+        "identityProviderMapper": "s301",
+        "internalId": "s302",
+        "linkOnly": false,
+        "name": "s304",
+        "postBrokerLoginFlowAlias": "s305",
+        "providerId": "s306",
+        "storeToken": false,
+        "trustEmail": true,
+        "updateProfileFirstLogin": false,
+        "updateProfileFirstLoginMode": "s30a"
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/identity-provider/instances/{alias}/mappers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/identity-provider/import-config": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/identity-provider/instances": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/identity-provider/instances/{alias}/export": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/identity-provider/instances/{alias}/mapper-types": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/identity-provider/providers/{provider_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/identity-provider/instances/{alias}/mappers/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/identity-provider/instances/{alias}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/identity-provider/instances/{alias}/mappers/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/identity-provider/instances/{alias}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+# BasicFlowFlow
+
+main: kit: flow: BasicFlowFlow:
+{
+  entity: "flow",
+  kind: "basic",
+  name: "BasicFlowFlow",
+  step: [
+    {
+      i: {
+        ref: "flow_ref01"
+      }
+
+      m: {
+        flow_alia: "flow_alia01",
+        realm: "realm01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicFlowFlow"
+}

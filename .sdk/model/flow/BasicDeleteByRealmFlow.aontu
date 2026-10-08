@@ -1,0 +1,9 @@
+# BasicDeleteByRealmFlow
+
+main: kit: flow: BasicDeleteByRealmFlow:
+{
+  entity: "delete_by_realm",
+  kind: "basic",
+  name: "BasicDeleteByRealmFlow",
+  "key$": "BasicDeleteByRealmFlow"
+}

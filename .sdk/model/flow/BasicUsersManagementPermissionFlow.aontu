@@ -1,0 +1,51 @@
+# BasicUsersManagementPermissionFlow
+
+main: kit: flow: BasicUsersManagementPermissionFlow:
+{
+  entity: "users_management_permission",
+  kind: "basic",
+  name: "BasicUsersManagementPermissionFlow",
+  step: [
+    {
+      i: {
+        ref: "users_management_permission_ref01",
+        srcdatavar: "users_management_permission_ref01_data",
+        suffix: "_up0",
+        textfield: "resource"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-users_management_permission_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "users_management_permission_ref01",
+        srcdatavar: "users_management_permission_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "users_management_permission01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-users_management_permission_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicUsersManagementPermissionFlow"
+}

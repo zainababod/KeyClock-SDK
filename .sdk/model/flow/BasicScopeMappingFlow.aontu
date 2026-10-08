@@ -1,0 +1,39 @@
+# BasicScopeMappingFlow
+
+main: kit: flow: BasicScopeMappingFlow:
+{
+  entity: "scope_mapping",
+  kind: "basic",
+  name: "BasicScopeMappingFlow",
+  step: [
+    {
+      i: {
+        ref: "scope_mapping_ref01"
+      }
+
+      m: {
+        client_id: "client01",
+        client_scope_id: "client_scope01",
+        client_template_id: "client_template01",
+        realm: "realm01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "scope_mapping_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "scope_mapping01",
+        realm: "realm01"
+      }
+
+      o: "remove"
+    }
+  ],
+  "key$": "BasicScopeMappingFlow"
+}

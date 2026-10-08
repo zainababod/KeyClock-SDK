@@ -1,0 +1,175 @@
+# Entity: event
+
+main: kit: entity: event: {
+
+  alias: field: {}
+
+  fields: {
+    clientId: {
+      h: "Client Id"
+      n: "clientId"
+      r: false
+      t: "`$STRING`"
+    }
+    details: {
+      h: "Details"
+      n: "details"
+      r: false
+      t: "`$OBJECT`"
+    }
+    error: {
+      h: "Error"
+      n: "error"
+      r: false
+      t: "`$STRING`"
+    }
+    ipAddress: {
+      h: "Ip Address"
+      n: "ipAddress"
+      r: false
+      t: "`$STRING`"
+    }
+    realmId: {
+      h: "Realm Id"
+      n: "realmId"
+      r: false
+      t: "`$STRING`"
+    }
+    sessionId: {
+      h: "Session Id"
+      n: "sessionId"
+      r: false
+      t: "`$STRING`"
+    }
+    time: {
+      fo: "int64"
+      h: "Time"
+      n: "time"
+      r: false
+      t: "`$INTEGER`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: false
+      t: "`$STRING`"
+    }
+    userId: {
+      h: "User Id"
+      n: "userId"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "event"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/events"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "client"
+                or: "client"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "date_from"
+                or: "dateFrom"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "date_to"
+                or: "dateTo"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "first"
+                or: "first"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "ip_address"
+                or: "ipAddress"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "max"
+                or: "max"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "type"
+                or: "type"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "user"
+                or: "user"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/events"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "events"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

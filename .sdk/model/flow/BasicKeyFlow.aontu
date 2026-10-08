@@ -1,0 +1,26 @@
+# BasicKeyFlow
+
+main: kit: flow: BasicKeyFlow:
+{
+  entity: "key",
+  kind: "basic",
+  name: "BasicKeyFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "key_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicKeyFlow"
+}

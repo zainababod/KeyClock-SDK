@@ -1,0 +1,24 @@
+# BasicCertificateRepresentationFlow
+
+main: kit: flow: BasicCertificateRepresentationFlow:
+{
+  entity: "certificate_representation",
+  kind: "basic",
+  name: "BasicCertificateRepresentationFlow",
+  step: [
+    {
+      i: {
+        ref: "certificate_representation_ref01"
+      }
+
+      m: {
+        attr: "attr01",
+        client_id: "client01",
+        realm: "realm01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicCertificateRepresentationFlow"
+}

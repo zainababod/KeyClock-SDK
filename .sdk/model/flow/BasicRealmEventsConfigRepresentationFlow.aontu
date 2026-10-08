@@ -1,0 +1,26 @@
+# BasicRealmEventsConfigRepresentationFlow
+
+main: kit: flow: BasicRealmEventsConfigRepresentationFlow:
+{
+  entity: "realm_events_config_representation",
+  kind: "basic",
+  name: "BasicRealmEventsConfigRepresentationFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "realm_events_config_representation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicRealmEventsConfigRepresentationFlow"
+}

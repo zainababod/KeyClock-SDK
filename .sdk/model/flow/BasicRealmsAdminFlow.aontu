@@ -1,0 +1,113 @@
+# BasicRealmsAdminFlow
+
+main: kit: flow: BasicRealmsAdminFlow:
+{
+  entity: "realms_admin",
+  kind: "basic",
+  name: "BasicRealmsAdminFlow",
+  step: [
+    {
+      i: {
+        ref: "realms_admin_ref01"
+      }
+
+      m: {
+        locale: "locale01",
+        realm: "realm01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "realms_admin_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "realms_admin_ref01",
+        srcdatavar: "realms_admin_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-realms_admin_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "realms_admin_ref01",
+        srcdatavar: "realms_admin_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "realms_admin01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-realms_admin_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "realms_admin_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "realms_admin01"
+      }
+
+      o: "remove"
+    }
+
+    {
+      i: {
+        suffix: "_rt0"
+      }
+
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemNotExists",
+          def: {
+            ref: "realms_admin_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicRealmsAdminFlow"
+}

@@ -1,0 +1,49 @@
+# BasicIdentityProviderRepresentationFlow
+
+main: kit: flow: BasicIdentityProviderRepresentationFlow:
+{
+  entity: "identity_provider_representation",
+  kind: "basic",
+  name: "BasicIdentityProviderRepresentationFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "identity_provider_representation_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "identity_provider_representation_ref01",
+        srcdatavar: "identity_provider_representation_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "identity_provider_representation01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-identity_provider_representation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicIdentityProviderRepresentationFlow"
+}

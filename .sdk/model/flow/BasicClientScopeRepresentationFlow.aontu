@@ -1,0 +1,49 @@
+# BasicClientScopeRepresentationFlow
+
+main: kit: flow: BasicClientScopeRepresentationFlow:
+{
+  entity: "client_scope_representation",
+  kind: "basic",
+  name: "BasicClientScopeRepresentationFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "client_scope_representation_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "client_scope_representation_ref01",
+        srcdatavar: "client_scope_representation_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "client_scope_representation01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-client_scope_representation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicClientScopeRepresentationFlow"
+}

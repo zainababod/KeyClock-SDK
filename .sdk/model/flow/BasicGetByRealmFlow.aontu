@@ -1,0 +1,26 @@
+# BasicGetByRealmFlow
+
+main: kit: flow: BasicGetByRealmFlow:
+{
+  entity: "get_by_realm",
+  kind: "basic",
+  name: "BasicGetByRealmFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "get_by_realm_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicGetByRealmFlow"
+}

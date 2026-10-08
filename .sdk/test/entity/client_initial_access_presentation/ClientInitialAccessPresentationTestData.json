@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "client_initial_access_presentation": {
+      "CLIENT_INITIAL_ACCESS_PRESENTATION00": {
+        "count": 60,
+        "expiration": 61,
+        "id": "CLIENT_INITIAL_ACCESS_PRESENTATION00",
+        "remainingCount": 63,
+        "timestamp": 64,
+        "token": "s41",
+        "realm": "REALM01"
+      },
+      "CLIENT_INITIAL_ACCESS_PRESENTATION01": {
+        "count": 120,
+        "expiration": 121,
+        "id": "CLIENT_INITIAL_ACCESS_PRESENTATION01",
+        "remainingCount": 123,
+        "timestamp": 124,
+        "token": "s7d",
+        "realm": "REALM01"
+      },
+      "CLIENT_INITIAL_ACCESS_PRESENTATION02": {
+        "count": 180,
+        "expiration": 181,
+        "id": "CLIENT_INITIAL_ACCESS_PRESENTATION02",
+        "remainingCount": 183,
+        "timestamp": 184,
+        "token": "sb9",
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "client_initial_access_presentation": {
+      "client_initial_access_presentation_ref01": {
+        "count": 240,
+        "expiration": 241,
+        "remainingCount": 243,
+        "timestamp": 244,
+        "token": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/clients-initial-access": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients-initial-access": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

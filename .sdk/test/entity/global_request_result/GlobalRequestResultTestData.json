@@ -1,0 +1,57 @@
+{
+  "existing": {
+    "global_request_result": {
+      "GLOBAL_REQUEST_RESULT00": {
+        "failedRequests": [],
+        "successRequests": [],
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "id": "GLOBAL_REQUEST_RESULT00"
+      },
+      "GLOBAL_REQUEST_RESULT01": {
+        "failedRequests": [],
+        "successRequests": [],
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "id": "GLOBAL_REQUEST_RESULT01"
+      },
+      "GLOBAL_REQUEST_RESULT02": {
+        "failedRequests": [],
+        "successRequests": [],
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "id": "GLOBAL_REQUEST_RESULT02"
+      }
+    }
+  },
+  "new": {
+    "global_request_result": {
+      "global_request_result_ref01": {
+        "failedRequests": [],
+        "successRequests": []
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/clients/{id}/push-revocation": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/logout-all": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/push-revocation": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/test-nodes-available": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

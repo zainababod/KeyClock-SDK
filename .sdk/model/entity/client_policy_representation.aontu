@@ -1,0 +1,95 @@
+# Entity: client_policy_representation
+
+main: kit: entity: client_policy_representation: {
+
+  alias: field: {}
+
+  fields: {
+    conditions: {
+      h: "Conditions"
+      n: "conditions"
+      r: false
+      t: "`$ARRAY`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    enabled: {
+      h: "Enabled"
+      n: "enabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    profiles: {
+      h: "Profiles"
+      n: "profiles"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "client_policy_representation"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/client-policies/policies"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/client-policies/policies"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-policies"
+            }
+            {
+              lit: "policies"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.policies`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

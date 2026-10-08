@@ -1,0 +1,26 @@
+# BasicClientPolicyRepresentationFlow
+
+main: kit: flow: BasicClientPolicyRepresentationFlow:
+{
+  entity: "client_policy_representation",
+  kind: "basic",
+  name: "BasicClientPolicyRepresentationFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "client_policy_representation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicClientPolicyRepresentationFlow"
+}

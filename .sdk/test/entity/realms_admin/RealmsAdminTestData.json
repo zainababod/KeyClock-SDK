@@ -1,0 +1,197 @@
+{
+  "existing": {
+    "realms_admin": {
+      "REALMS_ADMIN00": {
+        "adminEventsDetailsEnabled": true,
+        "adminEventsEnabled": false,
+        "enabledEventTypes": [],
+        "eventsEnabled": false,
+        "eventsExpiration": 104,
+        "eventsListeners": [],
+        "globalProfiles": [],
+        "id": "REALMS_ADMIN00",
+        "policies": [],
+        "profiles": [],
+        "locale": "LOCALE01",
+        "realm": "REALM01",
+        "key": "KEY01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "group_id": "GROUP01",
+        "session": "SESSION01"
+      },
+      "REALMS_ADMIN01": {
+        "adminEventsDetailsEnabled": true,
+        "adminEventsEnabled": false,
+        "enabledEventTypes": [],
+        "eventsEnabled": false,
+        "eventsExpiration": 204,
+        "eventsListeners": [],
+        "globalProfiles": [],
+        "id": "REALMS_ADMIN01",
+        "policies": [],
+        "profiles": [],
+        "locale": "LOCALE01",
+        "realm": "REALM01",
+        "key": "KEY01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "group_id": "GROUP01",
+        "session": "SESSION01"
+      },
+      "REALMS_ADMIN02": {
+        "adminEventsDetailsEnabled": true,
+        "adminEventsEnabled": false,
+        "enabledEventTypes": [],
+        "eventsEnabled": false,
+        "eventsExpiration": 304,
+        "eventsListeners": [],
+        "globalProfiles": [],
+        "id": "REALMS_ADMIN02",
+        "policies": [],
+        "profiles": [],
+        "locale": "LOCALE01",
+        "realm": "REALM01",
+        "key": "KEY01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "group_id": "GROUP01",
+        "session": "SESSION01"
+      }
+    }
+  },
+  "new": {
+    "realms_admin": {
+      "realms_admin_ref01": {
+        "adminEventsDetailsEnabled": true,
+        "adminEventsEnabled": false,
+        "enabledEventTypes": [],
+        "eventsEnabled": false,
+        "eventsExpiration": 404,
+        "eventsListeners": [],
+        "globalProfiles": [],
+        "policies": [],
+        "profiles": []
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/localization/{locale}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/partial-export": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/partialImport": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/testSMTPConnection": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-session-stats": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/credential-registrators": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/localization": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/localization/{locale}/{key}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/localization/{locale}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/localization/{locale}/{key}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/default-default-client-scopes/{clientScopeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/default-optional-client-scopes/{clientScopeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/default-groups/{groupId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/localization/{locale}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/sessions/{session}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/admin-events": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/events": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/localization/{locale}/{key}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/default-default-client-scopes/{clientScopeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/default-optional-client-scopes/{clientScopeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/default-groups/{groupId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/client-policies/policies": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/client-policies/profiles": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/events/config": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

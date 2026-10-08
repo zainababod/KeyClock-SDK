@@ -1,0 +1,64 @@
+{
+  "existing": {
+    "event": {
+      "EVENT00": {
+        "clientId": "s5a",
+        "details": {},
+        "error": "s5c",
+        "ipAddress": "s5d",
+        "realmId": "s5e",
+        "sessionId": "s5f",
+        "time": 96,
+        "type": "s61",
+        "userId": "s62",
+        "realm": "REALM01"
+      },
+      "EVENT01": {
+        "clientId": "sb4",
+        "details": {},
+        "error": "sb6",
+        "ipAddress": "sb7",
+        "realmId": "sb8",
+        "sessionId": "sb9",
+        "time": 186,
+        "type": "sbb",
+        "userId": "sbc",
+        "realm": "REALM01"
+      },
+      "EVENT02": {
+        "clientId": "s10e",
+        "details": {},
+        "error": "s110",
+        "ipAddress": "s111",
+        "realmId": "s112",
+        "sessionId": "s113",
+        "time": 276,
+        "type": "s115",
+        "userId": "s116",
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "event": {
+      "event_ref01": {
+        "clientId": "s168",
+        "details": {},
+        "error": "s16a",
+        "ipAddress": "s16b",
+        "realmId": "s16c",
+        "sessionId": "s16d",
+        "time": 366,
+        "type": "s16f",
+        "userId": "s170"
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/events": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

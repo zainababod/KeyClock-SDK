@@ -1,0 +1,379 @@
+# Entity: access_token
+
+main: kit: entity: access_token: {
+
+  alias: field: {}
+
+  fields: {
+    acr: {
+      h: "Acr"
+      n: "acr"
+      r: false
+      t: "`$STRING`"
+    }
+    address: {
+      h: "Address"
+      n: "address"
+      r: false
+      t: "`$OBJECT`"
+    }
+    allowedorigins: {
+      h: "Allowedorigins"
+      n: "allowedorigins"
+      r: false
+      t: "`$ARRAY`"
+    }
+    at_hash: {
+      h: "At Hash"
+      n: "at_hash"
+      r: false
+      t: "`$STRING`"
+    }
+    authTime: {
+      fo: "int32"
+      h: "Auth Time"
+      n: "authTime"
+      r: false
+      t: "`$INTEGER`"
+    }
+    auth_time: {
+      fo: "int64"
+      h: "Auth Time"
+      n: "auth_time"
+      r: false
+      t: "`$INTEGER`"
+    }
+    authorization: {
+      h: "Authorization"
+      n: "authorization"
+      r: false
+      t: "`$OBJECT`"
+    }
+    azp: {
+      h: "Azp"
+      n: "azp"
+      r: false
+      t: "`$STRING`"
+    }
+    birthdate: {
+      h: "Birthdate"
+      n: "birthdate"
+      r: false
+      t: "`$STRING`"
+    }
+    c_hash: {
+      h: "C Hash"
+      n: "c_hash"
+      r: false
+      t: "`$STRING`"
+    }
+    claims_locales: {
+      h: "Claims Locales"
+      n: "claims_locales"
+      r: false
+      t: "`$STRING`"
+    }
+    cnf: {
+      h: "Cnf"
+      n: "cnf"
+      r: false
+      t: "`$OBJECT`"
+    }
+    email: {
+      h: "Email"
+      n: "email"
+      r: false
+      t: "`$STRING`"
+    }
+    email_verified: {
+      h: "Email Verified"
+      n: "email_verified"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    exp: {
+      fo: "int64"
+      h: "Exp"
+      n: "exp"
+      r: false
+      t: "`$INTEGER`"
+    }
+    family_name: {
+      h: "Family Name"
+      n: "family_name"
+      r: false
+      t: "`$STRING`"
+    }
+    gender: {
+      h: "Gender"
+      n: "gender"
+      r: false
+      t: "`$STRING`"
+    }
+    given_name: {
+      h: "Given Name"
+      n: "given_name"
+      r: false
+      t: "`$STRING`"
+    }
+    iat: {
+      fo: "int64"
+      h: "Iat"
+      n: "iat"
+      r: false
+      t: "`$INTEGER`"
+    }
+    iss: {
+      h: "Iss"
+      n: "iss"
+      r: false
+      t: "`$STRING`"
+    }
+    jti: {
+      h: "Jti"
+      n: "jti"
+      r: false
+      t: "`$STRING`"
+    }
+    locale: {
+      h: "Locale"
+      n: "locale"
+      r: false
+      t: "`$STRING`"
+    }
+    middle_name: {
+      h: "Middle Name"
+      n: "middle_name"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    nbf: {
+      fo: "int64"
+      h: "Nbf"
+      n: "nbf"
+      r: false
+      t: "`$INTEGER`"
+    }
+    nickname: {
+      h: "Nickname"
+      n: "nickname"
+      r: false
+      t: "`$STRING`"
+    }
+    nonce: {
+      h: "Nonce"
+      n: "nonce"
+      r: false
+      t: "`$STRING`"
+    }
+    otherClaims: {
+      h: "Other Claims"
+      n: "otherClaims"
+      r: false
+      t: "`$OBJECT`"
+    }
+    phone_number: {
+      h: "Phone Number"
+      n: "phone_number"
+      r: false
+      t: "`$STRING`"
+    }
+    phone_number_verified: {
+      h: "Phone Number Verified"
+      n: "phone_number_verified"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    picture: {
+      h: "Picture"
+      n: "picture"
+      r: false
+      t: "`$STRING`"
+    }
+    preferred_username: {
+      h: "Preferred Username"
+      n: "preferred_username"
+      r: false
+      t: "`$STRING`"
+    }
+    profile: {
+      h: "Profile"
+      n: "profile"
+      r: false
+      t: "`$STRING`"
+    }
+    realm_access: {
+      h: "Realm Access"
+      n: "realm_access"
+      r: false
+      t: "`$OBJECT`"
+    }
+    resource_access: {
+      h: "Resource Access"
+      n: "resource_access"
+      r: false
+      t: "`$OBJECT`"
+    }
+    s_hash: {
+      h: "S Hash"
+      n: "s_hash"
+      r: false
+      t: "`$STRING`"
+    }
+    scope: {
+      h: "Scope"
+      n: "scope"
+      r: false
+      t: "`$STRING`"
+    }
+    session_state: {
+      h: "Session State"
+      n: "session_state"
+      r: false
+      t: "`$STRING`"
+    }
+    sid: {
+      h: "Sid"
+      n: "sid"
+      r: false
+      t: "`$STRING`"
+    }
+    sub: {
+      h: "Sub"
+      n: "sub"
+      r: false
+      t: "`$STRING`"
+    }
+    trustedcerts: {
+      h: "Trustedcerts"
+      n: "trustedcerts"
+      r: false
+      t: "`$ARRAY`"
+    }
+    typ: {
+      h: "Typ"
+      n: "typ"
+      r: false
+      t: "`$STRING`"
+    }
+    updated_at: {
+      fo: "int64"
+      h: "Updated At"
+      n: "updated_at"
+      r: false
+      t: "`$INTEGER`"
+    }
+    website: {
+      h: "Website"
+      n: "website"
+      r: false
+      t: "`$STRING`"
+    }
+    zoneinfo: {
+      h: "Zoneinfo"
+      n: "zoneinfo"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "access_token"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/clients/{id}/evaluate-scopes/generate-example-access-token"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "scope"
+                or: "scope"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "user_id"
+                or: "userId"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/clients/{id}/evaluate-scopes/generate-example-access-token"
+          q: {
+            exist: [
+              "client_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "evaluate-scopes"
+            }
+            {
+              lit: "generate-example-access-token"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.client")]
+  ]
+
+}

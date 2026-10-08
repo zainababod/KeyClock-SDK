@@ -1,0 +1,68 @@
+{
+  "existing": {
+    "key": {
+      "KEY00": {
+        "algorithm": "s64",
+        "certificate": "s65",
+        "kid": "s66",
+        "providerId": "s67",
+        "providerPriority": 104,
+        "publicKey": "s69",
+        "status": "s6a",
+        "type": "s6b",
+        "use": {},
+        "validTo": 109,
+        "realm": "REALM01"
+      },
+      "KEY01": {
+        "algorithm": "sc8",
+        "certificate": "sc9",
+        "kid": "sca",
+        "providerId": "scb",
+        "providerPriority": 204,
+        "publicKey": "scd",
+        "status": "sce",
+        "type": "scf",
+        "use": {},
+        "validTo": 209,
+        "realm": "REALM01"
+      },
+      "KEY02": {
+        "algorithm": "s12c",
+        "certificate": "s12d",
+        "kid": "s12e",
+        "providerId": "s12f",
+        "providerPriority": 304,
+        "publicKey": "s131",
+        "status": "s132",
+        "type": "s133",
+        "use": {},
+        "validTo": 309,
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "key": {
+      "key_ref01": {
+        "algorithm": "s190",
+        "certificate": "s191",
+        "kid": "s192",
+        "providerId": "s193",
+        "providerPriority": 404,
+        "publicKey": "s195",
+        "status": "s196",
+        "type": "s197",
+        "use": {},
+        "validTo": 409
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/keys": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

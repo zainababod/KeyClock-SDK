@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "client_policy_representation": {
+      "CLIENT_POLICY_REPRESENTATION00": {
+        "conditions": [],
+        "description": "s33",
+        "enabled": true,
+        "name": "s35",
+        "profiles": [],
+        "realm": "REALM01"
+      },
+      "CLIENT_POLICY_REPRESENTATION01": {
+        "conditions": [],
+        "description": "s65",
+        "enabled": true,
+        "name": "s67",
+        "profiles": [],
+        "realm": "REALM01"
+      },
+      "CLIENT_POLICY_REPRESENTATION02": {
+        "conditions": [],
+        "description": "s97",
+        "enabled": true,
+        "name": "s99",
+        "profiles": [],
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "client_policy_representation": {
+      "client_policy_representation_ref01": {
+        "conditions": [],
+        "description": "sc9",
+        "enabled": true,
+        "name": "scb",
+        "profiles": []
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/client-policies/policies": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "post": {
+      "POST00": {
+        "id": "POST00"
+      },
+      "POST01": {
+        "id": "POST01"
+      },
+      "POST02": {
+        "id": "POST02"
+      }
+    }
+  },
+  "new": {
+    "post": {
+      "post_ref01": {}
+    }
+  },
+  "requests": {
+    "POST /": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

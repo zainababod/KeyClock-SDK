@@ -1,0 +1,22 @@
+# BasicGetFlow
+
+main: kit: flow: BasicGetFlow:
+{
+  entity: "get",
+  kind: "basic",
+  name: "BasicGetFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "get_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicGetFlow"
+}

@@ -1,0 +1,99 @@
+{
+  "existing": {
+    "identity_provider_representation": {
+      "IDENTITY_PROVIDER_REPRESENTATION00": {
+        "addReadTokenRoleOnCreate": true,
+        "alias": "s97",
+        "authenticateByDefault": true,
+        "config": {},
+        "displayName": "s9a",
+        "enabled": false,
+        "firstBrokerLoginFlowAlias": "s9c",
+        "internalId": "s9d",
+        "linkOnly": true,
+        "postBrokerLoginFlowAlias": "s9f",
+        "providerId": "sa0",
+        "storeToken": false,
+        "trustEmail": true,
+        "updateProfileFirstLogin": false,
+        "updateProfileFirstLoginMode": "sa4",
+        "realm": "REALM01",
+        "alia": "ALIA01",
+        "id": "IDENTITY_PROVIDER_REPRESENTATION00"
+      },
+      "IDENTITY_PROVIDER_REPRESENTATION01": {
+        "addReadTokenRoleOnCreate": true,
+        "alias": "s12d",
+        "authenticateByDefault": true,
+        "config": {},
+        "displayName": "s130",
+        "enabled": false,
+        "firstBrokerLoginFlowAlias": "s132",
+        "internalId": "s133",
+        "linkOnly": true,
+        "postBrokerLoginFlowAlias": "s135",
+        "providerId": "s136",
+        "storeToken": false,
+        "trustEmail": true,
+        "updateProfileFirstLogin": false,
+        "updateProfileFirstLoginMode": "s13a",
+        "realm": "REALM01",
+        "alia": "ALIA01",
+        "id": "IDENTITY_PROVIDER_REPRESENTATION01"
+      },
+      "IDENTITY_PROVIDER_REPRESENTATION02": {
+        "addReadTokenRoleOnCreate": true,
+        "alias": "s1c3",
+        "authenticateByDefault": true,
+        "config": {},
+        "displayName": "s1c6",
+        "enabled": false,
+        "firstBrokerLoginFlowAlias": "s1c8",
+        "internalId": "s1c9",
+        "linkOnly": true,
+        "postBrokerLoginFlowAlias": "s1cb",
+        "providerId": "s1cc",
+        "storeToken": false,
+        "trustEmail": true,
+        "updateProfileFirstLogin": false,
+        "updateProfileFirstLoginMode": "s1d0",
+        "realm": "REALM01",
+        "alia": "ALIA01",
+        "id": "IDENTITY_PROVIDER_REPRESENTATION02"
+      }
+    }
+  },
+  "new": {
+    "identity_provider_representation": {
+      "identity_provider_representation_ref01": {
+        "addReadTokenRoleOnCreate": true,
+        "alias": "s259",
+        "authenticateByDefault": true,
+        "config": {},
+        "displayName": "s25c",
+        "enabled": false,
+        "firstBrokerLoginFlowAlias": "s25e",
+        "internalId": "s25f",
+        "linkOnly": true,
+        "postBrokerLoginFlowAlias": "s261",
+        "providerId": "s262",
+        "storeToken": false,
+        "trustEmail": true,
+        "updateProfileFirstLogin": false,
+        "updateProfileFirstLoginMode": "s266"
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/identity-provider/instances": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/identity-provider/instances/{alias}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

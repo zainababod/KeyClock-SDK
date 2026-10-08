@@ -1,0 +1,105 @@
+# Entity: authenticator_config_info_representation
+
+main: kit: entity: authenticator_config_info_representation: {
+
+  alias: field: {}
+
+  fields: {
+    helpText: {
+      h: "Help Text"
+      n: "helpText"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    properties: {
+      h: "Properties"
+      n: "properties"
+      r: false
+      t: "`$ARRAY`"
+    }
+    providerId: {
+      h: "Provider Id"
+      n: "providerId"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "authenticator_config_info_representation"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/authentication/config-description/{providerId}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "provider_id"
+                or: "providerId"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/authentication/config-description/{providerId}"
+          q: {
+            exist: [
+              "provider_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              providerId: "provider_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "config-description"
+            }
+            {
+              var: "provider_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

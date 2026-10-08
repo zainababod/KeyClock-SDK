@@ -1,0 +1,27 @@
+# BasicMappingsRepresentationFlow
+
+main: kit: flow: BasicMappingsRepresentationFlow:
+{
+  entity: "mappings_representation",
+  kind: "basic",
+  name: "BasicMappingsRepresentationFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01",
+        user_id: "user01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "mappings_representation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicMappingsRepresentationFlow"
+}

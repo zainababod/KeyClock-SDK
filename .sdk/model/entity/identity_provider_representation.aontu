@@ -1,0 +1,250 @@
+# Entity: identity_provider_representation
+
+main: kit: entity: identity_provider_representation: {
+
+  alias: field: {}
+
+  fields: {
+    addReadTokenRoleOnCreate: {
+      h: "Add Read Token Role On Create"
+      n: "addReadTokenRoleOnCreate"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    alias: {
+      h: "Alias"
+      n: "alias"
+      r: false
+      t: "`$STRING`"
+    }
+    authenticateByDefault: {
+      h: "Authenticate By Default"
+      n: "authenticateByDefault"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    config: {
+      h: "Config"
+      n: "config"
+      r: false
+      t: "`$OBJECT`"
+    }
+    displayName: {
+      h: "Display Name"
+      n: "displayName"
+      r: false
+      t: "`$STRING`"
+    }
+    enabled: {
+      h: "Enabled"
+      n: "enabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    firstBrokerLoginFlowAlias: {
+      h: "First Broker Login Flow Alias"
+      n: "firstBrokerLoginFlowAlias"
+      r: false
+      t: "`$STRING`"
+    }
+    internalId: {
+      h: "Internal Id"
+      n: "internalId"
+      r: false
+      t: "`$STRING`"
+    }
+    linkOnly: {
+      h: "Link Only"
+      n: "linkOnly"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    postBrokerLoginFlowAlias: {
+      h: "Post Broker Login Flow Alias"
+      n: "postBrokerLoginFlowAlias"
+      r: false
+      t: "`$STRING`"
+    }
+    providerId: {
+      h: "Provider Id"
+      n: "providerId"
+      r: false
+      t: "`$STRING`"
+    }
+    storeToken: {
+      h: "Store Token"
+      n: "storeToken"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    trustEmail: {
+      h: "Trust Email"
+      n: "trustEmail"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    updateProfileFirstLogin: {
+      h: "Update Profile First Login"
+      n: "updateProfileFirstLogin"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    updateProfileFirstLoginMode: {
+      h: "Update Profile First Login Mode"
+      n: "updateProfileFirstLoginMode"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "identity_provider_representation"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/identity-provider/instances"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "brief_representation"
+                or: "briefRepresentation"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "first"
+                or: "first"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "max"
+                or: "max"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/identity-provider/instances"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "identity-provider"
+            }
+            {
+              lit: "instances"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/identity-provider/instances/{alias}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "alia"
+                or: "alias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/identity-provider/instances/{alias}"
+          q: {
+            exist: [
+              "alia"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              alias: "alia"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "identity-provider"
+            }
+            {
+              lit: "instances"
+            }
+            {
+              var: "alia"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,81 @@
+# Entity: flow
+
+main: kit: entity: flow: {
+
+  alias: field: {}
+
+  name: "flow"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /{realm}/authentication/flows/{flowAlias}/copy"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "flow_alia"
+                or: "flowAlias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/authentication/flows/{flowAlias}/copy"
+          q: {
+            "$action": "copy"
+            exist: [
+              "flow_alia"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              flowAlias: "flow_alia"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "authentication"
+            }
+            {
+              lit: "flows"
+            }
+            {
+              var: "flow_alia"
+            }
+            {
+              lit: "copy"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

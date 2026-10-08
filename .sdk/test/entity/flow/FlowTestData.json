@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "flow": {
+      "FLOW00": {
+        "flow_alia": "FLOW_ALIA01",
+        "realm": "REALM01",
+        "id": "FLOW00"
+      },
+      "FLOW01": {
+        "flow_alia": "FLOW_ALIA01",
+        "realm": "REALM01",
+        "id": "FLOW01"
+      },
+      "FLOW02": {
+        "flow_alia": "FLOW_ALIA01",
+        "realm": "REALM01",
+        "id": "FLOW02"
+      }
+    }
+  },
+  "new": {
+    "flow": {
+      "flow_ref01": {}
+    }
+  },
+  "requests": {
+    "POST /{realm}/authentication/flows/{flowAlias}/copy": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "existing": {
+    "user": {
+      "USER00": {
+        "access": {},
+        "applicationRoles": {},
+        "attributes": {},
+        "clientConsents": [],
+        "clientRoles": {},
+        "createdTimestamp": 275,
+        "credentials": [],
+        "disableableCredentialTypes": [],
+        "email": "s116",
+        "emailVerified": false,
+        "enabled": true,
+        "federatedIdentities": [],
+        "federationLink": "s11a",
+        "firstName": "s11b",
+        "groups": [],
+        "id": "USER00",
+        "lastName": "s11e",
+        "notBefore": 287,
+        "origin": "s120",
+        "realmRoles": [],
+        "requiredActions": [],
+        "self": "s123",
+        "serviceAccountClientId": "s124",
+        "socialLinks": [],
+        "totp": true,
+        "userProfileMetadata": {},
+        "username": "s128",
+        "credential_id": "CREDENTIAL01",
+        "new_previous_credential_id": "NEW_PREVIOUS_CREDENTIAL01",
+        "realm": "REALM01",
+        "provider": "PROVIDER01",
+        "client_id": "CLIENT01",
+        "role_name": "ROLE_NAME01",
+        "client": "CLIENT01",
+        "group_id": "GROUP01"
+      },
+      "USER01": {
+        "access": {},
+        "applicationRoles": {},
+        "attributes": {},
+        "clientConsents": [],
+        "clientRoles": {},
+        "createdTimestamp": 545,
+        "credentials": [],
+        "disableableCredentialTypes": [],
+        "email": "s224",
+        "emailVerified": false,
+        "enabled": true,
+        "federatedIdentities": [],
+        "federationLink": "s228",
+        "firstName": "s229",
+        "groups": [],
+        "id": "USER01",
+        "lastName": "s22c",
+        "notBefore": 557,
+        "origin": "s22e",
+        "realmRoles": [],
+        "requiredActions": [],
+        "self": "s231",
+        "serviceAccountClientId": "s232",
+        "socialLinks": [],
+        "totp": true,
+        "userProfileMetadata": {},
+        "username": "s236",
+        "credential_id": "CREDENTIAL01",
+        "new_previous_credential_id": "NEW_PREVIOUS_CREDENTIAL01",
+        "realm": "REALM01",
+        "provider": "PROVIDER01",
+        "client_id": "CLIENT01",
+        "role_name": "ROLE_NAME01",
+        "client": "CLIENT01",
+        "group_id": "GROUP01"
+      },
+      "USER02": {
+        "access": {},
+        "applicationRoles": {},
+        "attributes": {},
+        "clientConsents": [],
+        "clientRoles": {},
+        "createdTimestamp": 815,
+        "credentials": [],
+        "disableableCredentialTypes": [],
+        "email": "s332",
+        "emailVerified": false,
+        "enabled": true,
+        "federatedIdentities": [],
+        "federationLink": "s336",
+        "firstName": "s337",
+        "groups": [],
+        "id": "USER02",
+        "lastName": "s33a",
+        "notBefore": 827,
+        "origin": "s33c",
+        "realmRoles": [],
+        "requiredActions": [],
+        "self": "s33f",
+        "serviceAccountClientId": "s340",
+        "socialLinks": [],
+        "totp": true,
+        "userProfileMetadata": {},
+        "username": "s344",
+        "credential_id": "CREDENTIAL01",
+        "new_previous_credential_id": "NEW_PREVIOUS_CREDENTIAL01",
+        "realm": "REALM01",
+        "provider": "PROVIDER01",
+        "client_id": "CLIENT01",
+        "role_name": "ROLE_NAME01",
+        "client": "CLIENT01",
+        "group_id": "GROUP01"
+      }
+    }
+  },
+  "new": {
+    "user": {
+      "user_ref01": {
+        "access": {},
+        "applicationRoles": {},
+        "attributes": {},
+        "clientConsents": [],
+        "clientRoles": {},
+        "createdTimestamp": 1085,
+        "credentials": [],
+        "disableableCredentialTypes": [],
+        "email": "s440",
+        "emailVerified": false,
+        "enabled": true,
+        "federatedIdentities": [],
+        "federationLink": "s444",
+        "firstName": "s445",
+        "groups": [],
+        "lastName": "s448",
+        "notBefore": 1097,
+        "origin": "s44a",
+        "realmRoles": [],
+        "requiredActions": [],
+        "self": "s44d",
+        "serviceAccountClientId": "s44e",
+        "socialLinks": [],
+        "totp": true,
+        "userProfileMetadata": {},
+        "username": "s452"
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/users/{id}/credentials/{credentialId}/moveAfter/{newPreviousCredentialId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/users/{id}/credentials/{credentialId}/moveToFirst": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/users/{id}/federated-identity/{provider}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/users/{id}/impersonation": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/users/{id}/logout": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/users": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/roles/{role-name}/users": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/users/{id}/configured-user-storage-credential-types": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/users/{id}/consents": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/roles/{role-name}/users": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/users": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/users/profile/metadata": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/users/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/users/{id}/groups/count": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/users/count": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/users/{id}/consents/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/users/{id}/credentials/{credentialId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/users/{id}/groups/{groupId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/users/{id}/federated-identity/{provider}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/users/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/users/{id}/credentials/{credentialId}/userLabel": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/users/{id}/groups/{groupId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/users/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/users/{id}/disable-credential-types": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/users/{id}/execute-actions-email": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/users/{id}/reset-password": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/users/{id}/reset-password-email": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/users/{id}/send-verify-email": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

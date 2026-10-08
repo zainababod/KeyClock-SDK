@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "component_type_representation": {
+      "COMPONENT_TYPE_REPRESENTATION00": {
+        "helpText": "s28",
+        "id": "COMPONENT_TYPE_REPRESENTATION00",
+        "metadata": {},
+        "properties": [],
+        "realm": "REALM01"
+      },
+      "COMPONENT_TYPE_REPRESENTATION01": {
+        "helpText": "s50",
+        "id": "COMPONENT_TYPE_REPRESENTATION01",
+        "metadata": {},
+        "properties": [],
+        "realm": "REALM01"
+      },
+      "COMPONENT_TYPE_REPRESENTATION02": {
+        "helpText": "s78",
+        "id": "COMPONENT_TYPE_REPRESENTATION02",
+        "metadata": {},
+        "properties": [],
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "component_type_representation": {
+      "component_type_representation_ref01": {
+        "helpText": "sa0",
+        "metadata": {},
+        "properties": []
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/components/{id}/sub-component-types": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-registration-policy/providers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

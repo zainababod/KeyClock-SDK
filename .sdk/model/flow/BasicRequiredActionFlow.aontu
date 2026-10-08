@@ -1,0 +1,62 @@
+# BasicRequiredActionFlow
+
+main: kit: flow: BasicRequiredActionFlow:
+{
+  entity: "required_action",
+  kind: "basic",
+  name: "BasicRequiredActionFlow",
+  step: [
+    {
+      i: {
+        ref: "required_action_ref01"
+      }
+
+      m: {
+        alia: "alia01",
+        realm: "realm01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "required_action_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "required_action_ref01",
+        srcdatavar: "required_action_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "required_action01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-required_action_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicRequiredActionFlow"
+}

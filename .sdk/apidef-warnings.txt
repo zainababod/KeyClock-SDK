@@ -1,0 +1,294 @@
+{
+  point: "warning"
+  note: "Points POST /{realm}/authentication/flows/{flowAlias}/executions/execution and POST /{realm}/authentication/flows/{flowAlias}/executions/flow on entity=authentication_management op=create have the same selector (exist: flow_alia,realm), so only POST /{realm}/authentication/flows/{flowAlias}/executions/execution is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "authentication_management"
+  op: "create"
+  points: [
+    "POST /{realm}/authentication/flows/{flowAlias}/executions/execution"
+    "POST /{realm}/authentication/flows/{flowAlias}/executions/flow"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points POST /{realm}/authentication/config, POST /{realm}/authentication/executions, POST /{realm}/authentication/flows and POST /{realm}/authentication/register-required-action on entity=authentication_management op=create have the same selector (exist: realm), so only POST /{realm}/authentication/config is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "authentication_management"
+  op: "create"
+  points: [
+    "POST /{realm}/authentication/config"
+    "POST /{realm}/authentication/executions"
+    "POST /{realm}/authentication/flows"
+    "POST /{realm}/authentication/register-required-action"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /{realm}/authentication/authenticator-providers, GET /{realm}/authentication/client-authenticator-providers, GET /{realm}/authentication/form-action-providers, GET /{realm}/authentication/form-providers and GET /{realm}/authentication/unregistered-required-actions on entity=authentication_management op=list have the same selector (exist: realm), so only GET /{realm}/authentication/authenticator-providers is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "authentication_management"
+  op: "list"
+  points: [
+    "GET /{realm}/authentication/authenticator-providers"
+    "GET /{realm}/authentication/client-authenticator-providers"
+    "GET /{realm}/authentication/form-action-providers"
+    "GET /{realm}/authentication/form-providers"
+    "GET /{realm}/authentication/unregistered-required-actions"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points DELETE /{realm}/authentication/config/{id} and DELETE /{realm}/authentication/flows/{id} on entity=authentication_management op=remove have the same selector (exist: id,realm), so only DELETE /{realm}/authentication/config/{id} is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "authentication_management"
+  op: "remove"
+  points: [
+    "DELETE /{realm}/authentication/config/{id}"
+    "DELETE /{realm}/authentication/flows/{id}"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points PUT /{realm}/authentication/config/{id} and PUT /{realm}/authentication/flows/{id} on entity=authentication_management op=update have the same selector (exist: id,realm), so only PUT /{realm}/authentication/config/{id} is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "authentication_management"
+  op: "update"
+  points: [
+    "PUT /{realm}/authentication/config/{id}"
+    "PUT /{realm}/authentication/flows/{id}"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points POST /{realm}/clients/{id}/certificates/{attr}/generate, POST /{realm}/clients/{id}/certificates/{attr}/upload and POST /{realm}/clients/{id}/certificates/{attr}/upload-certificate on entity=certificate_representation op=create have the same selector (exist: attr,client_id,realm), so only POST /{realm}/clients/{id}/certificates/{attr}/generate is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "certificate_representation"
+  op: "create"
+  points: [
+    "POST /{realm}/clients/{id}/certificates/{attr}/generate"
+    "POST /{realm}/clients/{id}/certificates/{attr}/upload"
+    "POST /{realm}/clients/{id}/certificates/{attr}/upload-certificate"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points DELETE /{realm}/clients/{id}/default-client-scopes/{clientScopeId} and DELETE /{realm}/clients/{id}/optional-client-scopes/{clientScopeId} on entity=client op=remove have the same selector (exist: client_scope_id,id,realm), so only DELETE /{realm}/clients/{id}/default-client-scopes/{clientScopeId} is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "client"
+  op: "remove"
+  points: [
+    "DELETE /{realm}/clients/{id}/default-client-scopes/{clientScopeId}"
+    "DELETE /{realm}/clients/{id}/optional-client-scopes/{clientScopeId}"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points PUT /{realm}/clients/{id}/default-client-scopes/{clientScopeId} and PUT /{realm}/clients/{id}/optional-client-scopes/{clientScopeId} on entity=client op=update have the same selector (exist: client_scope_id,id,realm), so only PUT /{realm}/clients/{id}/default-client-scopes/{clientScopeId} is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "client"
+  op: "update"
+  points: [
+    "PUT /{realm}/clients/{id}/default-client-scopes/{clientScopeId}"
+    "PUT /{realm}/clients/{id}/optional-client-scopes/{clientScopeId}"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points POST /{realm}/client-scopes and POST /{realm}/client-templates on entity=client_scope op=create have the same selector (exist: realm), so only POST /{realm}/client-scopes is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "client_scope"
+  op: "create"
+  points: [
+    "POST /{realm}/client-scopes"
+    "POST /{realm}/client-templates"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points DELETE /{realm}/client-scopes/{id} and DELETE /{realm}/client-templates/{id} on entity=client_scope op=remove have the same selector (exist: id,realm), so only DELETE /{realm}/client-scopes/{id} is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "client_scope"
+  op: "remove"
+  points: [
+    "DELETE /{realm}/client-scopes/{id}"
+    "DELETE /{realm}/client-templates/{id}"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points PUT /{realm}/client-scopes/{id} and PUT /{realm}/client-templates/{id} on entity=client_scope op=update have the same selector (exist: id,realm), so only PUT /{realm}/client-scopes/{id} is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "client_scope"
+  op: "update"
+  points: [
+    "PUT /{realm}/client-scopes/{id}"
+    "PUT /{realm}/client-templates/{id}"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /{realm}/client-templates, GET /{realm}/default-default-client-scopes and GET /{realm}/default-optional-client-scopes on entity=client_scope_representation op=list have the same selector (exist: realm), so only GET /{realm}/client-templates is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "client_scope_representation"
+  op: "list"
+  points: [
+    "GET /{realm}/client-templates"
+    "GET /{realm}/default-default-client-scopes"
+    "GET /{realm}/default-optional-client-scopes"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /{realm}/clients/{id}/client-secret and GET /{realm}/clients/{id}/client-secret/rotated on entity=credential_representation op=load have the same selector (exist: client_id,realm), so only GET /{realm}/clients/{id}/client-secret is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "credential_representation"
+  op: "load"
+  points: [
+    "GET /{realm}/clients/{id}/client-secret"
+    "GET /{realm}/clients/{id}/client-secret/rotated"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points POST /{realm}/logout-all and POST /{realm}/push-revocation on entity=global_request_result op=create have the same selector (exist: realm), so only POST /{realm}/logout-all is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "global_request_result"
+  op: "create"
+  points: [
+    "POST /{realm}/logout-all"
+    "POST /{realm}/push-revocation"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /{realm}/identity-provider/instances/{alias}/export and GET /{realm}/identity-provider/instances/{alias}/mapper-types on entity=identity_provider op=load have the same selector (exist: alia,realm), so only GET /{realm}/identity-provider/instances/{alias}/export is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "identity_provider"
+  op: "load"
+  points: [
+    "GET /{realm}/identity-provider/instances/{alias}/export"
+    "GET /{realm}/identity-provider/instances/{alias}/mapper-types"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points POST /{realm}/partial-export, POST /{realm}/partialImport and POST /{realm}/testSMTPConnection on entity=realms_admin op=create have the same selector (exist: realm), so only POST /{realm}/partial-export is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "realms_admin"
+  op: "create"
+  points: [
+    "POST /{realm}/partial-export"
+    "POST /{realm}/partialImport"
+    "POST /{realm}/testSMTPConnection"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /{realm}/client-session-stats, GET /{realm}/credential-registrators and GET /{realm}/localization on entity=realms_admin op=list have the same selector (exist: realm), so only GET /{realm}/client-session-stats is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "realms_admin"
+  op: "list"
+  points: [
+    "GET /{realm}/client-session-stats"
+    "GET /{realm}/credential-registrators"
+    "GET /{realm}/localization"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points DELETE /{realm}/default-default-client-scopes/{clientScopeId} and DELETE /{realm}/default-optional-client-scopes/{clientScopeId} on entity=realms_admin op=remove have the same selector (exist: client_scope_id,realm), so only DELETE /{realm}/default-default-client-scopes/{clientScopeId} is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "realms_admin"
+  op: "remove"
+  points: [
+    "DELETE /{realm}/default-default-client-scopes/{clientScopeId}"
+    "DELETE /{realm}/default-optional-client-scopes/{clientScopeId}"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points DELETE /{realm}/admin-events and DELETE /{realm}/events on entity=realms_admin op=remove have the same selector (exist: realm), so only DELETE /{realm}/admin-events is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "realms_admin"
+  op: "remove"
+  points: [
+    "DELETE /{realm}/admin-events"
+    "DELETE /{realm}/events"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points PUT /{realm}/default-default-client-scopes/{clientScopeId} and PUT /{realm}/default-optional-client-scopes/{clientScopeId} on entity=realms_admin op=update have the same selector (exist: client_scope_id,realm), so only PUT /{realm}/default-default-client-scopes/{clientScopeId} is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "realms_admin"
+  op: "update"
+  points: [
+    "PUT /{realm}/default-default-client-scopes/{clientScopeId}"
+    "PUT /{realm}/default-optional-client-scopes/{clientScopeId}"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points PUT /{realm}/client-policies/policies, PUT /{realm}/client-policies/profiles and PUT /{realm}/events/config on entity=realms_admin op=update have the same selector (exist: realm), so only PUT /{realm}/client-policies/policies is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "realms_admin"
+  op: "update"
+  points: [
+    "PUT /{realm}/client-policies/policies"
+    "PUT /{realm}/client-policies/profiles"
+    "PUT /{realm}/events/config"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /{realm}/users and GET /{realm}/users/profile/metadata on entity=user op=list have the same selector (exist: realm), so only GET /{realm}/users is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "user"
+  op: "list"
+  points: [
+    "GET /{realm}/users"
+    "GET /{realm}/users/profile/metadata"
+  ]
+
+}

@@ -1,0 +1,33 @@
+# BasicAttackDetectionFlow
+
+main: kit: flow: BasicAttackDetectionFlow:
+{
+  entity: "attack_detection",
+  kind: "basic",
+  name: "BasicAttackDetectionFlow",
+  step: [
+    {
+      i: {
+        ref: "attack_detection_ref01",
+        srcdatavar: "attack_detection_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "attack_detection01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-attack_detection_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAttackDetectionFlow"
+}

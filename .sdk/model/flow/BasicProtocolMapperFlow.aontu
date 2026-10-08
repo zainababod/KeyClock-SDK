@@ -1,0 +1,102 @@
+# BasicProtocolMapperFlow
+
+main: kit: flow: BasicProtocolMapperFlow:
+{
+  entity: "protocol_mapper",
+  kind: "basic",
+  name: "BasicProtocolMapperFlow",
+  step: [
+    {
+      i: {
+        ref: "protocol_mapper_ref01"
+      }
+
+      m: {
+        client_id: "client01",
+        client_scope_id: "client_scope01",
+        client_template_id: "client_template01",
+        realm: "realm01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        client_id: "client01",
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "protocol_mapper_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      d: {
+        client_template_id: "client_template01",
+        realm: "realm01"
+      }
+
+      i: {
+        ref: "protocol_mapper_ref01",
+        srcdatavar: "protocol_mapper_ref01_data",
+        suffix: "_up0",
+        textfield: "consentText"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-protocol_mapper_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "protocol_mapper_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        client_template_id: "client_template01",
+        id: "protocol_mapper01",
+        realm: "realm01"
+      }
+
+      o: "remove"
+    }
+
+    {
+      i: {
+        suffix: "_rt0"
+      }
+
+      m: {
+        client_id: "client01",
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemNotExists",
+          def: {
+            ref: "protocol_mapper_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicProtocolMapperFlow"
+}

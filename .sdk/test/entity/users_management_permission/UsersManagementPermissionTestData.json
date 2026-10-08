@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "users_management_permission": {
+      "USERS_MANAGEMENT_PERMISSION00": {
+        "enabled": true,
+        "resource": "s1f",
+        "scopePermissions": {},
+        "realm": "REALM01",
+        "id": "USERS_MANAGEMENT_PERMISSION00"
+      },
+      "USERS_MANAGEMENT_PERMISSION01": {
+        "enabled": true,
+        "resource": "s3d",
+        "scopePermissions": {},
+        "realm": "REALM01",
+        "id": "USERS_MANAGEMENT_PERMISSION01"
+      },
+      "USERS_MANAGEMENT_PERMISSION02": {
+        "enabled": true,
+        "resource": "s5b",
+        "scopePermissions": {},
+        "realm": "REALM01",
+        "id": "USERS_MANAGEMENT_PERMISSION02"
+      }
+    }
+  },
+  "new": {
+    "users_management_permission": {
+      "users_management_permission_ref01": {
+        "enabled": true,
+        "resource": "s79",
+        "scopePermissions": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/users-management-permissions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/users-management-permissions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

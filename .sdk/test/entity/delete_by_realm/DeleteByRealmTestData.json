@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "delete_by_realm": {
+      "DELETE_BY_REALM00": {
+        "id": "DELETE_BY_REALM00"
+      },
+      "DELETE_BY_REALM01": {
+        "id": "DELETE_BY_REALM01"
+      },
+      "DELETE_BY_REALM02": {
+        "id": "DELETE_BY_REALM02"
+      }
+    }
+  },
+  "new": {
+    "delete_by_realm": {
+      "delete_by_realm_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /{realm}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

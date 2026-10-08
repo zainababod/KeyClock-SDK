@@ -1,0 +1,386 @@
+# Entity: mappings_representation
+
+main: kit: entity: mappings_representation: {
+
+  alias: field: {}
+
+  fields: {
+    attributes: {
+      h: "Attributes"
+      n: "attributes"
+      r: false
+      t: "`$OBJECT`"
+    }
+    clientRole: {
+      h: "Client Role"
+      n: "clientRole"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    composite: {
+      h: "Composite"
+      n: "composite"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    composites: {
+      h: "Composites"
+      n: "composites"
+      r: false
+      t: "`$OBJECT`"
+    }
+    containerId: {
+      h: "Container Id"
+      n: "containerId"
+      r: false
+      t: "`$STRING`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    scopeParamRequired: {
+      h: "Scope Param Required"
+      n: "scopeParamRequired"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "mappings_representation"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/clients/{id}/scope-mappings"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/clients/{id}/scope-mappings"
+          q: {
+            exist: [
+              "client_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.realmMappings`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/client-scopes/{id}/scope-mappings"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_scope_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/client-scopes/{id}/scope-mappings"
+          q: {
+            exist: [
+              "client_scope_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_scope_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-scopes"
+            }
+            {
+              var: "client_scope_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.realmMappings`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/client-templates/{id}/scope-mappings"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_template_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/client-templates/{id}/scope-mappings"
+          q: {
+            exist: [
+              "client_template_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_template_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-templates"
+            }
+            {
+              var: "client_template_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.realmMappings`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/groups/{id}/role-mappings"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "group_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/groups/{id}/role-mappings"
+          q: {
+            exist: [
+              "group_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "group_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "groups"
+            }
+            {
+              var: "group_id"
+            }
+            {
+              lit: "role-mappings"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.realmMappings`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/users/{id}/role-mappings"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "user_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/users/{id}/role-mappings"
+          q: {
+            exist: [
+              "realm"
+              "user_id"
+            ]
+          }
+          r: {
+            param: {
+              id: "user_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "users"
+            }
+            {
+              var: "user_id"
+            }
+            {
+              lit: "role-mappings"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.realmMappings`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.client_scope")]
+    [path("$.main.kit.entity.client")]
+    [path("$.main.kit.entity.group")]
+    [path("$.main.kit.entity.user")]
+  ]
+
+}

@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "up_config": {
+      "UP_CONFIG00": {
+        "attributes": [],
+        "groups": [],
+        "realm": "REALM01",
+        "id": "UP_CONFIG00"
+      },
+      "UP_CONFIG01": {
+        "attributes": [],
+        "groups": [],
+        "realm": "REALM01",
+        "id": "UP_CONFIG01"
+      },
+      "UP_CONFIG02": {
+        "attributes": [],
+        "groups": [],
+        "realm": "REALM01",
+        "id": "UP_CONFIG02"
+      }
+    }
+  },
+  "new": {
+    "up_config": {
+      "up_config_ref01": {
+        "attributes": [],
+        "groups": []
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/users/profile": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/users/profile": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

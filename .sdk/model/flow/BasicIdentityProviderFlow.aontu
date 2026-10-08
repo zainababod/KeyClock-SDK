@@ -1,0 +1,83 @@
+# BasicIdentityProviderFlow
+
+main: kit: flow: BasicIdentityProviderFlow:
+{
+  entity: "identity_provider",
+  kind: "basic",
+  name: "BasicIdentityProviderFlow",
+  step: [
+    {
+      i: {
+        ref: "identity_provider_ref01"
+      }
+
+      m: {
+        alia: "alia01",
+        realm: "realm01"
+      }
+
+      o: "create"
+    }
+
+    {
+      d: {
+        realm: "realm01"
+      }
+
+      i: {
+        ref: "identity_provider_ref01",
+        srcdatavar: "identity_provider_ref01_data",
+        suffix: "_up0",
+        textfield: "alias"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-identity_provider_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "identity_provider_ref01",
+        srcdatavar: "identity_provider_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "identity_provider01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-identity_provider_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "identity_provider_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "identity_provider01",
+        realm: "realm01"
+      }
+
+      o: "remove"
+    }
+  ],
+  "key$": "BasicIdentityProviderFlow"
+}

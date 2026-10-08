@@ -1,0 +1,22 @@
+# BasicClientRepresentationFlow
+
+main: kit: flow: BasicClientRepresentationFlow:
+{
+  entity: "client_representation",
+  kind: "basic",
+  name: "BasicClientRepresentationFlow",
+  step: [
+    {
+      i: {
+        ref: "client_representation_ref01"
+      }
+
+      m: {
+        realm: "realm01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicClientRepresentationFlow"
+}

@@ -1,0 +1,40 @@
+# BasicGlobalRequestResultFlow
+
+main: kit: flow: BasicGlobalRequestResultFlow:
+{
+  entity: "global_request_result",
+  kind: "basic",
+  name: "BasicGlobalRequestResultFlow",
+  step: [
+    {
+      i: {
+        ref: "global_request_result_ref01"
+      }
+
+      m: {
+        client_id: "client01",
+        realm: "realm01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        client_id: "client01",
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "global_request_result_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicGlobalRequestResultFlow"
+}

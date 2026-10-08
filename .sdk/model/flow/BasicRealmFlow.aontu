@@ -1,0 +1,27 @@
+# BasicRealmFlow
+
+main: kit: flow: BasicRealmFlow:
+{
+  entity: "realm",
+  kind: "basic",
+  name: "BasicRealmFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01",
+        user_id: "user01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "realm_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicRealmFlow"
+}

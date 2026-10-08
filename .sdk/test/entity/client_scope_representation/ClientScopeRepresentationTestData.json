@@ -1,0 +1,76 @@
+{
+  "existing": {
+    "client_scope_representation": {
+      "CLIENT_SCOPE_REPRESENTATION00": {
+        "attributes": {},
+        "description": "s3d",
+        "id": "CLIENT_SCOPE_REPRESENTATION00",
+        "name": "s3f",
+        "protocol": "s40",
+        "protocolMappers": [],
+        "realm": "REALM01"
+      },
+      "CLIENT_SCOPE_REPRESENTATION01": {
+        "attributes": {},
+        "description": "s79",
+        "id": "CLIENT_SCOPE_REPRESENTATION01",
+        "name": "s7b",
+        "protocol": "s7c",
+        "protocolMappers": [],
+        "realm": "REALM01"
+      },
+      "CLIENT_SCOPE_REPRESENTATION02": {
+        "attributes": {},
+        "description": "sb5",
+        "id": "CLIENT_SCOPE_REPRESENTATION02",
+        "name": "sb7",
+        "protocol": "sb8",
+        "protocolMappers": [],
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "client_scope_representation": {
+      "client_scope_representation_ref01": {
+        "attributes": {},
+        "description": "sf1",
+        "name": "sf3",
+        "protocol": "sf4",
+        "protocolMappers": []
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/clients/{id}/default-client-scopes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/optional-client-scopes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-templates": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/default-default-client-scopes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/default-optional-client-scopes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-templates/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

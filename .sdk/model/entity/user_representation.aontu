@@ -1,0 +1,337 @@
+# Entity: user_representation
+
+main: kit: entity: user_representation: {
+
+  alias: field: {}
+
+  fields: {
+    access: {
+      h: "Access"
+      n: "access"
+      r: false
+      t: "`$OBJECT`"
+    }
+    applicationRoles: {
+      h: "Application Roles"
+      n: "applicationRoles"
+      r: false
+      t: "`$OBJECT`"
+    }
+    attributes: {
+      h: "Attributes"
+      n: "attributes"
+      r: false
+      t: "`$OBJECT`"
+    }
+    clientConsents: {
+      h: "Client Consents"
+      n: "clientConsents"
+      r: false
+      t: "`$ARRAY`"
+    }
+    clientRoles: {
+      h: "Client Roles"
+      n: "clientRoles"
+      r: false
+      t: "`$OBJECT`"
+    }
+    createdTimestamp: {
+      fo: "int64"
+      h: "Created Timestamp"
+      n: "createdTimestamp"
+      r: false
+      t: "`$INTEGER`"
+    }
+    credentials: {
+      h: "Credentials"
+      n: "credentials"
+      r: false
+      t: "`$ARRAY`"
+    }
+    disableableCredentialTypes: {
+      h: "Disableable Credential Types"
+      n: "disableableCredentialTypes"
+      r: false
+      t: "`$ARRAY`"
+    }
+    email: {
+      h: "Email"
+      n: "email"
+      r: false
+      t: "`$STRING`"
+    }
+    emailVerified: {
+      h: "Email Verified"
+      n: "emailVerified"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    enabled: {
+      h: "Enabled"
+      n: "enabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    federatedIdentities: {
+      h: "Federated Identities"
+      n: "federatedIdentities"
+      r: false
+      t: "`$ARRAY`"
+    }
+    federationLink: {
+      h: "Federation Link"
+      n: "federationLink"
+      r: false
+      t: "`$STRING`"
+    }
+    firstName: {
+      h: "First Name"
+      n: "firstName"
+      r: false
+      t: "`$STRING`"
+    }
+    groups: {
+      h: "Groups"
+      n: "groups"
+      r: false
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    lastName: {
+      h: "Last Name"
+      n: "lastName"
+      r: false
+      t: "`$STRING`"
+    }
+    notBefore: {
+      fo: "int32"
+      h: "Not Before"
+      n: "notBefore"
+      r: false
+      t: "`$INTEGER`"
+    }
+    origin: {
+      h: "Origin"
+      n: "origin"
+      r: false
+      t: "`$STRING`"
+    }
+    realmRoles: {
+      h: "Realm Roles"
+      n: "realmRoles"
+      r: false
+      t: "`$ARRAY`"
+    }
+    requiredActions: {
+      h: "Required Actions"
+      n: "requiredActions"
+      r: false
+      t: "`$ARRAY`"
+    }
+    self: {
+      h: "Self"
+      n: "self"
+      r: false
+      t: "`$STRING`"
+    }
+    serviceAccountClientId: {
+      h: "Service Account Client Id"
+      n: "serviceAccountClientId"
+      r: false
+      t: "`$STRING`"
+    }
+    socialLinks: {
+      h: "Social Links"
+      n: "socialLinks"
+      r: false
+      t: "`$ARRAY`"
+    }
+    totp: {
+      h: "Totp"
+      n: "totp"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    userProfileMetadata: {
+      h: "User Profile Metadata"
+      n: "userProfileMetadata"
+      r: false
+      t: "`$OBJECT`"
+    }
+    username: {
+      h: "Username"
+      n: "username"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "user_representation"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/clients/{id}/service-account-user"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/clients/{id}/service-account-user"
+          q: {
+            exist: [
+              "client_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "service-account-user"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /{realm}/groups/{id}/members"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "group_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "brief_representation"
+                or: "briefRepresentation"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "first"
+                or: "first"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "max"
+                or: "max"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/groups/{id}/members"
+          q: {
+            exist: [
+              "group_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "group_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "groups"
+            }
+            {
+              var: "group_id"
+            }
+            {
+              lit: "members"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.client")]
+    [path("$.main.kit.entity.group")]
+  ]
+
+}

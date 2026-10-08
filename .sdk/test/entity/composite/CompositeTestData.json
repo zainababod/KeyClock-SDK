@@ -1,0 +1,147 @@
+{
+  "existing": {
+    "composite": {
+      "COMPOSITE00": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s5e",
+        "description": "s5f",
+        "id": "COMPOSITE00",
+        "name": "s61",
+        "scopeParamRequired": true,
+        "client": "CLIENT01",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01",
+        "group_id": "GROUP01",
+        "role_name": "ROLE_NAME01",
+        "user_id": "USER01",
+        "roles_by_id_id": "ROLES_BY_ID01"
+      },
+      "COMPOSITE01": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "sb8",
+        "description": "sb9",
+        "id": "COMPOSITE01",
+        "name": "sbb",
+        "scopeParamRequired": true,
+        "client": "CLIENT01",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01",
+        "group_id": "GROUP01",
+        "role_name": "ROLE_NAME01",
+        "user_id": "USER01",
+        "roles_by_id_id": "ROLES_BY_ID01"
+      },
+      "COMPOSITE02": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s112",
+        "description": "s113",
+        "id": "COMPOSITE02",
+        "name": "s115",
+        "scopeParamRequired": true,
+        "client": "CLIENT01",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01",
+        "group_id": "GROUP01",
+        "role_name": "ROLE_NAME01",
+        "user_id": "USER01",
+        "roles_by_id_id": "ROLES_BY_ID01"
+      }
+    }
+  },
+  "new": {
+    "composite": {
+      "composite_ref01": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s16c",
+        "description": "s16d",
+        "name": "s16f",
+        "scopeParamRequired": true
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/clients/{id}/scope-mappings/clients/{client}/composite": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-scopes/{id}/scope-mappings/clients/{client}/composite": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-templates/{id}/scope-mappings/clients/{client}/composite": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/groups/{id}/role-mappings/clients/{client}/composite": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/roles/{role-name}/composites": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/users/{id}/role-mappings/clients/{client}/composite": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/scope-mappings/realm/composite": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-scopes/{id}/scope-mappings/realm/composite": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-templates/{id}/scope-mappings/realm/composite": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/groups/{id}/role-mappings/realm/composite": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/roles/{role-name}/composites": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/roles-by-id/{role-id}/composites": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/users/{id}/role-mappings/realm/composite": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

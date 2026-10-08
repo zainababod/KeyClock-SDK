@@ -1,0 +1,48 @@
+# BasicCertificateFlow
+
+main: kit: flow: BasicCertificateFlow:
+{
+  entity: "certificate",
+  kind: "basic",
+  name: "BasicCertificateFlow",
+  step: [
+    {
+      i: {
+        ref: "certificate_ref01"
+      }
+
+      m: {
+        attr: "attr01",
+        client_id: "client01",
+        realm: "realm01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "certificate_ref01",
+        srcdatavar: "certificate_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        client_id: "client01",
+        id: "certificate01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-certificate_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCertificateFlow"
+}

@@ -1,0 +1,77 @@
+{
+  "existing": {
+    "group_representation": {
+      "GROUP_REPRESENTATION00": {
+        "access": {},
+        "attributes": {},
+        "clientRoles": {},
+        "id": "GROUP_REPRESENTATION00",
+        "name": "s68",
+        "parentId": "s69",
+        "path": "s6a",
+        "realmRoles": [],
+        "subGroupCount": 108,
+        "subGroups": [],
+        "realm": "REALM01"
+      },
+      "GROUP_REPRESENTATION01": {
+        "access": {},
+        "attributes": {},
+        "clientRoles": {},
+        "id": "GROUP_REPRESENTATION01",
+        "name": "scc",
+        "parentId": "scd",
+        "path": "sce",
+        "realmRoles": [],
+        "subGroupCount": 208,
+        "subGroups": [],
+        "realm": "REALM01"
+      },
+      "GROUP_REPRESENTATION02": {
+        "access": {},
+        "attributes": {},
+        "clientRoles": {},
+        "id": "GROUP_REPRESENTATION02",
+        "name": "s130",
+        "parentId": "s131",
+        "path": "s132",
+        "realmRoles": [],
+        "subGroupCount": 308,
+        "subGroups": [],
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "group_representation": {
+      "group_representation_ref01": {
+        "access": {},
+        "attributes": {},
+        "clientRoles": {},
+        "name": "s194",
+        "parentId": "s195",
+        "path": "s196",
+        "realmRoles": [],
+        "subGroupCount": 408,
+        "subGroups": []
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/groups/{id}/children": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/default-groups": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/group-by-path/{path}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

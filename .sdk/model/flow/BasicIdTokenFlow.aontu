@@ -1,0 +1,33 @@
+# BasicIdTokenFlow
+
+main: kit: flow: BasicIdTokenFlow:
+{
+  entity: "id_token",
+  kind: "basic",
+  name: "BasicIdTokenFlow",
+  step: [
+    {
+      i: {
+        ref: "id_token_ref01",
+        srcdatavar: "id_token_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "id_token01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-id_token_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicIdTokenFlow"
+}

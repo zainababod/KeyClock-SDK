@@ -1,0 +1,147 @@
+{
+  "existing": {
+    "protocol_mapper": {
+      "PROTOCOL_MAPPER00": {
+        "config": {},
+        "consentRequired": false,
+        "consentText": "s7a",
+        "containerId": "s7b",
+        "containerName": "s7c",
+        "containerType": "s7d",
+        "id": "PROTOCOL_MAPPER00",
+        "mapperId": "s7f",
+        "mapperName": "s80",
+        "name": "s81",
+        "protocol": "s82",
+        "protocolMapper": "s83",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01",
+        "id2": "ID201"
+      },
+      "PROTOCOL_MAPPER01": {
+        "config": {},
+        "consentRequired": false,
+        "consentText": "sf2",
+        "containerId": "sf3",
+        "containerName": "sf4",
+        "containerType": "sf5",
+        "id": "PROTOCOL_MAPPER01",
+        "mapperId": "sf7",
+        "mapperName": "sf8",
+        "name": "sf9",
+        "protocol": "sfa",
+        "protocolMapper": "sfb",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01",
+        "id2": "ID201"
+      },
+      "PROTOCOL_MAPPER02": {
+        "config": {},
+        "consentRequired": false,
+        "consentText": "s16a",
+        "containerId": "s16b",
+        "containerName": "s16c",
+        "containerType": "s16d",
+        "id": "PROTOCOL_MAPPER02",
+        "mapperId": "s16f",
+        "mapperName": "s170",
+        "name": "s171",
+        "protocol": "s172",
+        "protocolMapper": "s173",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01",
+        "id2": "ID201"
+      }
+    }
+  },
+  "new": {
+    "protocol_mapper": {
+      "protocol_mapper_ref01": {
+        "config": {},
+        "consentRequired": false,
+        "consentText": "s1e2",
+        "containerId": "s1e3",
+        "containerName": "s1e4",
+        "containerType": "s1e5",
+        "mapperId": "s1e7",
+        "mapperName": "s1e8",
+        "name": "s1e9",
+        "protocol": "s1ea",
+        "protocolMapper": "s1eb"
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/clients/{id}/protocol-mappers/add-models": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/client-scopes/{id}/protocol-mappers/add-models": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/client-templates/{id}/protocol-mappers/add-models": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/clients/{id}/protocol-mappers/models": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/client-scopes/{id}/protocol-mappers/models": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/client-templates/{id}/protocol-mappers/models": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/evaluate-scopes/protocol-mappers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/clients/{id1}/protocol-mappers/models/{id2}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/client-templates/{id1}/protocol-mappers/models/{id2}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/clients/{id1}/protocol-mappers/models/{id2}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/client-templates/{id1}/protocol-mappers/models/{id2}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

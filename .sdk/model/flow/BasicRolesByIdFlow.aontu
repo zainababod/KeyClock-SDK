@@ -1,0 +1,83 @@
+# BasicRolesByIdFlow
+
+main: kit: flow: BasicRolesByIdFlow:
+{
+  entity: "roles_by_id",
+  kind: "basic",
+  name: "BasicRolesByIdFlow",
+  step: [
+    {
+      i: {
+        ref: "roles_by_id_ref01"
+      }
+
+      m: {
+        realm: "realm01",
+        "role-id": "role-id01"
+      }
+
+      o: "create"
+    }
+
+    {
+      d: {
+        realm: "realm01"
+      }
+
+      i: {
+        ref: "roles_by_id_ref01",
+        srcdatavar: "roles_by_id_ref01_data",
+        suffix: "_up0",
+        textfield: "containerId"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-roles_by_id_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "roles_by_id_ref01",
+        srcdatavar: "roles_by_id_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "roles_by_id01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-roles_by_id_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "roles_by_id_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "roles_by_id01",
+        realm: "realm01"
+      }
+
+      o: "remove"
+    }
+  ],
+  "key$": "BasicRolesByIdFlow"
+}

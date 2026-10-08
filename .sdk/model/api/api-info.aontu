@@ -1,0 +1,30 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        url: "https://www.keycloak.org/documentation"
+      }
+      description: "This is a REST API reference for the Keycloak Admin REST API."
+      security: {
+        in: "header"
+        name: "Authorization"
+        prefix: "Bearer"
+        scheme: "access_token"
+        type: "http"
+      }
+      servers: [
+        {
+          url: "https://keycloak.example.com/admin/realms"
+        }
+      ]
+      summary: "This is a REST API reference for the Keycloak Admin REST API."
+      title: "Keycloak Admin REST API"
+      version: "1.0"
+      website: "https://keycloak.example.com"
+    }
+  }
+}
+

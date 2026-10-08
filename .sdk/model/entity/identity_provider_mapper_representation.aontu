@@ -1,0 +1,198 @@
+# Entity: identity_provider_mapper_representation
+
+main: kit: entity: identity_provider_mapper_representation: {
+
+  alias: field: {}
+
+  fields: {
+    config: {
+      h: "Config"
+      n: "config"
+      r: false
+      t: "`$OBJECT`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    identityProviderAlias: {
+      h: "Identity Provider Alias"
+      n: "identityProviderAlias"
+      r: false
+      t: "`$STRING`"
+    }
+    identityProviderMapper: {
+      h: "Identity Provider Mapper"
+      n: "identityProviderMapper"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "identity_provider_mapper_representation"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/identity-provider/instances/{alias}/mappers"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "alia"
+                or: "alias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/identity-provider/instances/{alias}/mappers"
+          q: {
+            exist: [
+              "alia"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              alias: "alia"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "identity-provider"
+            }
+            {
+              lit: "instances"
+            }
+            {
+              var: "alia"
+            }
+            {
+              lit: "mappers"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/identity-provider/instances/{alias}/mappers/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "alia"
+                or: "alias"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/identity-provider/instances/{alias}/mappers/{id}"
+          q: {
+            exist: [
+              "alia"
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              alias: "alia"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "identity-provider"
+            }
+            {
+              lit: "instances"
+            }
+            {
+              var: "alia"
+            }
+            {
+              lit: "mappers"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

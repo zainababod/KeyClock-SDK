@@ -1,0 +1,289 @@
+# Entity: certificate
+
+main: kit: entity: certificate: {
+
+  alias: field: {}
+
+  fields: {
+    certificate: {
+      h: "Certificate"
+      n: "certificate"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    kid: {
+      h: "Kid"
+      n: "kid"
+      r: false
+      t: "`$STRING`"
+    }
+    privateKey: {
+      h: "Private Key"
+      n: "privateKey"
+      r: false
+      t: "`$STRING`"
+    }
+    publicKey: {
+      h: "Public Key"
+      n: "publicKey"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "certificate"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /{realm}/clients/{id}/certificates/{attr}/download"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "attr"
+                or: "attr"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/clients/{id}/certificates/{attr}/download"
+          q: {
+            "$action": "download"
+            exist: [
+              "attr"
+              "client_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+            }
+          }
+          rs: {
+            binary: true
+            kind: "raw"
+            media: "application/octet-stream"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "certificates"
+            }
+            {
+              var: "attr"
+            }
+            {
+              lit: "download"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/clients/{id}/certificates/{attr}/generate-and-download"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "attr"
+                or: "attr"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/clients/{id}/certificates/{attr}/generate-and-download"
+          q: {
+            "$action": "generate_and_download"
+            exist: [
+              "attr"
+              "client_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+            }
+          }
+          rs: {
+            binary: true
+            kind: "raw"
+            media: "application/octet-stream"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "certificates"
+            }
+            {
+              var: "attr"
+            }
+            {
+              lit: "generate-and-download"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/clients/{id}/certificates/{attr}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "id"
+                or: "attr"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/clients/{id}/certificates/{attr}"
+          q: {
+            exist: [
+              "client_id"
+              "id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              attr: "id"
+              id: "client_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "certificates"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.client")]
+    [path("$.main.kit.entity.client")]
+  ]
+
+}

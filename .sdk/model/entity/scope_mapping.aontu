@@ -1,0 +1,871 @@
+# Entity: scope_mapping
+
+main: kit: entity: scope_mapping: {
+
+  alias: field: {}
+
+  fields: {
+    attributes: {
+      h: "Attributes"
+      n: "attributes"
+      r: false
+      t: "`$OBJECT`"
+    }
+    clientRole: {
+      h: "Client Role"
+      n: "clientRole"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    composite: {
+      h: "Composite"
+      n: "composite"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    composites: {
+      h: "Composites"
+      n: "composites"
+      r: false
+      t: "`$OBJECT`"
+    }
+    containerId: {
+      h: "Container Id"
+      n: "containerId"
+      r: false
+      t: "`$STRING`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    scopeParamRequired: {
+      h: "Scope Param Required"
+      n: "scopeParamRequired"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "scope_mapping"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /{realm}/clients/{id}/scope-mappings/clients/{client}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client"
+                or: "client"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/clients/{id}/scope-mappings/clients/{client}"
+          q: {
+            exist: [
+              "client"
+              "client_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/client-scopes/{id}/scope-mappings/clients/{client}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client"
+                or: "client"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "client_scope_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}"
+          q: {
+            exist: [
+              "client"
+              "client_scope_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_scope_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-scopes"
+            }
+            {
+              var: "client_scope_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/client-templates/{id}/scope-mappings/clients/{client}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client"
+                or: "client"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "client_template_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/client-templates/{id}/scope-mappings/clients/{client}"
+          q: {
+            exist: [
+              "client"
+              "client_template_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_template_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-templates"
+            }
+            {
+              var: "client_template_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/clients/{id}/scope-mappings/realm"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/clients/{id}/scope-mappings/realm"
+          q: {
+            "$action": "realm"
+            exist: [
+              "client_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+            {
+              lit: "realm"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/client-scopes/{id}/scope-mappings/realm"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_scope_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/client-scopes/{id}/scope-mappings/realm"
+          q: {
+            "$action": "realm"
+            exist: [
+              "client_scope_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_scope_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-scopes"
+            }
+            {
+              var: "client_scope_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+            {
+              lit: "realm"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/client-templates/{id}/scope-mappings/realm"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_template_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/client-templates/{id}/scope-mappings/realm"
+          q: {
+            "$action": "realm"
+            exist: [
+              "client_template_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_template_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-templates"
+            }
+            {
+              var: "client_template_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+            {
+              lit: "realm"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /{realm}/clients/{id}/scope-mappings/clients/{client}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client"
+                or: "client"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/clients/{id}/scope-mappings/clients/{client}"
+          q: {
+            exist: [
+              "client"
+              "client_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/client-scopes/{id}/scope-mappings/clients/{client}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client"
+                or: "client"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "client_scope_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/client-scopes/{id}/scope-mappings/clients/{client}"
+          q: {
+            exist: [
+              "client"
+              "client_scope_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_scope_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-scopes"
+            }
+            {
+              var: "client_scope_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/client-templates/{id}/scope-mappings/clients/{client}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client"
+                or: "client"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "client_template_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/client-templates/{id}/scope-mappings/clients/{client}"
+          q: {
+            exist: [
+              "client"
+              "client_template_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_template_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-templates"
+            }
+            {
+              var: "client_template_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/clients/{id}/scope-mappings/realm"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/clients/{id}/scope-mappings/realm"
+          q: {
+            "$action": "realm"
+            exist: [
+              "client_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "client_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+            {
+              lit: "realm"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/client-scopes/{id}/scope-mappings/realm"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_scope_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/client-scopes/{id}/scope-mappings/realm"
+          q: {
+            "$action": "realm"
+            exist: [
+              "client_scope_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_scope_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-scopes"
+            }
+            {
+              var: "client_scope_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+            {
+              lit: "realm"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /{realm}/client-templates/{id}/scope-mappings/realm"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "client_template_id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/{realm}/client-templates/{id}/scope-mappings/realm"
+          q: {
+            "$action": "realm"
+            exist: [
+              "client_template_id"
+              "realm"
+            ]
+          }
+          r: {
+            param: {
+              id: "client_template_id"
+            }
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-templates"
+            }
+            {
+              var: "client_template_id"
+            }
+            {
+              lit: "scope-mappings"
+            }
+            {
+              lit: "realm"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.client_scope")]
+    [path("$.main.kit.entity.client_scope") path("$.main.kit.entity.client")]
+    [path("$.main.kit.entity.client")]
+    [path("$.main.kit.entity.client") path("$.main.kit.entity.client")]
+  ]
+
+}

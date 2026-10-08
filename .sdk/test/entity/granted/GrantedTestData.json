@@ -1,0 +1,69 @@
+{
+  "existing": {
+    "granted": {
+      "GRANTED00": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s5e",
+        "description": "s5f",
+        "id": "GRANTED00",
+        "name": "s61",
+        "scopeParamRequired": true,
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "scope_mapping_id": "SCOPE_MAPPING01"
+      },
+      "GRANTED01": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "sb8",
+        "description": "sb9",
+        "id": "GRANTED01",
+        "name": "sbb",
+        "scopeParamRequired": true,
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "scope_mapping_id": "SCOPE_MAPPING01"
+      },
+      "GRANTED02": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s112",
+        "description": "s113",
+        "id": "GRANTED02",
+        "name": "s115",
+        "scopeParamRequired": true,
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "scope_mapping_id": "SCOPE_MAPPING01"
+      }
+    }
+  },
+  "new": {
+    "granted": {
+      "granted_ref01": {
+        "attributes": {},
+        "clientRole": false,
+        "composite": true,
+        "composites": {},
+        "containerId": "s16c",
+        "description": "s16d",
+        "name": "s16f",
+        "scopeParamRequired": true
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/clients/{id}/evaluate-scopes/scope-mappings/{roleContainerId}/granted": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

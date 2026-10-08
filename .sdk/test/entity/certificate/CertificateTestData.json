@@ -1,0 +1,63 @@
+{
+  "existing": {
+    "certificate": {
+      "CERTIFICATE00": {
+        "certificate": "s32",
+        "id": "CERTIFICATE00",
+        "kid": "s34",
+        "privateKey": "s35",
+        "publicKey": "s36",
+        "attr": "ATTR01",
+        "client_id": "CLIENT01",
+        "realm": "REALM01"
+      },
+      "CERTIFICATE01": {
+        "certificate": "s64",
+        "id": "CERTIFICATE01",
+        "kid": "s66",
+        "privateKey": "s67",
+        "publicKey": "s68",
+        "attr": "ATTR01",
+        "client_id": "CLIENT01",
+        "realm": "REALM01"
+      },
+      "CERTIFICATE02": {
+        "certificate": "s96",
+        "id": "CERTIFICATE02",
+        "kid": "s98",
+        "privateKey": "s99",
+        "publicKey": "s9a",
+        "attr": "ATTR01",
+        "client_id": "CLIENT01",
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "certificate": {
+      "certificate_ref01": {
+        "certificate": "sc8",
+        "kid": "sca",
+        "privateKey": "scb",
+        "publicKey": "scc"
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/clients/{id}/certificates/{attr}/download": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/clients/{id}/certificates/{attr}/generate-and-download": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/certificates/{attr}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

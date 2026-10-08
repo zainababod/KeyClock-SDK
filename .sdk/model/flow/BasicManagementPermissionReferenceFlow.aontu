@@ -1,0 +1,56 @@
+# BasicManagementPermissionReferenceFlow
+
+main: kit: flow: BasicManagementPermissionReferenceFlow:
+{
+  entity: "management_permission_reference",
+  kind: "basic",
+  name: "BasicManagementPermissionReferenceFlow",
+  step: [
+    {
+      d: {
+        realm: "realm01"
+      }
+
+      i: {
+        ref: "management_permission_reference_ref01",
+        srcdatavar: "management_permission_reference_ref01_data",
+        suffix: "_up0",
+        textfield: "resource"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-management_permission_reference_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "management_permission_reference_ref01",
+        srcdatavar: "management_permission_reference_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "management_permission_reference01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-management_permission_reference_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicManagementPermissionReferenceFlow"
+}

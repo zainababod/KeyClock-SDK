@@ -1,0 +1,190 @@
+# Entity: admin_event
+
+main: kit: entity: admin_event: {
+
+  alias: field: {}
+
+  fields: {
+    authDetails: {
+      h: "Auth Details"
+      n: "authDetails"
+      r: false
+      t: "`$OBJECT`"
+    }
+    error: {
+      h: "Error"
+      n: "error"
+      r: false
+      t: "`$STRING`"
+    }
+    operationType: {
+      h: "Operation Type"
+      n: "operationType"
+      r: false
+      t: "`$STRING`"
+    }
+    realmId: {
+      h: "Realm Id"
+      n: "realmId"
+      r: false
+      t: "`$STRING`"
+    }
+    representation: {
+      h: "Representation"
+      n: "representation"
+      r: false
+      t: "`$STRING`"
+    }
+    resourcePath: {
+      h: "Resource Path"
+      n: "resourcePath"
+      r: false
+      t: "`$STRING`"
+    }
+    resourceType: {
+      h: "Resource Type"
+      n: "resourceType"
+      r: false
+      t: "`$STRING`"
+    }
+    time: {
+      fo: "int64"
+      h: "Time"
+      n: "time"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "admin_event"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /{realm}/admin-events"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "auth_client"
+                or: "authClient"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "auth_ip_address"
+                or: "authIpAddress"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "auth_realm"
+                or: "authRealm"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "auth_user"
+                or: "authUser"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "date_from"
+                or: "dateFrom"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "date_to"
+                or: "dateTo"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "first"
+                or: "first"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "max"
+                or: "max"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "operation_type"
+                or: "operationTypes"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "resource_path"
+                or: "resourcePath"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "resource_type"
+                or: "resourceTypes"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/{realm}/admin-events"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "admin-events"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

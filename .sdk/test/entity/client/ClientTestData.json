@@ -1,0 +1,388 @@
+{
+  "existing": {
+    "client": {
+      "CLIENT00": {
+        "access": {},
+        "adminUrl": "s1eb",
+        "alwaysDisplayInConsole": true,
+        "attributes": {},
+        "authenticationFlowBindingOverrides": {},
+        "authorizationServicesEnabled": false,
+        "authorizationSettings": {},
+        "baseUrl": "s1f1",
+        "bearerOnly": true,
+        "clientAuthenticatorType": "s1f3",
+        "clientId": "s1f4",
+        "clientRole": false,
+        "clientTemplate": "s1f6",
+        "composite": false,
+        "composites": {},
+        "consentRequired": false,
+        "containerId": "s1fa",
+        "defaultClientScopes": [],
+        "defaultRoles": [],
+        "description": "s1fd",
+        "directAccessGrantsEnabled": true,
+        "directGrantsOnly": false,
+        "enabled": true,
+        "frontchannelLogout": false,
+        "fullScopeAllowed": true,
+        "id": "CLIENT00",
+        "implicitFlowEnabled": true,
+        "name": "s205",
+        "nodeReRegistrationTimeout": 518,
+        "notBefore": 519,
+        "oauth2DeviceAuthorizationGrantEnabled": true,
+        "optionalClientScopes": [],
+        "origin": "s20a",
+        "protocol": "s20b",
+        "protocolMappers": [],
+        "publicClient": false,
+        "redirectUris": [],
+        "registeredNodes": {},
+        "registrationAccessToken": "s210",
+        "rootUrl": "s211",
+        "scopeParamRequired": true,
+        "secret": "s213",
+        "serviceAccountsEnabled": true,
+        "standardFlowEnabled": false,
+        "surrogateAuthRequired": true,
+        "useTemplateConfig": false,
+        "useTemplateMappers": true,
+        "useTemplateScope": false,
+        "webOrigins": [],
+        "group_id": "GROUP01",
+        "realm": "REALM01",
+        "user_id": "USER01",
+        "client_uuid": "CLIENT_UUID01",
+        "role_name": "ROLE_NAME01",
+        "client": "CLIENT01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01",
+        "provider_id": "PROVIDER01",
+        "roles_by_id_id": "ROLES_BY_ID01",
+        "node": "NODE01"
+      },
+      "CLIENT01": {
+        "access": {},
+        "adminUrl": "s3d5",
+        "alwaysDisplayInConsole": true,
+        "attributes": {},
+        "authenticationFlowBindingOverrides": {},
+        "authorizationServicesEnabled": false,
+        "authorizationSettings": {},
+        "baseUrl": "s3db",
+        "bearerOnly": true,
+        "clientAuthenticatorType": "s3dd",
+        "clientId": "s3de",
+        "clientRole": false,
+        "clientTemplate": "s3e0",
+        "composite": false,
+        "composites": {},
+        "consentRequired": false,
+        "containerId": "s3e4",
+        "defaultClientScopes": [],
+        "defaultRoles": [],
+        "description": "s3e7",
+        "directAccessGrantsEnabled": true,
+        "directGrantsOnly": false,
+        "enabled": true,
+        "frontchannelLogout": false,
+        "fullScopeAllowed": true,
+        "id": "CLIENT01",
+        "implicitFlowEnabled": true,
+        "name": "s3ef",
+        "nodeReRegistrationTimeout": 1008,
+        "notBefore": 1009,
+        "oauth2DeviceAuthorizationGrantEnabled": true,
+        "optionalClientScopes": [],
+        "origin": "s3f4",
+        "protocol": "s3f5",
+        "protocolMappers": [],
+        "publicClient": false,
+        "redirectUris": [],
+        "registeredNodes": {},
+        "registrationAccessToken": "s3fa",
+        "rootUrl": "s3fb",
+        "scopeParamRequired": true,
+        "secret": "s3fd",
+        "serviceAccountsEnabled": true,
+        "standardFlowEnabled": false,
+        "surrogateAuthRequired": true,
+        "useTemplateConfig": false,
+        "useTemplateMappers": true,
+        "useTemplateScope": false,
+        "webOrigins": [],
+        "group_id": "GROUP01",
+        "realm": "REALM01",
+        "user_id": "USER01",
+        "client_uuid": "CLIENT_UUID01",
+        "role_name": "ROLE_NAME01",
+        "client": "CLIENT01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01",
+        "provider_id": "PROVIDER01",
+        "roles_by_id_id": "ROLES_BY_ID01",
+        "node": "NODE01"
+      },
+      "CLIENT02": {
+        "access": {},
+        "adminUrl": "s5bf",
+        "alwaysDisplayInConsole": true,
+        "attributes": {},
+        "authenticationFlowBindingOverrides": {},
+        "authorizationServicesEnabled": false,
+        "authorizationSettings": {},
+        "baseUrl": "s5c5",
+        "bearerOnly": true,
+        "clientAuthenticatorType": "s5c7",
+        "clientId": "s5c8",
+        "clientRole": false,
+        "clientTemplate": "s5ca",
+        "composite": false,
+        "composites": {},
+        "consentRequired": false,
+        "containerId": "s5ce",
+        "defaultClientScopes": [],
+        "defaultRoles": [],
+        "description": "s5d1",
+        "directAccessGrantsEnabled": true,
+        "directGrantsOnly": false,
+        "enabled": true,
+        "frontchannelLogout": false,
+        "fullScopeAllowed": true,
+        "id": "CLIENT02",
+        "implicitFlowEnabled": true,
+        "name": "s5d9",
+        "nodeReRegistrationTimeout": 1498,
+        "notBefore": 1499,
+        "oauth2DeviceAuthorizationGrantEnabled": true,
+        "optionalClientScopes": [],
+        "origin": "s5de",
+        "protocol": "s5df",
+        "protocolMappers": [],
+        "publicClient": false,
+        "redirectUris": [],
+        "registeredNodes": {},
+        "registrationAccessToken": "s5e4",
+        "rootUrl": "s5e5",
+        "scopeParamRequired": true,
+        "secret": "s5e7",
+        "serviceAccountsEnabled": true,
+        "standardFlowEnabled": false,
+        "surrogateAuthRequired": true,
+        "useTemplateConfig": false,
+        "useTemplateMappers": true,
+        "useTemplateScope": false,
+        "webOrigins": [],
+        "group_id": "GROUP01",
+        "realm": "REALM01",
+        "user_id": "USER01",
+        "client_uuid": "CLIENT_UUID01",
+        "role_name": "ROLE_NAME01",
+        "client": "CLIENT01",
+        "client_scope_id": "CLIENT_SCOPE01",
+        "client_template_id": "CLIENT_TEMPLATE01",
+        "provider_id": "PROVIDER01",
+        "roles_by_id_id": "ROLES_BY_ID01",
+        "node": "NODE01"
+      }
+    }
+  },
+  "new": {
+    "client": {
+      "client_ref01": {
+        "access": {},
+        "adminUrl": "s7a9",
+        "alwaysDisplayInConsole": true,
+        "attributes": {},
+        "authenticationFlowBindingOverrides": {},
+        "authorizationServicesEnabled": false,
+        "authorizationSettings": {},
+        "baseUrl": "s7af",
+        "bearerOnly": true,
+        "clientAuthenticatorType": "s7b1",
+        "clientId": "s7b2",
+        "clientRole": false,
+        "clientTemplate": "s7b4",
+        "composite": false,
+        "composites": {},
+        "consentRequired": false,
+        "containerId": "s7b8",
+        "defaultClientScopes": [],
+        "defaultRoles": [],
+        "description": "s7bb",
+        "directAccessGrantsEnabled": true,
+        "directGrantsOnly": false,
+        "enabled": true,
+        "frontchannelLogout": false,
+        "fullScopeAllowed": true,
+        "implicitFlowEnabled": true,
+        "name": "s7c3",
+        "nodeReRegistrationTimeout": 1988,
+        "notBefore": 1989,
+        "oauth2DeviceAuthorizationGrantEnabled": true,
+        "optionalClientScopes": [],
+        "origin": "s7c8",
+        "protocol": "s7c9",
+        "protocolMappers": [],
+        "publicClient": false,
+        "redirectUris": [],
+        "registeredNodes": {},
+        "registrationAccessToken": "s7ce",
+        "rootUrl": "s7cf",
+        "scopeParamRequired": true,
+        "secret": "s7d1",
+        "serviceAccountsEnabled": true,
+        "standardFlowEnabled": false,
+        "surrogateAuthRequired": true,
+        "useTemplateConfig": false,
+        "useTemplateMappers": true,
+        "useTemplateScope": false,
+        "webOrigins": []
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/groups/{id}/role-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/users/{id}/role-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/clients/{id}/nodes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/clients": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/roles/{role-name}/composites/clients/{clientUuid}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/scope-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-scopes/{id}/scope-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/client-templates/{id}/scope-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/groups/{id}/role-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/installation/providers/{providerId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/roles/{role-name}/composites/clients/{clientUuid}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/roles-by-id/{role-id}/composites/clients/{clientUuid}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/users/{id}/role-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/evaluate-scopes/generate-example-userinfo": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/offline-session-count": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/session-count": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/clients/{id}/default-client-scopes/{clientScopeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/clients/{id}/optional-client-scopes/{clientScopeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/groups/{id}/role-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/clients/{id}/nodes/{node}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/users/{id}/role-mappings/clients/{client}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/clients/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/clients/{id}/client-secret/rotated": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/clients/{id}/default-client-scopes/{clientScopeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/clients/{id}/optional-client-scopes/{clientScopeId}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/clients/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

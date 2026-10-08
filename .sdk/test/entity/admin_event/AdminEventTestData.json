@@ -1,0 +1,60 @@
+{
+  "existing": {
+    "admin_event": {
+      "ADMIN_EVENT00": {
+        "authDetails": {},
+        "error": "s51",
+        "operationType": "s52",
+        "realmId": "s53",
+        "representation": "s54",
+        "resourcePath": "s55",
+        "resourceType": "s56",
+        "time": 87,
+        "realm": "REALM01"
+      },
+      "ADMIN_EVENT01": {
+        "authDetails": {},
+        "error": "sa1",
+        "operationType": "sa2",
+        "realmId": "sa3",
+        "representation": "sa4",
+        "resourcePath": "sa5",
+        "resourceType": "sa6",
+        "time": 167,
+        "realm": "REALM01"
+      },
+      "ADMIN_EVENT02": {
+        "authDetails": {},
+        "error": "sf1",
+        "operationType": "sf2",
+        "realmId": "sf3",
+        "representation": "sf4",
+        "resourcePath": "sf5",
+        "resourceType": "sf6",
+        "time": 247,
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "admin_event": {
+      "admin_event_ref01": {
+        "authDetails": {},
+        "error": "s141",
+        "operationType": "s142",
+        "realmId": "s143",
+        "representation": "s144",
+        "resourcePath": "s145",
+        "resourceType": "s146",
+        "time": 327
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/admin-events": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

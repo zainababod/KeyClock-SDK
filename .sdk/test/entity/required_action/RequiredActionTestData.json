@@ -1,0 +1,77 @@
+{
+  "existing": {
+    "required_action": {
+      "REQUIRED_ACTION00": {
+        "alias": "s50",
+        "config": {},
+        "defaultAction": true,
+        "enabled": false,
+        "id": "REQUIRED_ACTION00",
+        "name": "s55",
+        "priority": 86,
+        "providerId": "s57",
+        "alia": "ALIA01",
+        "realm": "REALM01"
+      },
+      "REQUIRED_ACTION01": {
+        "alias": "sa0",
+        "config": {},
+        "defaultAction": true,
+        "enabled": false,
+        "id": "REQUIRED_ACTION01",
+        "name": "sa5",
+        "priority": 166,
+        "providerId": "sa7",
+        "alia": "ALIA01",
+        "realm": "REALM01"
+      },
+      "REQUIRED_ACTION02": {
+        "alias": "sf0",
+        "config": {},
+        "defaultAction": true,
+        "enabled": false,
+        "id": "REQUIRED_ACTION02",
+        "name": "sf5",
+        "priority": 246,
+        "providerId": "sf7",
+        "alia": "ALIA01",
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "required_action": {
+      "required_action_ref01": {
+        "alias": "s140",
+        "config": {},
+        "defaultAction": true,
+        "enabled": false,
+        "name": "s145",
+        "priority": 326,
+        "providerId": "s147"
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/authentication/required-actions/{alias}/lower-priority": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/authentication/required-actions/{alias}/raise-priority": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/authentication/required-actions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/authentication/required-actions/{alias}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

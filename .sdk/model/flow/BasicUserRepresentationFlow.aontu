@@ -1,0 +1,27 @@
+# BasicUserRepresentationFlow
+
+main: kit: flow: BasicUserRepresentationFlow:
+{
+  entity: "user_representation",
+  kind: "basic",
+  name: "BasicUserRepresentationFlow",
+  step: [
+    {
+      m: {
+        group_id: "group01",
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "user_representation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicUserRepresentationFlow"
+}

@@ -1,0 +1,78 @@
+{
+  "existing": {
+    "user_session_representation": {
+      "USER_SESSION_REPRESENTATION00": {
+        "clients": {},
+        "id": "USER_SESSION_REPRESENTATION00",
+        "ipAddress": "s52",
+        "lastAccess": 83,
+        "rememberMe": true,
+        "start": 85,
+        "userId": "s56",
+        "username": "s57",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_uuid": "CLIENT_UUID01",
+        "user_id": "USER01"
+      },
+      "USER_SESSION_REPRESENTATION01": {
+        "clients": {},
+        "id": "USER_SESSION_REPRESENTATION01",
+        "ipAddress": "sa2",
+        "lastAccess": 163,
+        "rememberMe": true,
+        "start": 165,
+        "userId": "sa6",
+        "username": "sa7",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_uuid": "CLIENT_UUID01",
+        "user_id": "USER01"
+      },
+      "USER_SESSION_REPRESENTATION02": {
+        "clients": {},
+        "id": "USER_SESSION_REPRESENTATION02",
+        "ipAddress": "sf2",
+        "lastAccess": 243,
+        "rememberMe": true,
+        "start": 245,
+        "userId": "sf6",
+        "username": "sf7",
+        "client_id": "CLIENT01",
+        "realm": "REALM01",
+        "client_uuid": "CLIENT_UUID01",
+        "user_id": "USER01"
+      }
+    }
+  },
+  "new": {
+    "user_session_representation": {
+      "user_session_representation_ref01": {
+        "clients": {},
+        "ipAddress": "s142",
+        "lastAccess": 323,
+        "rememberMe": true,
+        "start": 325,
+        "userId": "s146",
+        "username": "s147"
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/clients/{id}/offline-sessions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/users/{id}/sessions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/users/{id}/offline-sessions/{clientUuid}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

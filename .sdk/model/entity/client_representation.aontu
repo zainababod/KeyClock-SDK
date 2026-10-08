@@ -1,0 +1,389 @@
+# Entity: client_representation
+
+main: kit: entity: client_representation: {
+
+  alias: field: {}
+
+  fields: {
+    access: {
+      h: "Access"
+      n: "access"
+      r: false
+      t: "`$OBJECT`"
+    }
+    adminUrl: {
+      h: "Admin Url"
+      n: "adminUrl"
+      r: false
+      t: "`$STRING`"
+    }
+    alwaysDisplayInConsole: {
+      h: "Always Display In Console"
+      n: "alwaysDisplayInConsole"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    attributes: {
+      h: "Attributes"
+      n: "attributes"
+      r: false
+      t: "`$OBJECT`"
+    }
+    authenticationFlowBindingOverrides: {
+      h: "Authentication Flow Binding Overrides"
+      n: "authenticationFlowBindingOverrides"
+      r: false
+      t: "`$OBJECT`"
+    }
+    authorizationServicesEnabled: {
+      h: "Authorization Services Enabled"
+      n: "authorizationServicesEnabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    authorizationSettings: {
+      h: "Authorization Settings"
+      n: "authorizationSettings"
+      r: false
+      t: "`$OBJECT`"
+    }
+    baseUrl: {
+      h: "Base Url"
+      n: "baseUrl"
+      r: false
+      t: "`$STRING`"
+    }
+    bearerOnly: {
+      h: "Bearer Only"
+      n: "bearerOnly"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    clientAuthenticatorType: {
+      h: "Client Authenticator Type"
+      n: "clientAuthenticatorType"
+      r: false
+      t: "`$STRING`"
+    }
+    clientId: {
+      h: "Client Id"
+      n: "clientId"
+      r: false
+      t: "`$STRING`"
+    }
+    clientTemplate: {
+      h: "Client Template"
+      n: "clientTemplate"
+      r: false
+      t: "`$STRING`"
+    }
+    consentRequired: {
+      h: "Consent Required"
+      n: "consentRequired"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    defaultClientScopes: {
+      h: "Default Client Scopes"
+      n: "defaultClientScopes"
+      r: false
+      t: "`$ARRAY`"
+    }
+    defaultRoles: {
+      h: "Default Roles"
+      n: "defaultRoles"
+      r: false
+      t: "`$ARRAY`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    directAccessGrantsEnabled: {
+      h: "Direct Access Grants Enabled"
+      n: "directAccessGrantsEnabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    directGrantsOnly: {
+      h: "Direct Grants Only"
+      n: "directGrantsOnly"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    enabled: {
+      h: "Enabled"
+      n: "enabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    frontchannelLogout: {
+      h: "Frontchannel Logout"
+      n: "frontchannelLogout"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    fullScopeAllowed: {
+      h: "Full Scope Allowed"
+      n: "fullScopeAllowed"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    implicitFlowEnabled: {
+      h: "Implicit Flow Enabled"
+      n: "implicitFlowEnabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    nodeReRegistrationTimeout: {
+      fo: "int32"
+      h: "Node Re Registration Timeout"
+      n: "nodeReRegistrationTimeout"
+      r: false
+      t: "`$INTEGER`"
+    }
+    notBefore: {
+      fo: "int32"
+      h: "Not Before"
+      n: "notBefore"
+      r: false
+      t: "`$INTEGER`"
+    }
+    oauth2DeviceAuthorizationGrantEnabled: {
+      h: "Oauth2 Device Authorization Grant Enabled"
+      n: "oauth2DeviceAuthorizationGrantEnabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    optionalClientScopes: {
+      h: "Optional Client Scopes"
+      n: "optionalClientScopes"
+      r: false
+      t: "`$ARRAY`"
+    }
+    origin: {
+      h: "Origin"
+      n: "origin"
+      r: false
+      t: "`$STRING`"
+    }
+    protocol: {
+      h: "Protocol"
+      n: "protocol"
+      r: false
+      t: "`$STRING`"
+    }
+    protocolMappers: {
+      h: "Protocol Mappers"
+      n: "protocolMappers"
+      r: false
+      t: "`$ARRAY`"
+    }
+    publicClient: {
+      h: "Public Client"
+      n: "publicClient"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    redirectUris: {
+      h: "Redirect Uris"
+      n: "redirectUris"
+      r: false
+      t: "`$ARRAY`"
+    }
+    registeredNodes: {
+      h: "Registered Nodes"
+      n: "registeredNodes"
+      r: false
+      t: "`$OBJECT`"
+    }
+    registrationAccessToken: {
+      h: "Registration Access Token"
+      n: "registrationAccessToken"
+      r: false
+      t: "`$STRING`"
+    }
+    rootUrl: {
+      h: "Root Url"
+      n: "rootUrl"
+      r: false
+      t: "`$STRING`"
+    }
+    secret: {
+      h: "Secret"
+      n: "secret"
+      r: false
+      t: "`$STRING`"
+    }
+    serviceAccountsEnabled: {
+      h: "Service Accounts Enabled"
+      n: "serviceAccountsEnabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    standardFlowEnabled: {
+      h: "Standard Flow Enabled"
+      n: "standardFlowEnabled"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    surrogateAuthRequired: {
+      h: "Surrogate Auth Required"
+      n: "surrogateAuthRequired"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    useTemplateConfig: {
+      h: "Use Template Config"
+      n: "useTemplateConfig"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    useTemplateMappers: {
+      h: "Use Template Mappers"
+      n: "useTemplateMappers"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    useTemplateScope: {
+      h: "Use Template Scope"
+      n: "useTemplateScope"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    webOrigins: {
+      h: "Web Origins"
+      n: "webOrigins"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "client_representation"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /{realm}/clients/{id}/registration-access-token"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/clients/{id}/registration-access-token"
+          q: {
+            "$action": "registration-access-token"
+            exist: [
+              "id"
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "clients"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "registration-access-token"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /{realm}/client-description-converter"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "realm"
+                or: "realm"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/{realm}/client-description-converter"
+          q: {
+            exist: [
+              "realm"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              var: "realm"
+            }
+            {
+              lit: "client-description-converter"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,55 @@
+{
+  "existing": {
+    "identity_provider_mapper_representation": {
+      "IDENTITY_PROVIDER_MAPPER_REPRESENTATION00": {
+        "config": {},
+        "id": "IDENTITY_PROVIDER_MAPPER_REPRESENTATION00",
+        "identityProviderAlias": "s34",
+        "identityProviderMapper": "s35",
+        "name": "s36",
+        "alia": "ALIA01",
+        "realm": "REALM01"
+      },
+      "IDENTITY_PROVIDER_MAPPER_REPRESENTATION01": {
+        "config": {},
+        "id": "IDENTITY_PROVIDER_MAPPER_REPRESENTATION01",
+        "identityProviderAlias": "s66",
+        "identityProviderMapper": "s67",
+        "name": "s68",
+        "alia": "ALIA01",
+        "realm": "REALM01"
+      },
+      "IDENTITY_PROVIDER_MAPPER_REPRESENTATION02": {
+        "config": {},
+        "id": "IDENTITY_PROVIDER_MAPPER_REPRESENTATION02",
+        "identityProviderAlias": "s98",
+        "identityProviderMapper": "s99",
+        "name": "s9a",
+        "alia": "ALIA01",
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "identity_provider_mapper_representation": {
+      "identity_provider_mapper_representation_ref01": {
+        "config": {},
+        "identityProviderAlias": "sca",
+        "identityProviderMapper": "scb",
+        "name": "scc"
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/identity-provider/instances/{alias}/mappers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/identity-provider/instances/{alias}/mappers/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

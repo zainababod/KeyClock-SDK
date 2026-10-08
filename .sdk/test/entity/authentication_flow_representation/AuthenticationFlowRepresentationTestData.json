@@ -1,0 +1,60 @@
+{
+  "existing": {
+    "authentication_flow_representation": {
+      "AUTHENTICATION_FLOW_REPRESENTATION00": {
+        "alias": "s46",
+        "authenticationExecutions": [],
+        "builtIn": true,
+        "description": "s49",
+        "id": "AUTHENTICATION_FLOW_REPRESENTATION00",
+        "providerId": "s4b",
+        "topLevel": true,
+        "realm": "REALM01"
+      },
+      "AUTHENTICATION_FLOW_REPRESENTATION01": {
+        "alias": "s8c",
+        "authenticationExecutions": [],
+        "builtIn": true,
+        "description": "s8f",
+        "id": "AUTHENTICATION_FLOW_REPRESENTATION01",
+        "providerId": "s91",
+        "topLevel": true,
+        "realm": "REALM01"
+      },
+      "AUTHENTICATION_FLOW_REPRESENTATION02": {
+        "alias": "sd2",
+        "authenticationExecutions": [],
+        "builtIn": true,
+        "description": "sd5",
+        "id": "AUTHENTICATION_FLOW_REPRESENTATION02",
+        "providerId": "sd7",
+        "topLevel": true,
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "authentication_flow_representation": {
+      "authentication_flow_representation_ref01": {
+        "alias": "s118",
+        "authenticationExecutions": [],
+        "builtIn": true,
+        "description": "s11b",
+        "providerId": "s11d",
+        "topLevel": true
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/authentication/flows": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/authentication/flows/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

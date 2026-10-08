@@ -1,0 +1,34 @@
+# Entity: post
+
+main: kit: entity: post: {
+
+  alias: field: {}
+
+  name: "post"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/"
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

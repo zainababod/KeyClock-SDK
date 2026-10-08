@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "client_profiles_representation": {
+      "CLIENT_PROFILES_REPRESENTATION00": {
+        "globalProfiles": [],
+        "profiles": [],
+        "realm": "REALM01"
+      },
+      "CLIENT_PROFILES_REPRESENTATION01": {
+        "globalProfiles": [],
+        "profiles": [],
+        "realm": "REALM01"
+      },
+      "CLIENT_PROFILES_REPRESENTATION02": {
+        "globalProfiles": [],
+        "profiles": [],
+        "realm": "REALM01"
+      }
+    }
+  },
+  "new": {
+    "client_profiles_representation": {
+      "client_profiles_representation_ref01": {
+        "globalProfiles": [],
+        "profiles": []
+      }
+    }
+  },
+  "requests": {
+    "GET /{realm}/client-policies/profiles": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

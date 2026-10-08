@@ -1,0 +1,49 @@
+# BasicAuthenticationFlowRepresentationFlow
+
+main: kit: flow: BasicAuthenticationFlowRepresentationFlow:
+{
+  entity: "authentication_flow_representation",
+  kind: "basic",
+  name: "BasicAuthenticationFlowRepresentationFlow",
+  step: [
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "authentication_flow_representation_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "authentication_flow_representation_ref01",
+        srcdatavar: "authentication_flow_representation_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "authentication_flow_representation01",
+        realm: "realm01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-authentication_flow_representation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAuthenticationFlowRepresentationFlow"
+}

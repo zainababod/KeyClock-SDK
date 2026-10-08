@@ -1,0 +1,121 @@
+{
+  "existing": {
+    "group": {
+      "GROUP00": {
+        "access": {},
+        "attributes": {},
+        "clientRoles": {},
+        "id": "GROUP00",
+        "name": "s68",
+        "parentId": "s69",
+        "path": "s6a",
+        "realmRoles": [],
+        "subGroupCount": 108,
+        "subGroups": [],
+        "realm": "REALM01",
+        "client_id": "CLIENT01",
+        "role_name": "ROLE_NAME01",
+        "user_id": "USER01"
+      },
+      "GROUP01": {
+        "access": {},
+        "attributes": {},
+        "clientRoles": {},
+        "id": "GROUP01",
+        "name": "scc",
+        "parentId": "scd",
+        "path": "sce",
+        "realmRoles": [],
+        "subGroupCount": 208,
+        "subGroups": [],
+        "realm": "REALM01",
+        "client_id": "CLIENT01",
+        "role_name": "ROLE_NAME01",
+        "user_id": "USER01"
+      },
+      "GROUP02": {
+        "access": {},
+        "attributes": {},
+        "clientRoles": {},
+        "id": "GROUP02",
+        "name": "s130",
+        "parentId": "s131",
+        "path": "s132",
+        "realmRoles": [],
+        "subGroupCount": 308,
+        "subGroups": [],
+        "realm": "REALM01",
+        "client_id": "CLIENT01",
+        "role_name": "ROLE_NAME01",
+        "user_id": "USER01"
+      }
+    }
+  },
+  "new": {
+    "group": {
+      "group_ref01": {
+        "access": {},
+        "attributes": {},
+        "clientRoles": {},
+        "name": "s194",
+        "parentId": "s195",
+        "path": "s196",
+        "realmRoles": [],
+        "subGroupCount": 408,
+        "subGroups": []
+      }
+    }
+  },
+  "requests": {
+    "POST /{realm}/groups/{id}/children": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /{realm}/groups": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/clients/{id}/roles/{role-name}/groups": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/roles/{role-name}/groups": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/users/{id}/groups": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/groups": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/groups/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /{realm}/groups/count": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /{realm}/groups/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /{realm}/groups/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

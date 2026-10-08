@@ -1,0 +1,38 @@
+# BasicClientInitialAccessPresentationFlow
+
+main: kit: flow: BasicClientInitialAccessPresentationFlow:
+{
+  entity: "client_initial_access_presentation",
+  kind: "basic",
+  name: "BasicClientInitialAccessPresentationFlow",
+  step: [
+    {
+      i: {
+        ref: "client_initial_access_presentation_ref01"
+      }
+
+      m: {
+        realm: "realm01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        realm: "realm01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "client_initial_access_presentation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicClientInitialAccessPresentationFlow"
+}
